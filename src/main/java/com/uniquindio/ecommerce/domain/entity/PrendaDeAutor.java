@@ -61,7 +61,23 @@ public class PrendaDeAutor {
         this.disponibleParaLaVenta = true;
     }
 
-    // Getters defensivos (sin setters públicos para proteger el estado)
+    // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PrendaDeAutor that = (PrendaDeAutor) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    // --- Getters defensivos (sin setters públicos para proteger el estado) ---
+
     public PrendaDeAutorId getId() {
         return id;
     }

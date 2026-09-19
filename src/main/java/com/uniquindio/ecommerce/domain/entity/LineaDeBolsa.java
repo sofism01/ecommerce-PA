@@ -3,6 +3,9 @@ package com.uniquindio.ecommerce.domain.entity;
 import com.uniquindio.ecommerce.domain.valueobject.Dinero;
 import java.util.UUID;
 
+import java.util.Objects;
+import java.util.UUID;
+
 public class LineaDeBolsa {
 
     private final UUID varianteId;
@@ -34,6 +37,23 @@ public class LineaDeBolsa {
                 precioUnitario.moneda()
         );
     }
+
+    // --- equals() y hashCode() por identidad (basados en el identificador de la variante) ---
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LineaDeBolsa that = (LineaDeBolsa) o;
+        return Objects.equals(varianteId, that.varianteId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(varianteId);
+    }
+
+    // --- Getters (sin setters) ---
 
     public UUID varianteId() {
         return varianteId;
