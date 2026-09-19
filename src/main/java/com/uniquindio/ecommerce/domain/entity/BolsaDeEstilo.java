@@ -11,6 +11,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
+
 public class BolsaDeEstilo {
 
     private final BolsaDeEstiloId id;
@@ -64,7 +70,23 @@ public class BolsaDeEstilo {
         }
     }
 
-    // Getters defensivos (sin setters para proteger las invariantes)
+    // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BolsaDeEstilo that = (BolsaDeEstilo) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    // --- Getters defensivos (sin setters para proteger las invariantes) ---
+
     public BolsaDeEstiloId getId() {
         return id;
     }
