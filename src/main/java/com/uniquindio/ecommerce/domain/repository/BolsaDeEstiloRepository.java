@@ -9,17 +9,17 @@ import java.util.UUID;
 public interface BolsaDeEstiloRepository {
 
     /**
-     * Busca una bolsa de estilo por su identificador único de dominio.
+     * Recupera una bolsa de estilo por su identificador único de dominio.
      */
-    Optional<BolsaDeEstilo> findById(BolsaDeEstiloId id);
+    Optional<BolsaDeEstilo> obtenerBolsaPorId(BolsaDeEstiloId id);
 
     /**
-     * Busca una bolsa de estilo activa asociada a un cliente específico.
+     * Recupera la bolsa de estilo activa asociada a un cliente específico.
      */
-    Optional<BolsaDeEstilo> findByClienteIdAndCerradaFalse(UUID clienteId);
+    Optional<BolsaDeEstilo> obtenerBolsaActivaPorCliente(UUID clienteId);
 
     /**
-     * Guarda o actualiza una bolsa de estilo (tanto si es nueva como si se han agregado líneas).
+     * Almacena o actualiza una bolsa de estilo (tanto si es nueva como si se han agregado líneas).
      */
-    BolsaDeEstilo save(BolsaDeEstilo bolsaDeEstilo);
+    BolsaDeEstilo guardarBolsa(BolsaDeEstilo bolsaDeEstilo);
 }
