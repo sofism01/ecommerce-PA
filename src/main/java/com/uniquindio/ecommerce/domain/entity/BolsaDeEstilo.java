@@ -65,6 +65,10 @@ public class BolsaDeEstilo {
         }
     }
 
+    public boolean estaActiva() {
+        return !cerrada;
+    }
+
     // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
 
     @Override
