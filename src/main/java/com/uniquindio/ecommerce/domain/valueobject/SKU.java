@@ -15,4 +15,4 @@ public record SKU(String value) {
         value = value.trim().toUpperCase();
     }
 }
-}
+
