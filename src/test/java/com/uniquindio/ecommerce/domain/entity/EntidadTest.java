@@ -1,7 +1,6 @@
 package com.uniquindio.ecommerce.domain.entity;
 
-import com.uniquindio.ecommerce.domain.valueobject.Dinero;
-import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
+import com.uniquindio.ecommerce.domain.valueobject.*;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -14,13 +13,13 @@ class EntidadTest {
 
     @Test
     void igualdadPorIdentidad_PrendaDeAutor() {
-        //Valida que dos instancias de la entidad PrendaDeAutor con el mismo identificador (id) sean consideradas iguales
         // Arrange
         PrendaDeAutorId id = new PrendaDeAutorId(UUID.randomUUID());
+        VariantePrenda variante = new VariantePrenda(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
         PrendaDeAutor prenda1 = new PrendaDeAutor(id, UUID.randomUUID(), "Camisa", "Camisa de algodón",
-                new Dinero(new BigDecimal("50.00"), "USD"), List.of());
+                new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante));
         PrendaDeAutor prenda2 = new PrendaDeAutor(id, UUID.randomUUID(), "Pantalón", "Pantalón de lino",
-                new Dinero(new BigDecimal("70.00"), "USD"), List.of());
+                new Dinero(new BigDecimal("70.00"), "USD"), List.of(variante));
 
         // Act & Assert
         assertEquals(prenda1, prenda2, "Dos prendas con el mismo ID deben ser iguales, aunque tengan datos distintos.");
@@ -28,16 +27,16 @@ class EntidadTest {
 
     @Test
     void reglaProtegida_ActualizarPrecioPrenda() {
-        //Verifica que no se permita actualizar el precio de una PrendaDeAutor con un valor negativo
         // Arrange
+        VariantePrenda variante = new VariantePrenda(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
         PrendaDeAutor prenda = new PrendaDeAutor(new PrendaDeAutorId(UUID.randomUUID()), UUID.randomUUID(),
-                "Camisa", "Camisa de algodón", new Dinero(new BigDecimal("50.00"), "USD"), List.of());
+                "Camisa", "Camisa de algodón", new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante));
 
         // Act & Assert
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
                 prenda.actualizarPrecio(new Dinero(new BigDecimal("-10.00"), "USD"))
         );
-        assertEquals("El precio base de la prenda debe ser mayor a cero.", exception.getMessage());
+        assertEquals("El monto del dinero no puede ser negativo.", exception.getMessage());
     }
 
     @Test
