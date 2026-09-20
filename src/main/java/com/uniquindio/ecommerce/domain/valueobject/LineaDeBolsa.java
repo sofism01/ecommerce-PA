@@ -1,10 +1,8 @@
-package com.uniquindio.ecommerce.domain.entity;
+package com.uniquindio.ecommerce.domain.valueobject;
 
-import com.uniquindio.ecommerce.domain.valueobject.Dinero;
 import java.util.UUID;
 
 import java.util.Objects;
-import java.util.UUID;
 
 public class LineaDeBolsa {
 

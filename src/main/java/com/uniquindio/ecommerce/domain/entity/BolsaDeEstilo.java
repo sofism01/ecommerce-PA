@@ -3,19 +3,14 @@ package com.uniquindio.ecommerce.domain.entity;
 import com.uniquindio.ecommerce.domain.exception.ModificacionBolsaNoPermitidaException;
 import com.uniquindio.ecommerce.domain.exception.StockInsuficienteException;
 import com.uniquindio.ecommerce.domain.valueobject.BolsaDeEstiloId;
-import com.uniquindio.ecommerce.domain.valueobject.Dinero;
+import com.uniquindio.ecommerce.domain.valueobject.LineaDeBolsa;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 
 public class BolsaDeEstilo {
 
