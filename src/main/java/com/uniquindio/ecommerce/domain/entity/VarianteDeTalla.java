@@ -13,12 +13,16 @@ public class VarianteDeTalla {
     private int stock;
     private final Dinero precio;
 
-    public VarianteDeTalla(SKU sku, String talla, String color, int stock, Dinero precio) {
+    private VarianteDeTalla(SKU sku, String talla, String color, int stock, Dinero precio) {
         this.sku = Objects.requireNonNull(sku, "El SKU es obligatorio.");
         this.talla = validarTalla(talla);
         this.color = validarColor(color);
         this.precio = Objects.requireNonNull(precio, "El precio es obligatorio.");
         actualizarStock(stock);
+    }
+
+    public static VarianteDeTalla crear(SKU sku, String talla, String color, int stock, Dinero precio) {
+        return new VarianteDeTalla(sku, talla, color, stock, precio);
     }
 
     private String validarTalla(String talla) {
@@ -35,7 +39,7 @@ public class VarianteDeTalla {
         return color.trim();
     }
 
-    public void actualizarStock(int nuevoStock) {
+    private void actualizarStock(int nuevoStock) {
         if (nuevoStock < 0) {
             throw new IllegalArgumentException("El stock no puede ser negativo.");
         }

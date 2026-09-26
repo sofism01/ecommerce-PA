@@ -41,13 +41,13 @@ class EntidadTest {
 
     @Test
     void reglaProtegida_ValidarVitrinasCreador() {
-        //Asegura que no se pueda crear un Creador sin al menos una vitrina activa
+        // Asegura que no se pueda crear un Creador sin al menos una vitrina activa
         // Arrange
         UUID id = UUID.randomUUID();
 
         // Act & Assert
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                new Creador(id, "Juan", "juan@example.com", "123456789", "Taller 1", true, List.of())
+                Creador.crear(id, "Juan", "juan@example.com", "123456789", "Taller 1", true, List.of())
         );
         assertEquals("El creador debe tener al menos una vitrina activa.", exception.getMessage());
     }

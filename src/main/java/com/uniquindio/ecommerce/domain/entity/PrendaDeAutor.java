@@ -12,53 +12,46 @@ import java.util.UUID;
 public class PrendaDeAutor {
 
     private final PrendaDeAutorId id;
-    private final UUID creadorId; // Identificador del taller o diseñador
-    private String nombre;
-    private String descripcion;
-    private Dinero precioBase;
+    private final UUID creadorId;
+    private final String nombre;
+    private final String descripcion;
+    private final Dinero precioBase;
     private final List<VariantePrenda> variantes;
-    private boolean disponibleParaLaVenta;
+    private final boolean disponibleParaLaVenta;
 
-    public PrendaDeAutor(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes) {
+    private PrendaDeAutor(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes, boolean disponibleParaLaVenta) {
         this.id = Objects.requireNonNull(id, "El ID de la prenda es obligatorio.");
         this.creadorId = Objects.requireNonNull(creadorId, "El ID del creador es obligatorio.");
-
-        actualizarNombre(nombre);
-        actualizarDescripcion(descripcion);
-        actualizarPrecio(precioBase);
-
-        this.variantes = new java.util.ArrayList<>(Objects.requireNonNull(variantes, "Las variantes de la prenda son obligatorias."));
-        if (this.variantes.isEmpty()) {
-            throw new IllegalArgumentException("Una prenda de autor debe tener al menos una variante de talla.");
-        }
-
-        this.disponibleParaLaVenta = true;
+        this.nombre = validarNombre(nombre);
+        this.descripcion = descripcion != null ? descripcion.trim() : "";
+        this.precioBase = validarPrecio(precioBase);
+        this.variantes = validarVariantes(variantes);
+        this.disponibleParaLaVenta = disponibleParaLaVenta;
     }
 
-    public void actualizarPrecio(Dinero nuevoPrecio) {
-        this.precioBase = Objects.requireNonNull(nuevoPrecio, "El precio base no puede ser nulo.");
-        if (nuevoPrecio.monto().signum() <= 0) {
-            throw new IllegalArgumentException("El precio base de la prenda debe ser mayor a cero.");
-        }
+    public static PrendaDeAutor crear(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes) {
+        return new PrendaDeAutor(id, creadorId, nombre, descripcion, precioBase, variantes, true);
     }
 
-    public void actualizarNombre(String nombre) {
+    private String validarNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
             throw new IllegalArgumentException("El nombre de la prenda no puede estar vacío.");
         }
-        this.nombre = nombre.trim();
+        return nombre.trim();
     }
 
-    public void actualizarDescripcion(String descripcion) {
-        this.descripcion = descripcion != null ? descripcion.trim() : "";
+    private Dinero validarPrecio(Dinero precioBase) {
+        if (precioBase == null || precioBase.monto().signum() <= 0) {
+            throw new IllegalArgumentException("El precio base de la prenda debe ser mayor a cero.");
+        }
+        return precioBase;
     }
 
-    public void suspenderVenta() {
-        this.disponibleParaLaVenta = false;
-    }
-
-    public void habilitarVenta() {
-        this.disponibleParaLaVenta = true;
+    private List<VariantePrenda> validarVariantes(List<VariantePrenda> variantes) {
+        if (variantes == null || variantes.isEmpty()) {
+            throw new IllegalArgumentException("Una prenda de autor debe tener al menos una variante de talla.");
+        }
+        return List.copyOf(variantes);
     }
 
     // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
@@ -76,7 +69,7 @@ public class PrendaDeAutor {
         return Objects.hash(id);
     }
 
-    // --- Getters defensivos (sin setters públicos para proteger el estado) ---
+    // --- Getters ---
 
     public PrendaDeAutorId getId() {
         return id;

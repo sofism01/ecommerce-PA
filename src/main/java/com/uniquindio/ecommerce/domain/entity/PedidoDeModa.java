@@ -16,12 +16,16 @@ public class PedidoDeModa {
     private EstadoPedido estado;
     private final LocalDateTime fechaCreacion;
 
-    public PedidoDeModa(UUID id, UUID clienteId, List<VariantePrenda> variantes) {
+    private PedidoDeModa(UUID id, UUID clienteId, List<VariantePrenda> variantes) {
         this.id = Objects.requireNonNull(id, "El ID del pedido es obligatorio.");
         this.clienteId = Objects.requireNonNull(clienteId, "El ID del cliente es obligatorio.");
         this.variantes = validarVariantes(variantes);
         this.estado = EstadoPedido.PENDIENTE;
         this.fechaCreacion = LocalDateTime.now();
+    }
+
+    public static PedidoDeModa crear(UUID id, UUID clienteId, List<VariantePrenda> variantes) {
+        return new PedidoDeModa(id, clienteId, variantes);
     }
 
     private List<VariantePrenda> validarVariantes(List<VariantePrenda> variantes) {
@@ -84,5 +88,20 @@ public class PedidoDeModa {
 
     public LocalDateTime getFechaCreacion() {
         return fechaCreacion;
+    }
+
+    // --- equals y hashCode ---
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PedidoDeModa that = (PedidoDeModa) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

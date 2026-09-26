@@ -14,7 +14,7 @@ public class Creador {
     private final boolean cuentaValidada;
     private final List<VitrinaDeCreador> vitrinas;
 
-    public Creador(UUID id, String nombre, String email, String telefono, String taller, boolean cuentaValidada, List<VitrinaDeCreador> vitrinas) {
+    private Creador(UUID id, String nombre, String email, String telefono, String taller, boolean cuentaValidada, List<VitrinaDeCreador> vitrinas) {
         this.id = Objects.requireNonNull(id, "El ID del creador es obligatorio.");
         this.nombre = validarNombre(nombre);
         this.email = validarEmail(email);
@@ -22,6 +22,10 @@ public class Creador {
         this.taller = Objects.requireNonNull(taller, "El taller es obligatorio.");
         this.cuentaValidada = cuentaValidada;
         this.vitrinas = validarVitrinas(vitrinas);
+    }
+
+    public static Creador crear(UUID id, String nombre, String email, String telefono, String taller, boolean cuentaValidada, List<VitrinaDeCreador> vitrinas) {
+        return new Creador(id, nombre, email, telefono, taller, cuentaValidada, vitrinas);
     }
 
     private String validarNombre(String nombre) {
@@ -82,5 +86,20 @@ public class Creador {
 
     public List<VitrinaDeCreador> getVitrinas() {
         return vitrinas;
+    }
+
+    // --- equals y hashCode ---
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Creador creador = (Creador) o;
+        return Objects.equals(id, creador.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
