@@ -1,7 +1,6 @@
 package com.uniquindio.ecommerce.domain.entity;
 
 import com.uniquindio.ecommerce.domain.valueobject.EstadoPedido;
-import com.uniquindio.ecommerce.domain.valueobject.VariantePrenda;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.uniquindio.ecommerce.domain.valueobject;
+package com.uniquindio.ecommerce.domain.entity;
 
 import com.uniquindio.ecommerce.domain.valueobject.SKU;
 import com.uniquindio.ecommerce.domain.valueobject.TipoTalla;
@@ -11,9 +11,9 @@ public class VariantePrenda {
     private final UUID id;
     private final SKU sku;
     private final TipoTalla tipoTalla;
-    private int stockDisponible;
+    private final int stockDisponible;
 
-    public VariantePrenda(UUID id, SKU sku, TipoTalla tipoTalla, int stockDisponible) {
+    private VariantePrenda(UUID id, SKU sku, TipoTalla tipoTalla, int stockDisponible) {
         this.id = Objects.requireNonNull(id, "El ID de la variante es obligatorio.");
         this.sku = Objects.requireNonNull(sku, "El SKU es obligatorio.");
         this.tipoTalla = Objects.requireNonNull(tipoTalla, "El tipo de talla es obligatorio.");
@@ -22,6 +22,10 @@ public class VariantePrenda {
             throw new IllegalArgumentException("El stock disponible no puede ser negativo.");
         }
         this.stockDisponible = stockDisponible;
+    }
+
+    public static VariantePrenda crear(UUID id, SKU sku, TipoTalla tipoTalla, int stockDisponible) {
+        return new VariantePrenda(id, sku, tipoTalla, stockDisponible);
     }
 
     public VariantePrenda reducirStock(int cantidad) {
@@ -38,4 +42,17 @@ public class VariantePrenda {
     public SKU sku() { return sku; }
     public TipoTalla tipoTalla() { return tipoTalla; }
     public int stockDisponible() { return stockDisponible; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VariantePrenda that = (VariantePrenda) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

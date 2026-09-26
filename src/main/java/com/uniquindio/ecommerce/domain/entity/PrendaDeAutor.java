@@ -2,7 +2,6 @@ package com.uniquindio.ecommerce.domain.entity;
 
 import com.uniquindio.ecommerce.domain.valueobject.Dinero;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
-import com.uniquindio.ecommerce.domain.valueobject.VariantePrenda;
 
 import java.util.Collections;
 import java.util.List;

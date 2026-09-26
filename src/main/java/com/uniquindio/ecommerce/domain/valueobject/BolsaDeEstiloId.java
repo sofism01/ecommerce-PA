@@ -7,5 +7,8 @@ public record BolsaDeEstiloId(UUID valor) {
         if (valor == null) {
             throw new IllegalArgumentException("El identificador de la bolsa de estilo no puede ser nulo.");
         }
+        if (valor.toString().isBlank()) {
+            throw new IllegalArgumentException("El identificador de la bolsa de estilo no puede estar vacío.");
+        }
     }
 }

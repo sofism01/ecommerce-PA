@@ -1,7 +1,6 @@
 package com.uniquindio.ecommerce.domain.valueobject;
 
 import java.util.UUID;
-
 import java.util.Objects;
 
 public class LineaDeBolsa {
@@ -10,7 +9,7 @@ public class LineaDeBolsa {
     private final int cantidad;
     private final Dinero precioUnitario;
 
-    public LineaDeBolsa(UUID varianteId, int cantidad, Dinero precioUnitario) {
+    private LineaDeBolsa(UUID varianteId, int cantidad, Dinero precioUnitario) {
         if (varianteId == null) {
             throw new IllegalArgumentException("El identificador de la variante de talla es obligatorio.");
         }
@@ -25,6 +24,10 @@ public class LineaDeBolsa {
         this.precioUnitario = precioUnitario;
     }
 
+    public static LineaDeBolsa crear(UUID varianteId, int cantidad, Dinero precioUnitario) {
+        return new LineaDeBolsa(varianteId, cantidad, precioUnitario);
+    }
+
     public LineaDeBolsa actualizarCantidad(int nuevaCantidad) {
         return new LineaDeBolsa(this.varianteId, nuevaCantidad, this.precioUnitario);
     }
@@ -35,8 +38,6 @@ public class LineaDeBolsa {
                 precioUnitario.moneda()
         );
     }
-
-    // --- equals() y hashCode() por identidad (basados en el identificador de la variante) ---
 
     @Override
     public boolean equals(Object o) {
@@ -50,8 +51,6 @@ public class LineaDeBolsa {
     public int hashCode() {
         return Objects.hash(varianteId);
     }
-
-    // --- Getters (sin setters) ---
 
     public UUID varianteId() {
         return varianteId;
