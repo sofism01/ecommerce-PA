@@ -15,7 +15,7 @@ public class CrearBolsaDeEstiloUseCase {
     }
 
     public BolsaDeEstilo ejecutar(UUID clienteId) {
-        BolsaDeEstilo nuevaBolsa = new BolsaDeEstilo(new BolsaDeEstiloId(UUID.randomUUID()), clienteId);
+        BolsaDeEstilo nuevaBolsa = BolsaDeEstilo.crear(new BolsaDeEstiloId(UUID.randomUUID()), clienteId);
         return bolsaDeEstiloRepository.guardarBolsa(nuevaBolsa);
     }
 }

@@ -19,7 +19,7 @@ class BolsaDeEstiloTest {
     void agregarLinea_StockInsuficiente_NoCambiaEstado() {
         // Valida que no se pueda agregar una línea si el stock es insuficiente y que el estado no cambie.
         // Arrange
-        BolsaDeEstilo bolsa = new BolsaDeEstilo(new BolsaDeEstiloId(UUID.randomUUID()), UUID.randomUUID());
+        BolsaDeEstilo bolsa = BolsaDeEstilo.crear(new BolsaDeEstiloId(UUID.randomUUID()), UUID.randomUUID());
         LineaDeBolsa nuevaLinea = new LineaDeBolsa(UUID.randomUUID(), 10, new Dinero(new BigDecimal("50.00"), "USD"));
         int stockDisponible = 5;
 
@@ -35,7 +35,7 @@ class BolsaDeEstiloTest {
     void modificarBolsaCerrada_LanzaExcepcion_NoCambiaEstado() {
         // Valida que no se pueda modificar una bolsa cerrada y que el estado no cambie.
         // Arrange
-        BolsaDeEstilo bolsa = new BolsaDeEstilo(new BolsaDeEstiloId(UUID.randomUUID()), UUID.randomUUID());
+        BolsaDeEstilo bolsa = BolsaDeEstilo.crear(new BolsaDeEstiloId(UUID.randomUUID()), UUID.randomUUID());
         bolsa.cerrarBolsa();
         LineaDeBolsa nuevaLinea = new LineaDeBolsa(UUID.randomUUID(), 1, new Dinero(new BigDecimal("50.00"), "USD"));
 

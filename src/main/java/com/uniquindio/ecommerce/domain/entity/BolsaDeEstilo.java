@@ -8,9 +8,8 @@ import com.uniquindio.ecommerce.domain.valueobject.LineaDeBolsa;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.UUID;
-
 import java.util.Objects;
+import java.util.UUID;
 
 public class BolsaDeEstilo {
 
@@ -19,7 +18,7 @@ public class BolsaDeEstilo {
     private final List<LineaDeBolsa> lineas;
     private boolean cerrada;
 
-    public BolsaDeEstilo(BolsaDeEstiloId id, UUID clienteId) {
+    private BolsaDeEstilo(BolsaDeEstiloId id, UUID clienteId) {
         if (id == null) {
             throw new IllegalArgumentException("El identificador de la bolsa no puede ser nulo.");
         }
@@ -32,6 +31,10 @@ public class BolsaDeEstilo {
         this.cerrada = false;
     }
 
+    public static BolsaDeEstilo crear(BolsaDeEstiloId id, UUID clienteId) {
+        return new BolsaDeEstilo(id, clienteId);
+    }
+
     public void agregarLinea(LineaDeBolsa nuevaLinea, int stockDisponibleEnTaller) {
         validarEstadoActivo();
 
@@ -39,7 +42,6 @@ public class BolsaDeEstilo {
             throw new StockInsuficienteException("No hay suficiente stock en el taller para esta variante de talla.");
         }
 
-        // Si ya existe la línea con la misma variante, acumulamos o actualizamos
         for (int i = 0; i < lineas.size(); i++) {
             LineaDeBolsa lineaExistente = lineas.get(i);
             if (lineaExistente.varianteId().equals(nuevaLinea.varianteId())) {
@@ -69,8 +71,6 @@ public class BolsaDeEstilo {
         return !cerrada;
     }
 
-    // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -83,8 +83,6 @@ public class BolsaDeEstilo {
     public int hashCode() {
         return Objects.hash(id);
     }
-
-    // --- Getters defensivos (sin setters para proteger las invariantes) ---
 
     public BolsaDeEstiloId getId() {
         return id;
