@@ -14,6 +14,7 @@ public class CrearBolsaDeEstiloUseCase {
         this.bolsaDeEstiloRepository = bolsaDeEstiloRepository;
     }
 
+    // crea una nueva bolsa de estilo asociada a un cliente específico y la guarda en el repositorio
     public BolsaDeEstilo ejecutar(UUID clienteId) {
         BolsaDeEstilo nuevaBolsa = BolsaDeEstilo.crear(new BolsaDeEstiloId(UUID.randomUUID()), clienteId);
         return bolsaDeEstiloRepository.guardarBolsa(nuevaBolsa);
