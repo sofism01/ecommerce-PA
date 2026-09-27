@@ -20,7 +20,7 @@ class BolsaDeEstiloTest {
         // Valida que no se pueda agregar una línea si el stock es insuficiente y que el estado no cambie.
         // Arrange
         BolsaDeEstilo bolsa = BolsaDeEstilo.crear(new BolsaDeEstiloId(UUID.randomUUID()), UUID.randomUUID());
-        LineaDeBolsa nuevaLinea = new LineaDeBolsa(UUID.randomUUID(), 10, new Dinero(new BigDecimal("50.00"), "USD"));
+        LineaDeBolsa nuevaLinea = LineaDeBolsa.crear(UUID.randomUUID(), 10, new Dinero(new BigDecimal("50.00"), "USD"));
         int stockDisponible = 5;
 
         // Act & Assert
@@ -37,7 +37,7 @@ class BolsaDeEstiloTest {
         // Arrange
         BolsaDeEstilo bolsa = BolsaDeEstilo.crear(new BolsaDeEstiloId(UUID.randomUUID()), UUID.randomUUID());
         bolsa.cerrarBolsa();
-        LineaDeBolsa nuevaLinea = new LineaDeBolsa(UUID.randomUUID(), 1, new Dinero(new BigDecimal("50.00"), "USD"));
+        LineaDeBolsa nuevaLinea = LineaDeBolsa.crear(UUID.randomUUID(), 1, new Dinero(new BigDecimal("50.00"), "USD"));
 
         // Act & Assert
         Exception exception = assertThrows(ModificacionBolsaNoPermitidaException.class, () ->
