@@ -15,11 +15,12 @@ class EntidadTest {
     void igualdadPorIdentidad_PrendaDeAutor() {
         // Arrange
         PrendaDeAutorId id = new PrendaDeAutorId(UUID.randomUUID());
-        VariantePrenda variante = new VariantePrenda(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
-        PrendaDeAutor prenda1 = new PrendaDeAutor(id, UUID.randomUUID(), "Camisa", "Camisa de algodón",
-                new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante));
-        PrendaDeAutor prenda2 = new PrendaDeAutor(id, UUID.randomUUID(), "Pantalón", "Pantalón de lino",
-                new Dinero(new BigDecimal("70.00"), "USD"), List.of(variante));
+        VariantePrenda variante1 = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
+        VariantePrenda variante2 = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU456"), TipoTalla.L, 5);
+        PrendaDeAutor prenda1 = PrendaDeAutor.crear(id, UUID.randomUUID(), "Camisa", "Camisa de algodón",
+                new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante1));
+        PrendaDeAutor prenda2 = PrendaDeAutor.crear(id, UUID.randomUUID(), "Pantalón", "Pantalón de lino",
+                new Dinero(new BigDecimal("70.00"), "USD"), List.of(variante2));
 
         // Act & Assert
         assertEquals(prenda1, prenda2, "Dos prendas con el mismo ID deben ser iguales, aunque tengan datos distintos.");
@@ -28,8 +29,8 @@ class EntidadTest {
     @Test
     void reglaProtegida_ActualizarPrecioPrenda() {
         // Arrange
-        VariantePrenda variante = new VariantePrenda(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
-        PrendaDeAutor prenda = new PrendaDeAutor(new PrendaDeAutorId(UUID.randomUUID()), UUID.randomUUID(),
+        VariantePrenda variante = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
+        PrendaDeAutor prenda = PrendaDeAutor.crear(new PrendaDeAutorId(UUID.randomUUID()), UUID.randomUUID(),
                 "Camisa", "Camisa de algodón", new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante));
 
         // Act & Assert

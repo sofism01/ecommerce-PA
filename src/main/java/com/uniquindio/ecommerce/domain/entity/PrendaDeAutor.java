@@ -46,6 +46,12 @@ public class PrendaDeAutor {
         return precioBase;
     }
 
+    public void actualizarPrecio(Dinero nuevoPrecio) {
+        if (nuevoPrecio == null || nuevoPrecio.monto().signum() <= 0) {
+            throw new IllegalArgumentException("El monto del dinero no puede ser negativo.");
+        }
+    }
+
     private List<VariantePrenda> validarVariantes(List<VariantePrenda> variantes) {
         if (variantes == null || variantes.isEmpty()) {
             throw new IllegalArgumentException("Una prenda de autor debe tener al menos una variante de talla.");
