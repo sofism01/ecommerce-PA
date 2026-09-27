@@ -13,6 +13,7 @@ class EntidadTest {
 
     @Test
     void igualdadPorIdentidad_PrendaDeAutor() {
+        // Verifica que dos prendas de autor con el mismo ID sean consideradas iguales, independientemente de sus otros atributos.
         // Arrange
         PrendaDeAutorId id = new PrendaDeAutorId(UUID.randomUUID());
         VariantePrenda variante1 = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
@@ -28,6 +29,7 @@ class EntidadTest {
 
     @Test
     void reglaProtegida_ActualizarPrecioPrenda() {
+        // Verifica que no se pueda actualizar el precio base de una prenda de autor con un monto negativo.
         // Arrange
         VariantePrenda variante = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
         PrendaDeAutor prenda = PrendaDeAutor.crear(new PrendaDeAutorId(UUID.randomUUID()), UUID.randomUUID(),
