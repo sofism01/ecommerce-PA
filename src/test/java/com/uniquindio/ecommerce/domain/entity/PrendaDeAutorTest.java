@@ -39,9 +39,9 @@ public class PrendaDeAutorTest {
         Dinero nuevoPrecio = new Dinero(new BigDecimal("75.00"), "USD");
 
         // Act
-        prenda.actualizarPrecio(nuevoPrecio);
+        PrendaDeAutor prendaActualizada = prenda.actualizarPrecio(nuevoPrecio);
 
         // Assert
-        assertEquals(nuevoPrecio, prenda.getPrecioBase(), "El precio base de la prenda debe actualizarse correctamente.");
+        assertEquals(nuevoPrecio, prendaActualizada.getPrecioBase(), "El precio base de la prenda debe actualizarse correctamente.");
     }
 }

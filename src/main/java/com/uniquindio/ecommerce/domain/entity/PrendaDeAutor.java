@@ -46,10 +46,11 @@ public class PrendaDeAutor {
         return precioBase;
     }
 
-    public void actualizarPrecio(Dinero nuevoPrecio) {
+    public PrendaDeAutor actualizarPrecio(Dinero nuevoPrecio) {
         if (nuevoPrecio == null || nuevoPrecio.monto().signum() <= 0) {
             throw new IllegalArgumentException("El monto del dinero no puede ser negativo.");
         }
+        return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, nuevoPrecio, this.variantes, this.disponibleParaLaVenta);
     }
 
     private List<VariantePrenda> validarVariantes(List<VariantePrenda> variantes) {
