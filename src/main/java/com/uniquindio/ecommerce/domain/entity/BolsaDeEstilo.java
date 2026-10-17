@@ -71,6 +71,11 @@ public class BolsaDeEstilo {
         return !cerrada;
     }
 
+    public void vaciar() {
+        validarEstadoActivo();
+        this.lineas.clear();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
