@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface PrendaDeAutorRepository extends JpaRepository<PrendaDeAutor, UUID> {
+public interface PrendaDeAutorRepository {
 
     /**
      * Recupera una prenda de autor por su identificador único de dominio.

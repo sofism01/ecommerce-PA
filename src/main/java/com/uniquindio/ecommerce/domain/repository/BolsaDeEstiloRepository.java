@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface BolsaDeEstiloRepository extends JpaRepository<BolsaDeEstilo, UUID> {
+public interface BolsaDeEstiloRepository{
 
     /**
      * Recupera una bolsa de estilo por su identificador único de dominio.
