@@ -2,11 +2,12 @@ package com.uniquindio.ecommerce.domain.repository;
 
 import com.uniquindio.ecommerce.domain.entity.PrendaDeAutor;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public interface PrendaDeAutorRepository {
+public interface PrendaDeAutorRepository extends JpaRepository<PrendaDeAutor, UUID> {
 
     /**
      * Recupera una prenda de autor por su identificador único de dominio.

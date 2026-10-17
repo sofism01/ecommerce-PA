@@ -3,15 +3,17 @@ package com.uniquindio.ecommerce.application.usecase;
 import com.uniquindio.ecommerce.domain.entity.PrendaDeAutor;
 import com.uniquindio.ecommerce.domain.repository.PrendaDeAutorRepository;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@RequiredArgsConstructor
 public class RegistrarPrendaDeAutorUseCase {
 
     private final PrendaDeAutorRepository prendaDeAutorRepository;
 
-    public RegistrarPrendaDeAutorUseCase(PrendaDeAutorRepository prendaDeAutorRepository) {
-        this.prendaDeAutorRepository = prendaDeAutorRepository;
-    }
-
-    // registra una nueva prenda de autor en el sistema
+    @Transactional
     public PrendaDeAutor ejecutar(PrendaDeAutor prendaDeAutor) {
         return prendaDeAutorRepository.guardarPrenda(prendaDeAutor);
     }

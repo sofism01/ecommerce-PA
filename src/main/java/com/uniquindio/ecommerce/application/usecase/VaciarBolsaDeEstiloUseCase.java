@@ -4,15 +4,17 @@ import com.uniquindio.ecommerce.domain.entity.BolsaDeEstilo;
 import com.uniquindio.ecommerce.domain.repository.BolsaDeEstiloRepository;
 import com.uniquindio.ecommerce.domain.valueobject.BolsaDeEstiloId;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@RequiredArgsConstructor
 public class VaciarBolsaDeEstiloUseCase {
 
     private final BolsaDeEstiloRepository bolsaDeEstiloRepository;
 
-    public VaciarBolsaDeEstiloUseCase(BolsaDeEstiloRepository bolsaDeEstiloRepository) {
-        this.bolsaDeEstiloRepository = bolsaDeEstiloRepository;
-    }
-
-    // Vacía todas las líneas de productos de una bolsa de estilo
+    @Transactional
     public void ejecutar(BolsaDeEstiloId bolsaId) {
         BolsaDeEstilo bolsa = bolsaDeEstiloRepository.obtenerBolsaPorId(bolsaId)
                 .orElseThrow(() -> new IllegalArgumentException("La bolsa de estilo no existe."));
