@@ -74,6 +74,13 @@ public class PrendaDeAutor {
         variante.actualizarStock(nuevoStock);
     }
 
+    public PrendaDeAutor suspenderVenta() {
+        if (!this.disponibleParaLaVenta) {
+            throw new IllegalStateException("La prenda ya está suspendida para la venta.");
+        }
+        return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, this.precioBase, this.variantes, false);
+    }
+
     // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
 
     @Override
