@@ -38,6 +38,13 @@ public class VariantePrenda {
         return new VariantePrenda(this.id, this.sku, this.tipoTalla, this.stockDisponible - cantidad);
     }
 
+    public VariantePrenda actualizarStock(int nuevoStock) {
+        if (nuevoStock < 0) {
+            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        }
+        return new VariantePrenda(this.id, this.sku, this.tipoTalla, nuevoStock);
+    }
+
     public UUID id() { return id; }
     public SKU sku() { return sku; }
     public TipoTalla tipoTalla() { return tipoTalla; }
@@ -54,5 +61,21 @@ public class VariantePrenda {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public SKU getSku() {
+        return sku;
+    }
+
+    public TipoTalla getTipoTalla() {
+        return tipoTalla;
+    }
+
+    public int getStockDisponible() {
+        return stockDisponible;
     }
 }

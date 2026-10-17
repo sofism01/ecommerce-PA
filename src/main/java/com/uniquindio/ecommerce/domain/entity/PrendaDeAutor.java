@@ -2,6 +2,7 @@ package com.uniquindio.ecommerce.domain.entity;
 
 import com.uniquindio.ecommerce.domain.valueobject.Dinero;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
+import com.uniquindio.ecommerce.domain.valueobject.VariantePrendaId;
 
 import java.util.Collections;
 import java.util.List;
@@ -58,6 +59,19 @@ public class PrendaDeAutor {
             throw new IllegalArgumentException("Una prenda de autor debe tener al menos una variante de talla.");
         }
         return List.copyOf(variantes);
+    }
+
+    public void actualizarStockVariante(VariantePrendaId varianteId, int nuevoStock) {
+        if (nuevoStock < 0) {
+            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        }
+
+        VariantePrenda variante = this.variantes.stream()
+                .filter(v -> v.getId().equals(varianteId))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("La variante especificada no existe."));
+
+        variante.actualizarStock(nuevoStock);
     }
 
     // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
