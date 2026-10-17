@@ -16,10 +16,14 @@ public class PrendaDeAutor {
     private final String nombre;
     private final String descripcion;
     private final Dinero precioBase;
+
     private final List<VariantePrenda> variantes;
     private final boolean disponibleParaLaVenta;
 
-    private PrendaDeAutor(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes, boolean disponibleParaLaVenta) {
+
+    private int stockTotal;
+
+    private PrendaDeAutor(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes, boolean disponibleParaLaVenta, int stockTotal) {
         this.id = Objects.requireNonNull(id, "El ID de la prenda es obligatorio.");
         this.creadorId = Objects.requireNonNull(creadorId, "El ID del creador es obligatorio.");
         this.nombre = validarNombre(nombre);
@@ -27,10 +31,21 @@ public class PrendaDeAutor {
         this.precioBase = validarPrecio(precioBase);
         this.variantes = validarVariantes(variantes);
         this.disponibleParaLaVenta = disponibleParaLaVenta;
+        this.stockTotal = validarStock(stockTotal);
     }
 
-    public static PrendaDeAutor crear(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes) {
-        return new PrendaDeAutor(id, creadorId, nombre, descripcion, precioBase, variantes, true);
+    private List<VariantePrenda> validarVariantes(List<VariantePrenda> variantes) {
+        if (variantes == null) {
+            throw new IllegalArgumentException("La lista de variantes no puede ser nula.");
+        }
+        if (variantes.stream().distinct().count() != variantes.size()) {
+            throw new IllegalArgumentException("La lista de variantes contiene elementos duplicados.");
+        }
+        return List.copyOf(variantes);
+    }
+
+    public static PrendaDeAutor crear(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes, int stockTotal) {
+        return new PrendaDeAutor(id, creadorId, nombre, descripcion, precioBase, variantes, true, stockTotal);
     }
 
     private String validarNombre(String nombre) {
@@ -47,18 +62,29 @@ public class PrendaDeAutor {
         return precioBase;
     }
 
+    private int validarStock(int stock) {
+        if (stock < 0) {
+            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        }
+        return stock;
+    }
+
+    public void actualizarStock(int nuevoStock) {
+        if (nuevoStock < 0) {
+            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        }
+        this.stockTotal = nuevoStock;
+    }
+
+    public int getStockTotal() {
+        return stockTotal;
+    }
+
     public PrendaDeAutor actualizarPrecio(Dinero nuevoPrecio) {
         if (nuevoPrecio == null || nuevoPrecio.monto().signum() <= 0) {
             throw new IllegalArgumentException("El monto del dinero no puede ser negativo.");
         }
-        return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, nuevoPrecio, this.variantes, this.disponibleParaLaVenta);
-    }
-
-    private List<VariantePrenda> validarVariantes(List<VariantePrenda> variantes) {
-        if (variantes == null || variantes.isEmpty()) {
-            throw new IllegalArgumentException("Una prenda de autor debe tener al menos una variante de talla.");
-        }
-        return List.copyOf(variantes);
+        return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, nuevoPrecio, this.variantes, this.disponibleParaLaVenta, this.stockTotal);
     }
 
     public void actualizarStockVariante(VariantePrendaId varianteId, int nuevoStock) {
@@ -78,7 +104,7 @@ public class PrendaDeAutor {
         if (!this.disponibleParaLaVenta) {
             throw new IllegalStateException("La prenda ya está suspendida para la venta.");
         }
-        return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, this.precioBase, this.variantes, false);
+        return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, this.precioBase, this.variantes, false, this.stockTotal);
     }
 
     // --- equals() y hashCode() por identidad (basados únicamente en el id) ---
@@ -120,6 +146,10 @@ public class PrendaDeAutor {
 
     public List<VariantePrenda> getVariantes() {
         return Collections.unmodifiableList(variantes);
+    }
+
+    public void setStockTotal(int stockTotal) {
+        this.stockTotal = stockTotal;
     }
 
     public boolean isDisponibleParaLaVenta() {
