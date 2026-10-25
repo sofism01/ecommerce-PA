@@ -1,0 +1,35 @@
+{
+  "actividad": "Seguimiento: Pruebas avanzadas del backend",
+  "fechaRevisionUtc": "2026-10-25T21:25:12.861009+00:00",
+  "comando": "gradlew.bat test --tests CompraHttpIntegrationTest.flujoCompletoConErrorIntencionalStockPedidoYRelecturaDesdeH2",
+  "gradle": "BUILD SUCCESSFUL",
+  "clases": 1,
+  "totales": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exitosas": 1
+  },
+  "baseEntregable2": 219,
+  "nuevas": null,
+  "metodosSeleccionados": [
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest",
+      "metodo": "flujoCompletoConErrorIntencionalStockPedidoYRelecturaDesdeH2()",
+      "segundos": "1.187",
+      "estado": "exitosa"
+    }
+  ],
+  "suites": [
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:21:35.136Z",
+      "time": "12.011"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-10-25T03:05:05.515Z" hostname="JUANRESTREPO" time="1.782">
+  <properties/>
+  <testcase name="omiteTextoYMonedaBlancosYEscapaComodines()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.108"/>
+  <testcase name="paginaConConteoTotalSinDuplicadosYConTodasLasVariantes()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.097"/>
+  <testcase name="[1] q = &quot;Camisa&quot;, nombre = &quot;Camisa&quot;" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.042"/>
+  <testcase name="[2] q = &quot;artesanal&quot;, nombre = &quot;Camisa&quot;" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.039"/>
+  <testcase name="[3] q = &quot;cAmIsA&quot;, nombre = &quot;Camisa&quot;" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.032"/>
+  <testcase name="[4] q = &quot;LINO&quot;, nombre = &quot;Camisa&quot;" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.038"/>
+  <testcase name="[5] q = &quot;edición&quot;, nombre = &quot;Chaqueta&quot;" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.032"/>
+  <testcase name="sinCoincidenciasYFueraDeRangoConservaConteos()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.031"/>
+  <testcase name="desempataNombresPorIdEnBaseDeDatos()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.056"/>
+  <testcase name="suspensionExcluyeOfertaDelRankingPeroNoDelListado()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.056"/>
+  <testcase name="desempataRankingPorCreadorAscendente()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.034"/>
+  <testcase name="ejecutaLimiteEnSqlYNumeroConstanteDeConsultasSinNMasUno()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.086"/>
+  <testcase name="rankingVacioSiNoHayOferta()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.036"/>
+  <testcase name="rankingCuentaVariantesYPrendasDistintasCoincideConSqlReal()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.025"/>
+  <testcase name="excluyePrendasEliminadasDelContenidoConteoYRanking()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.034"/>
+  <testcase name="filtraPorMonedaYNormalizaEntrada()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.028"/>
+  <testcase name="combinaBusquedaCreadorYMonedaConAnd()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.028"/>
+  <testcase name="filtraPorCreadorEnH2()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.028"/>
+  <testcase name="excluyeVarianteHuerfanaEliminadaSinPerderPrenda()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest" time="0.031"/>
+  <system-out><![CDATA[2026-10-24T22:05:05.563-05:00  INFO 25360 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest
+2026-10-24T22:05:05.585-05:00  INFO 25360 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-24T22:05:05.645-05:00  INFO 25360 --- [    Test worker] c.u.e.i.p.jpa.ConsultasAvanzadasJpaTest  : Starting ConsultasAvanzadasJpaTest using Java 21.0.12.1 with PID 25360 (started by Juan Restrepo in EQUIPO_LOCAL\OneDrive - uniminuto.edu\Documentos\ecommerce-PA)
+2026-10-24T22:05:05.645-05:00  INFO 25360 --- [    Test worker] c.u.e.i.p.jpa.ConsultasAvanzadasJpaTest  : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T22:05:05.817-05:00  INFO 25360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T22:05:05.872-05:00  INFO 25360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2026-10-24T22:05:05.890-05:00  INFO 25360 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-10-24T22:05:05.927-05:00  INFO 25360 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:43310d5c-b53c-49a0-94b6-c4c4bca27ec3;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-10-24T22:05:05.978-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T22:05:06.046-05:00  INFO 25360 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T22:05:06.050-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:43310d5c-b53c-49a0-94b6-c4c4bca27ec3]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 43310D5C-B53C-49A0-94B6-C4C4BCA27EC3/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T22:05:06.262-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T22:05:06.289-05:00  INFO 25360 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T22:05:06.387-05:00  INFO 25360 --- [    Test worker] c.u.e.i.p.jpa.ConsultasAvanzadasJpaTest  : Started ConsultasAvanzadasJpaTest in 0.795 seconds (process running for 15.225)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

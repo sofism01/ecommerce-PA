@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+Copyright 2004-2025 H2 Group. Multiple-Licensed under the MPL 2.0,
+and the EPL 1.0 (https://h2database.com/html/license.html).
+Initial Developer: H2 Group
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>H2 Console</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script type="text/javascript" src="table.js"></script>
+</head>
+<body class="result">
+
+<div id="output">
+SELECT p.id,p.bolsa_id,p.cliente_id,p.estado,p.fecha_creacion,p.total,p.moneda,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l.prenda_id,l.variante_id,l.sku,l.tipo_talla,l.cantidad,l.precio_unitario,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l.cantidad*l.precio_unitario AS subtotal FROM pedidos_moda p<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN lineas_pedido l ON l.pedido_id=p.id WHERE p.id=&#39;b643920b-69f1-4673-b52d-e2316a8ed658&#39; ORDER BY l.posicion;<br /><table class="resultSet" cellspacing="0" cellpadding="0"><tr><th>ID</th><th>BOLSA_ID</th><th>CLIENTE_ID</th><th>ESTADO</th><th>FECHA_CREACION</th><th>TOTAL</th><th>MONEDA</th><th>PRENDA_ID</th><th>VARIANTE_ID</th><th>SKU</th><th>TIPO_TALLA</th><th>CANTIDAD</th><th>PRECIO_UNITARIO</th><th>SUBTOTAL</th></tr><tr><td>b643920b-69f1-4673-b52d-e2316a8ed658</td><td>2e02af0f-bb3b-4d44-9042-656233d14829</td><td>24952836-09e1-45b2-a2c1-7b94a9387a3e</td><td>PENDIENTE</td><td>2026-10-25 03:13:51.4507405</td><td>39.9</td><td>COP</td><td>4813095b-e9b2-4a8a-9708-44bf973d44ab</td><td>a7a1ca37-aa4c-4693-802b-bca5d802ec5b</td><td>DEMO29-M</td><td>M</td><td>2</td><td>19.95</td><td>39.9</td></tr></table>(1 row, 2 ms)<br />
+</div>
+
+<table id="h2auto" class="autoComp"><tbody></tbody></table>
+
+</body></html>

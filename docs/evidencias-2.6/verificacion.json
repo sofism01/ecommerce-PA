@@ -1,0 +1,876 @@
+{
+  "fechaUtc": "2026-10-25T01:47:15.517212+00:00",
+  "baseUrl": "http://localhost:8081",
+  "http": [
+    {
+      "method": "GET",
+      "path": "/swagger-ui/index.html",
+      "status": 200,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/swagger-ui/swagger-initializer.js",
+      "status": 200,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/api-docs/swagger-config",
+      "status": 200,
+      "body": {
+        "configUrl": "/api-docs/swagger-config",
+        "oauth2RedirectUrl": "http://localhost:8081/swagger-ui/oauth2-redirect.html",
+        "url": "/api-docs",
+        "validatorUrl": ""
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api-docs",
+      "status": 200,
+      "body": {
+        "operaciones": [
+          "DELETE /api/bolsas/{bolsaId}/items",
+          "GET /api/bolsas/activas/{clienteId}",
+          "GET /api/prendas",
+          "GET /api/prendas/creador/{creadorId}",
+          "GET /api/reportes/creadores/variedad",
+          "PATCH /api/bolsas/{bolsaId}/cerrar",
+          "PATCH /api/prendas/{prendaId}/suspender",
+          "PATCH /api/prendas/{prendaId}/variantes/{varianteId}/stock",
+          "POST /api/bolsas",
+          "POST /api/prendas"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          },
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000003",
+            "creadorId": "81000000-0000-4000-8000-000000000002",
+            "nombre": "Chaqueta de autor",
+            "descripcion": "Chaqueta de edición limitada",
+            "precioBase": {
+              "monto": 95.9,
+              "moneda": "USD"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000005",
+                "sku": "BOH-CHAQ-L",
+                "tipoTalla": "L",
+                "stockDisponible": 2
+              }
+            ],
+            "stockTotal": 2,
+            "disponibleParaLaVenta": true
+          },
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000002",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Vestido de algodón",
+            "descripcion": "Vestido de colección independiente",
+            "precioBase": {
+              "monto": 220000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000003",
+                "sku": "BOH-VEST-S",
+                "tipoTalla": "S",
+                "stockDisponible": 4
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000004",
+                "sku": "BOH-VEST-M",
+                "tipoTalla": "M",
+                "stockDisponible": 0
+              }
+            ],
+            "stockTotal": 4,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 3,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?q=LINO",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?q=artesanal",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?q=cAmIsA",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?q=confeccionada",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?creadorId=81000000-0000-4000-8000-000000000001",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          },
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000002",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Vestido de algodón",
+            "descripcion": "Vestido de colección independiente",
+            "precioBase": {
+              "monto": 220000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000003",
+                "sku": "BOH-VEST-S",
+                "tipoTalla": "S",
+                "stockDisponible": 4
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000004",
+                "sku": "BOH-VEST-M",
+                "tipoTalla": "M",
+                "stockDisponible": 0
+              }
+            ],
+            "stockTotal": 4,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 2,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?moneda=usd",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000003",
+            "creadorId": "81000000-0000-4000-8000-000000000002",
+            "nombre": "Chaqueta de autor",
+            "descripcion": "Chaqueta de edición limitada",
+            "precioBase": {
+              "monto": 95.9,
+              "moneda": "USD"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000005",
+                "sku": "BOH-CHAQ-L",
+                "tipoTalla": "L",
+                "stockDisponible": 2
+              }
+            ],
+            "stockTotal": 2,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?q=LINO&moneda=COP&creadorId=81000000-0000-4000-8000-000000000001",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?page=0&size=2",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          },
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000003",
+            "creadorId": "81000000-0000-4000-8000-000000000002",
+            "nombre": "Chaqueta de autor",
+            "descripcion": "Chaqueta de edición limitada",
+            "precioBase": {
+              "monto": 95.9,
+              "moneda": "USD"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000005",
+                "sku": "BOH-CHAQ-L",
+                "tipoTalla": "L",
+                "stockDisponible": 2
+              }
+            ],
+            "stockTotal": 2,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 3,
+        "totalPages": 2,
+        "page": 0,
+        "size": 2
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?page=1&size=2",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000002",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Vestido de algodón",
+            "descripcion": "Vestido de colección independiente",
+            "precioBase": {
+              "monto": 220000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000003",
+                "sku": "BOH-VEST-S",
+                "tipoTalla": "S",
+                "stockDisponible": 4
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000004",
+                "sku": "BOH-VEST-M",
+                "tipoTalla": "M",
+                "stockDisponible": 0
+              }
+            ],
+            "stockTotal": 4,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 3,
+        "totalPages": 2,
+        "page": 1,
+        "size": 2
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?page=2&size=2",
+      "status": 200,
+      "body": {
+        "content": [],
+        "totalElements": 3,
+        "totalPages": 2,
+        "page": 2,
+        "size": 2
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?q=sin-coincidencias",
+      "status": 200,
+      "body": {
+        "content": [],
+        "totalElements": 0,
+        "totalPages": 0,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?page=-1",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T01:47:15.875300700Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "page debe ser mayor o igual a 0.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?size=0",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T01:47:15.898490500Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "size debe estar entre 1 y 100.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?size=101",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T01:47:15.913644700Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "size debe estar entre 1 y 100.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?page=abc",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T01:47:15.932723200Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "El JSON o los parámetros de la solicitud son inválidos. Revisa los UUID, tallas y tipos de datos.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?creadorId=invalido",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T01:47:15.959685200Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "El JSON o los parámetros de la solicitud son inválidos. Revisa los UUID, tallas y tipos de datos.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?moneda=123",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T01:47:15.962681400Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "moneda debe contener tres letras.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/reportes/creadores/variedad",
+      "status": 200,
+      "body": [
+        {
+          "creadorId": "81000000-0000-4000-8000-000000000001",
+          "cantidadVariantes": 4,
+          "cantidadPrendas": 2
+        },
+        {
+          "creadorId": "81000000-0000-4000-8000-000000000002",
+          "cantidadVariantes": 1,
+          "cantidadPrendas": 1
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/prendas",
+      "status": 201,
+      "body": {
+        "prendaId": "41f6f856-2428-4def-9e53-1bdbaa13426c",
+        "creadorId": "657051c8-bdad-44fa-b6c2-9d8a64d43b0a",
+        "nombre": "Prenda verificación 2.6",
+        "descripcion": "Muestra HTTP",
+        "precioBase": {
+          "monto": 50,
+          "moneda": "COP"
+        },
+        "variantes": [
+          {
+            "varianteId": "c6bb2a92-1e63-4e77-8c81-82c20d9e386d",
+            "sku": "VER-26-M",
+            "tipoTalla": "M",
+            "stockDisponible": 3
+          }
+        ],
+        "stockTotal": 3,
+        "disponibleParaLaVenta": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas/creador/657051c8-bdad-44fa-b6c2-9d8a64d43b0a",
+      "status": 200,
+      "body": [
+        {
+          "prendaId": "41f6f856-2428-4def-9e53-1bdbaa13426c",
+          "creadorId": "657051c8-bdad-44fa-b6c2-9d8a64d43b0a",
+          "nombre": "Prenda verificación 2.6",
+          "descripcion": "Muestra HTTP",
+          "precioBase": {
+            "monto": 50,
+            "moneda": "COP"
+          },
+          "variantes": [
+            {
+              "varianteId": "c6bb2a92-1e63-4e77-8c81-82c20d9e386d",
+              "sku": "VER-26-M",
+              "tipoTalla": "M",
+              "stockDisponible": 3
+            }
+          ],
+          "stockTotal": 3,
+          "disponibleParaLaVenta": true
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/prendas/41f6f856-2428-4def-9e53-1bdbaa13426c/variantes/c6bb2a92-1e63-4e77-8c81-82c20d9e386d/stock",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/prendas/41f6f856-2428-4def-9e53-1bdbaa13426c/suspender",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas/creador/657051c8-bdad-44fa-b6c2-9d8a64d43b0a",
+      "status": 200,
+      "body": [
+        {
+          "prendaId": "41f6f856-2428-4def-9e53-1bdbaa13426c",
+          "creadorId": "657051c8-bdad-44fa-b6c2-9d8a64d43b0a",
+          "nombre": "Prenda verificación 2.6",
+          "descripcion": "Muestra HTTP",
+          "precioBase": {
+            "monto": 50,
+            "moneda": "COP"
+          },
+          "variantes": [
+            {
+              "varianteId": "c6bb2a92-1e63-4e77-8c81-82c20d9e386d",
+              "sku": "VER-26-M",
+              "tipoTalla": "M",
+              "stockDisponible": 2
+            }
+          ],
+          "stockTotal": 3,
+          "disponibleParaLaVenta": false
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/bolsas",
+      "status": 201,
+      "body": {
+        "bolsaId": "c9443fb2-e038-4392-ba3f-b60b22f754b2",
+        "clienteId": "14ac6234-fb0c-4bcb-9cbd-9ad8abe04de9",
+        "lineas": [],
+        "cerrada": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/bolsas/activas/14ac6234-fb0c-4bcb-9cbd-9ad8abe04de9",
+      "status": 200,
+      "body": {
+        "bolsaId": "c9443fb2-e038-4392-ba3f-b60b22f754b2",
+        "clienteId": "14ac6234-fb0c-4bcb-9cbd-9ad8abe04de9",
+        "lineas": [],
+        "cerrada": false
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/bolsas/c9443fb2-e038-4392-ba3f-b60b22f754b2/items",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/bolsas/c9443fb2-e038-4392-ba3f-b60b22f754b2/cerrar",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/api/bolsas/activas/14ac6234-fb0c-4bcb-9cbd-9ad8abe04de9",
+      "status": 404,
+      "body": {
+        "timestamp": "2026-10-25T01:47:16.338741700Z",
+        "status": 404,
+        "code": "RECURSO_NO_ENCONTRADO",
+        "message": "El cliente no tiene una bolsa de estilo activa.",
+        "path": "/api/bolsas/activas/14ac6234-fb0c-4bcb-9cbd-9ad8abe04de9",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/reportes/creadores/variedad",
+      "status": 200,
+      "body": [
+        {
+          "creadorId": "81000000-0000-4000-8000-000000000001",
+          "cantidadVariantes": 4,
+          "cantidadPrendas": 2
+        },
+        {
+          "creadorId": "81000000-0000-4000-8000-000000000002",
+          "cantidadVariantes": 1,
+          "cantidadPrendas": 1
+        }
+      ]
+    }
+  ],
+  "sql": [
+    {
+      "nombre": "catalogo-h2",
+      "consulta": "SELECT p.id, p.creador_id, p.nombre, p.moneda,\n        p.disponible_para_venta, p.eliminado, COUNT(v.id) AS variantes\n        FROM prendas_autor p JOIN variantes_prenda v ON v.prenda_id=p.id\n        WHERE p.eliminado=FALSE AND v.eliminado=FALSE\n        GROUP BY p.id, p.creador_id, p.nombre, p.moneda, p.disponible_para_venta, p.eliminado\n        ORDER BY p.nombre, p.id",
+      "filas": [
+        {
+          "ID": "91000000-0000-4000-8000-000000000001",
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000001",
+          "NOMBRE": "Camisa de lino artesanal",
+          "MONEDA": "COP",
+          "DISPONIBLE_PARA_VENTA": "TRUE",
+          "ELIMINADO": "FALSE",
+          "VARIANTES": "2"
+        },
+        {
+          "ID": "91000000-0000-4000-8000-000000000003",
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000002",
+          "NOMBRE": "Chaqueta de autor",
+          "MONEDA": "USD",
+          "DISPONIBLE_PARA_VENTA": "TRUE",
+          "ELIMINADO": "FALSE",
+          "VARIANTES": "1"
+        },
+        {
+          "ID": "91000000-0000-4000-8000-000000000002",
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000001",
+          "NOMBRE": "Vestido de algodón",
+          "MONEDA": "COP",
+          "DISPONIBLE_PARA_VENTA": "TRUE",
+          "ELIMINADO": "FALSE",
+          "VARIANTES": "2"
+        }
+      ]
+    },
+    {
+      "nombre": "ranking-h2",
+      "consulta": "SELECT p.creador_id, COUNT(v.id) AS cantidad_variantes,\n        COUNT(DISTINCT p.id) AS cantidad_prendas FROM prendas_autor p\n        JOIN variantes_prenda v ON v.prenda_id=p.id\n        WHERE p.eliminado=FALSE AND v.eliminado=FALSE AND p.disponible_para_venta=TRUE\n        GROUP BY p.creador_id ORDER BY COUNT(v.id) DESC, p.creador_id ASC",
+      "filas": [
+        {
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000001",
+          "CANTIDAD_VARIANTES": "4",
+          "CANTIDAD_PRENDAS": "2"
+        },
+        {
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000002",
+          "CANTIDAD_VARIANTES": "1",
+          "CANTIDAD_PRENDAS": "1"
+        }
+      ]
+    },
+    {
+      "nombre": "pagina-h2",
+      "consulta": "SELECT p.id, p.nombre FROM prendas_autor p\n        WHERE p.eliminado=FALSE AND p.moneda='COP' AND\n        (LOWER(p.nombre) LIKE '%lino%' OR LOWER(p.descripcion) LIKE '%lino%')\n        ORDER BY p.nombre, p.id OFFSET 0 ROWS FETCH FIRST 1 ROWS ONLY",
+      "filas": [
+        {
+          "ID": "91000000-0000-4000-8000-000000000001",
+          "NOMBRE": "Camisa de lino artesanal"
+        }
+      ]
+    }
+  ],
+  "operacionesOpenApi": [
+    "DELETE /api/bolsas/{bolsaId}/items",
+    "GET /api/bolsas/activas/{clienteId}",
+    "GET /api/prendas",
+    "GET /api/prendas/creador/{creadorId}",
+    "GET /api/reportes/creadores/variedad",
+    "PATCH /api/bolsas/{bolsaId}/cerrar",
+    "PATCH /api/prendas/{prendaId}/suspender",
+    "PATCH /api/prendas/{prendaId}/variantes/{varianteId}/stock",
+    "POST /api/bolsas",
+    "POST /api/prendas"
+  ],
+  "resultado": "Todas las aserciones HTTP, OpenAPI y SQL fueron satisfactorias.",
+  "mutacionesDemo": {
+    "prendaSuspendida": "41f6f856-2428-4def-9e53-1bdbaa13426c",
+    "bolsaCerrada": "c9443fb2-e038-4392-ba3f-b60b22f754b2"
+  }
+}

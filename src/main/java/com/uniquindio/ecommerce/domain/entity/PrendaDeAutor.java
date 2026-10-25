@@ -1,9 +1,13 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+import com.uniquindio.ecommerce.domain.exception.RecursoNoEncontradoException;
+
 import com.uniquindio.ecommerce.domain.valueobject.Dinero;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
 import com.uniquindio.ecommerce.domain.valueobject.VariantePrendaId;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +28,14 @@ public class PrendaDeAutor {
     private int stockTotal;
 
     private PrendaDeAutor(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes, boolean disponibleParaLaVenta, int stockTotal) {
-        this.id = Objects.requireNonNull(id, "El ID de la prenda es obligatorio.");
-        this.creadorId = Objects.requireNonNull(creadorId, "El ID del creador es obligatorio.");
+        if (id == null) {
+            throw new ReglaDominioException("El ID de la prenda es obligatorio.");
+        }
+        this.id = id;
+        if (creadorId == null) {
+            throw new ReglaDominioException("El ID del creador es obligatorio.");
+        }
+        this.creadorId = creadorId;
         this.nombre = validarNombre(nombre);
         this.descripcion = descripcion != null ? descripcion.trim() : "";
         this.precioBase = validarPrecio(precioBase);
@@ -36,44 +46,54 @@ public class PrendaDeAutor {
 
     private List<VariantePrenda> validarVariantes(List<VariantePrenda> variantes) {
         if (variantes == null) {
-            throw new IllegalArgumentException("La lista de variantes no puede ser nula.");
+            throw new ReglaDominioException("La lista de variantes no puede ser nula.");
+        }
+        if (variantes.isEmpty()) {
+            throw new ReglaDominioException("Una prenda de autor debe tener al menos una variante de talla.");
+        }
+        if (variantes.stream().anyMatch(Objects::isNull)) {
+            throw new ReglaDominioException("Las variantes no pueden contener elementos nulos.");
         }
         if (variantes.stream().distinct().count() != variantes.size()) {
-            throw new IllegalArgumentException("La lista de variantes contiene elementos duplicados.");
+            throw new ReglaDominioException("La lista de variantes contiene elementos duplicados.");
         }
-        return List.copyOf(variantes);
+        return new ArrayList<>(variantes);
     }
 
     public static PrendaDeAutor crear(PrendaDeAutorId id, UUID creadorId, String nombre, String descripcion, Dinero precioBase, List<VariantePrenda> variantes, int stockTotal) {
         return new PrendaDeAutor(id, creadorId, nombre, descripcion, precioBase, variantes, true, stockTotal);
     }
 
+    /** Reconstruye un estado existente aplicando las mismas invariantes de creación. */
+    public static PrendaDeAutor reconstruir(PrendaDeAutorId id, UUID creadorId, String nombre,
+            String descripcion, Dinero precioBase, List<VariantePrenda> variantes,
+            boolean disponibleParaLaVenta, int stockTotal) {
+        return new PrendaDeAutor(id, creadorId, nombre, descripcion, precioBase, variantes, disponibleParaLaVenta, stockTotal);
+    }
+
     private String validarNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
-            throw new IllegalArgumentException("El nombre de la prenda no puede estar vacío.");
+            throw new ReglaDominioException("El nombre de la prenda no puede estar vacío.");
         }
         return nombre.trim();
     }
 
     private Dinero validarPrecio(Dinero precioBase) {
         if (precioBase == null || precioBase.monto().signum() <= 0) {
-            throw new IllegalArgumentException("El precio base de la prenda debe ser mayor a cero.");
+            throw new ReglaDominioException("El precio base de la prenda debe ser mayor a cero.");
         }
         return precioBase;
     }
 
     private int validarStock(int stock) {
         if (stock < 0) {
-            throw new IllegalArgumentException("El stock no puede ser negativo.");
+            throw new ReglaDominioException("El stock no puede ser negativo.");
         }
         return stock;
     }
 
     public void actualizarStock(int nuevoStock) {
-        if (nuevoStock < 0) {
-            throw new IllegalArgumentException("El stock no puede ser negativo.");
-        }
-        this.stockTotal = nuevoStock;
+        this.stockTotal = validarStock(nuevoStock);
     }
 
     public int getStockTotal() {
@@ -81,28 +101,27 @@ public class PrendaDeAutor {
     }
 
     public PrendaDeAutor actualizarPrecio(Dinero nuevoPrecio) {
-        if (nuevoPrecio == null || nuevoPrecio.monto().signum() <= 0) {
-            throw new IllegalArgumentException("El monto del dinero no puede ser negativo.");
-        }
         return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, nuevoPrecio, this.variantes, this.disponibleParaLaVenta, this.stockTotal);
     }
 
     public void actualizarStockVariante(VariantePrendaId varianteId, int nuevoStock) {
-        if (nuevoStock < 0) {
-            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        if (varianteId == null) {
+            throw new ReglaDominioException("El ID de la variante es obligatorio.");
         }
-
-        VariantePrenda variante = this.variantes.stream()
-                .filter(v -> v.getId().equals(varianteId))
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("La variante especificada no existe."));
-
-        variante.actualizarStock(nuevoStock);
+        validarStock(nuevoStock);
+        for (int i = 0; i < variantes.size(); i++) {
+            VariantePrenda variante = variantes.get(i);
+            if (variante.getId().equals(varianteId.getId())) {
+                variantes.set(i, variante.actualizarStock(nuevoStock));
+                return;
+            }
+        }
+        throw new RecursoNoEncontradoException("La variante especificada no existe.");
     }
 
     public PrendaDeAutor suspenderVenta() {
         if (!this.disponibleParaLaVenta) {
-            throw new IllegalStateException("La prenda ya está suspendida para la venta.");
+            throw new ReglaDominioException("La prenda ya está suspendida para la venta.");
         }
         return new PrendaDeAutor(this.id, this.creadorId, this.nombre, this.descripcion, this.precioBase, this.variantes, false, this.stockTotal);
     }
@@ -146,10 +165,6 @@ public class PrendaDeAutor {
 
     public List<VariantePrenda> getVariantes() {
         return Collections.unmodifiableList(variantes);
-    }
-
-    public void setStockTotal(int stockTotal) {
-        this.stockTotal = stockTotal;
     }
 
     public boolean isDisponibleParaLaVenta() {

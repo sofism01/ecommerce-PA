@@ -1,5 +1,7 @@
 package com.uniquindio.ecommerce.application.usecase;
 
+import com.uniquindio.ecommerce.domain.exception.RecursoNoEncontradoException;
+
 import com.uniquindio.ecommerce.domain.entity.PrendaDeAutor;
 import com.uniquindio.ecommerce.domain.repository.PrendaDeAutorRepository;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
@@ -16,10 +18,10 @@ public class SuspenderVentaPrendaDeAutorUseCase {
 
     @Transactional
     public void ejecutar(PrendaDeAutorId prendaId) {
-        PrendaDeAutor prenda = prendaDeAutorRepository.obtenerPrendaPorId(prendaId)
-                .orElseThrow(() -> new IllegalArgumentException("La prenda de autor no existe."));
+        PrendaDeAutor prenda = prendaDeAutorRepository.obtenerPrendaParaActualizar(prendaId)
+                .orElseThrow(() -> new RecursoNoEncontradoException("La prenda de autor no existe."));
 
-        prenda.suspenderVenta();
+        prenda = prenda.suspenderVenta();
 
         prendaDeAutorRepository.guardarPrenda(prenda);
     }

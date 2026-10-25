@@ -1,0 +1,361 @@
+{
+  "fechaUtc": "2026-10-25T03:13:56.798636+00:00",
+  "baseUrl": "http://127.0.0.1:61809",
+  "fase": "seguridad",
+  "estadisticasNewman": {
+    "iterations": {
+      "total": 1,
+      "pending": 0,
+      "failed": 0
+    },
+    "items": {
+      "total": 7,
+      "pending": 0,
+      "failed": 0
+    },
+    "scripts": {
+      "total": 7,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequests": {
+      "total": 7,
+      "pending": 0,
+      "failed": 0
+    },
+    "requests": {
+      "total": 7,
+      "pending": 0,
+      "failed": 0
+    },
+    "tests": {
+      "total": 7,
+      "pending": 0,
+      "failed": 0
+    },
+    "assertions": {
+      "total": 8,
+      "pending": 0,
+      "failed": 0
+    },
+    "testScripts": {
+      "total": 7,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequestScripts": {
+      "total": 0,
+      "pending": 0,
+      "failed": 0
+    }
+  },
+  "http": [
+    {
+      "paso": "17 Sin JWT",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "pedidos",
+          "b643920b-69f1-4673-b52d-e2316a8ed658"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 401,
+      "response": {
+        "timestamp": "2026-10-25T03:13:54.936166100Z",
+        "status": 401,
+        "code": "NO_AUTENTICADO",
+        "message": "Credenciales o token inválidos.",
+        "path": "/api/pedidos/b643920b-69f1-4673-b52d-e2316a8ed658",
+        "details": {}
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 401",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "18 Vendedor no consulta pedido",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "pedidos",
+          "b643920b-69f1-4673-b52d-e2316a8ed658"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 403,
+      "response": {
+        "timestamp": "2026-10-25T03:13:55.033310200Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/pedidos/b643920b-69f1-4673-b52d-e2316a8ed658",
+        "details": {}
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 403",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "19 Registrar otro comprador",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "auth",
+          "register"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "nombre": "Otro comprador demo",
+        "correo": "ajeno.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "password": "[contraseña ficticia omitida]",
+        "rol": "COMPRADOR"
+      },
+      "status": 201,
+      "response": {
+        "id": "c24745d1-92a8-46bc-93e7-60ee626de4f8",
+        "nombre": "Otro comprador demo",
+        "correo": "ajeno.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "rol": "COMPRADOR",
+        "activo": true
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "20 Login otro comprador",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "auth",
+          "login"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "correo": "ajeno.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "password": "[contraseña ficticia omitida]"
+      },
+      "status": 200,
+      "response": {
+        "token": "[JWT omitido]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T04:13:55Z",
+        "rol": "COMPRADOR",
+        "usuario": {
+          "id": "c24745d1-92a8-46bc-93e7-60ee626de4f8",
+          "nombre": "Otro comprador demo",
+          "correo": "ajeno.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+          "rol": "COMPRADOR",
+          "activo": true
+        }
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "21 Rechazar pedido ajeno",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "pedidos",
+          "b643920b-69f1-4673-b52d-e2316a8ed658"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 403,
+      "response": {
+        "timestamp": "2026-10-25T03:13:55.770686900Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/pedidos/b643920b-69f1-4673-b52d-e2316a8ed658",
+        "details": {}
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 403",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "22 Rechazar bolsa ajena",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas",
+          "2e02af0f-bb3b-4d44-9042-656233d14829",
+          "items"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+        "cantidad": 1
+      },
+      "status": 403,
+      "response": {
+        "timestamp": "2026-10-25T03:13:55.864904600Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/bolsas/2e02af0f-bb3b-4d44-9042-656233d14829/items",
+        "details": {}
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 403",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "23 Comprobar OpenAPI y Bearer",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api-docs"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 200,
+      "response": {
+        "securitySchemes": {
+          "bearerAuth": {
+            "type": "http",
+            "description": "Pega sólo el JWT devuelto por /api/auth/login, sin el prefijo Bearer.",
+            "scheme": "bearer",
+            "bearerFormat": "JWT"
+          }
+        },
+        "operaciones": [
+          "GET /api/prendas",
+          "POST /api/prendas",
+          "POST /api/bolsas",
+          "POST /api/bolsas/{bolsaId}/items",
+          "DELETE /api/bolsas/{bolsaId}/items",
+          "POST /api/bolsas/{bolsaId}/confirmar-pedido",
+          "POST /api/auth/register",
+          "POST /api/auth/login",
+          "PATCH /api/prendas/{prendaId}/variantes/{varianteId}/stock",
+          "PATCH /api/prendas/{prendaId}/suspender",
+          "PATCH /api/bolsas/{bolsaId}/cerrar",
+          "GET /api/reportes/creadores/variedad",
+          "GET /api/prendas/creador/{creadorId}",
+          "GET /api/pedidos/{pedidoId}",
+          "GET /api/bolsas/activas/{clienteId}"
+        ]
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Bearer y nuevos endpoints",
+          "correcta": true
+        }
+      ]
+    }
+  ],
+  "sql": [],
+  "muestras": {
+    "vendedorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+    "compradorId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+    "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+    "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+    "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+    "pedidoId": "b643920b-69f1-4673-b52d-e2316a8ed658"
+  },
+  "resultado": "OK: aserciones Postman y comprobaciones SQL satisfactorias."
+}

@@ -1,5 +1,7 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+
 import com.uniquindio.ecommerce.domain.valueobject.*;
 import org.junit.jupiter.api.Test;
 
@@ -19,9 +21,9 @@ class EntidadTest {
         VariantePrenda variante1 = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
         VariantePrenda variante2 = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU456"), TipoTalla.L, 5);
         PrendaDeAutor prenda1 = PrendaDeAutor.crear(id, UUID.randomUUID(), "Camisa", "Camisa de algodón",
-                new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante1));
+                new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante1), 10);
         PrendaDeAutor prenda2 = PrendaDeAutor.crear(id, UUID.randomUUID(), "Pantalón", "Pantalón de lino",
-                new Dinero(new BigDecimal("70.00"), "USD"), List.of(variante2));
+                new Dinero(new BigDecimal("70.00"), "USD"), List.of(variante2), 5);
 
         // Act & Assert
         assertEquals(prenda1, prenda2, "Dos prendas con el mismo ID deben ser iguales, aunque tengan datos distintos.");
@@ -29,17 +31,17 @@ class EntidadTest {
 
     @Test
     void reglaProtegida_ActualizarPrecioPrenda() {
-        // Verifica que no se pueda actualizar el precio base de una prenda de autor con un monto negativo.
+        // Dinero admite cero, pero la prenda exige un precio estrictamente positivo.
         // Arrange
         VariantePrenda variante = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
         PrendaDeAutor prenda = PrendaDeAutor.crear(new PrendaDeAutorId(UUID.randomUUID()), UUID.randomUUID(),
-                "Camisa", "Camisa de algodón", new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante));
+                "Camisa", "Camisa de algodón", new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante), 10);
 
         // Act & Assert
-        Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                prenda.actualizarPrecio(new Dinero(new BigDecimal("-10.00"), "USD"))
+        Exception exception = assertThrows(ReglaDominioException.class, () ->
+                prenda.actualizarPrecio(new Dinero(BigDecimal.ZERO, "USD"))
         );
-        assertEquals("El monto del dinero no puede ser negativo.", exception.getMessage());
+        assertEquals("El precio base de la prenda debe ser mayor a cero.", exception.getMessage());
     }
 
     @Test
@@ -49,7 +51,7 @@ class EntidadTest {
         UUID id = UUID.randomUUID();
 
         // Act & Assert
-        Exception exception = assertThrows(IllegalArgumentException.class, () ->
+        Exception exception = assertThrows(ReglaDominioException.class, () ->
                 Creador.crear(id, "Juan", "juan@example.com", "123456789", "Taller 1", true, List.of())
         );
         assertEquals("El creador debe tener al menos una vitrina activa.", exception.getMessage());

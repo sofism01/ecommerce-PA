@@ -1,0 +1,15 @@
+{
+  "estado": "pendiente_manual",
+  "capturaGenerada": false,
+  "motivo": "No hay navegador conectado. El control nativo de Chrome detuvo la interacción porque no pudo determinar la URL actual con suficiente confianza.",
+  "reporteReal": "reporte-gradle-html.zip",
+  "reporteGenerado": "build/reports/tests/test/index.html",
+  "resultado": {
+    "tests": 224,
+    "clases": 23,
+    "fallos": 0,
+    "errores": 0,
+    "omitidas": 0
+  },
+  "instrucciones": "Abrir el reporte real, mostrar resumen y clases nuevas en verde y guardar un recorte real como captura-gradle-verde.png en esta carpeta. No se fabrica una imagen."
+}

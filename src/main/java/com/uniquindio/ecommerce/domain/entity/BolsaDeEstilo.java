@@ -1,5 +1,7 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+
 import com.uniquindio.ecommerce.domain.exception.ModificacionBolsaNoPermitidaException;
 import com.uniquindio.ecommerce.domain.exception.StockInsuficienteException;
 import com.uniquindio.ecommerce.domain.valueobject.BolsaDeEstiloId;
@@ -20,10 +22,10 @@ public class BolsaDeEstilo {
 
     private BolsaDeEstilo(BolsaDeEstiloId id, UUID clienteId) {
         if (id == null) {
-            throw new IllegalArgumentException("El identificador de la bolsa no puede ser nulo.");
+            throw new ReglaDominioException("El identificador de la bolsa no puede ser nulo.");
         }
         if (clienteId == null) {
-            throw new IllegalArgumentException("El identificador del cliente no puede ser nulo.");
+            throw new ReglaDominioException("El identificador del cliente no puede ser nulo.");
         }
         this.id = id;
         this.clienteId = clienteId;
@@ -35,9 +37,37 @@ public class BolsaDeEstilo {
         return new BolsaDeEstilo(id, clienteId);
     }
 
+    /**
+     * Reconstruye la selección histórica. El stock se comprueba al agregar, no al leer:
+     * el inventario puede haber cambiado desde que se creó la línea.
+     */
+    public static BolsaDeEstilo reconstruir(BolsaDeEstiloId id, UUID clienteId,
+            List<LineaDeBolsa> lineas, boolean cerrada) {
+        BolsaDeEstilo bolsa = new BolsaDeEstilo(id, clienteId);
+        if (lineas == null || lineas.stream().anyMatch(Objects::isNull)) {
+            throw new ReglaDominioException("Las líneas de la bolsa no pueden ser nulas.");
+        }
+        if (lineas.stream().distinct().count() != lineas.size()) {
+            throw new ReglaDominioException("La bolsa no puede contener líneas duplicadas de una variante.");
+        }
+        for (LineaDeBolsa linea : lineas) {
+            bolsa.validarMoneda(linea);
+            bolsa.lineas.add(linea);
+        }
+        bolsa.cerrada = cerrada;
+        return bolsa;
+    }
+
     public void agregarLinea(LineaDeBolsa nuevaLinea, int stockDisponibleEnTaller) {
         validarEstadoActivo();
 
+        if (nuevaLinea == null) {
+            throw new ReglaDominioException("La línea de bolsa es obligatoria.");
+        }
+        if (stockDisponibleEnTaller < 0) {
+            throw new ReglaDominioException("El stock disponible no puede ser negativo.");
+        }
+        validarMoneda(nuevaLinea);
         if (nuevaLinea.cantidad() > stockDisponibleEnTaller) {
             throw new StockInsuficienteException("No hay suficiente stock en el taller para esta variante de talla.");
         }
@@ -45,11 +75,11 @@ public class BolsaDeEstilo {
         for (int i = 0; i < lineas.size(); i++) {
             LineaDeBolsa lineaExistente = lineas.get(i);
             if (lineaExistente.varianteId().equals(nuevaLinea.varianteId())) {
-                int cantidadTotal = lineaExistente.cantidad() + nuevaLinea.cantidad();
+                long cantidadTotal = (long) lineaExistente.cantidad() + nuevaLinea.cantidad();
                 if (cantidadTotal > stockDisponibleEnTaller) {
                     throw new StockInsuficienteException("La cantidad total excede el inventario físico disponible.");
                 }
-                lineas.set(i, lineaExistente.actualizarCantidad(cantidadTotal));
+                lineas.set(i, lineaExistente.actualizarCantidad((int) cantidadTotal));
                 return;
             }
         }
@@ -59,6 +89,12 @@ public class BolsaDeEstilo {
 
     public void cerrarBolsa() {
         this.cerrada = true;
+    }
+
+    private void validarMoneda(LineaDeBolsa nuevaLinea) {
+        if (lineas.stream().anyMatch(linea -> !linea.precioUnitario().moneda().equals(nuevaLinea.precioUnitario().moneda()))) {
+            throw new ReglaDominioException("Todas las líneas de la bolsa deben utilizar la misma moneda.");
+        }
     }
 
     private void validarEstadoActivo() {

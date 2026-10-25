@@ -3,14 +3,13 @@ package com.uniquindio.ecommerce.infrastructure.persistence.jpa;
 import com.uniquindio.ecommerce.domain.entity.BolsaDeEstilo;
 import com.uniquindio.ecommerce.domain.repository.BolsaDeEstiloRepository;
 import com.uniquindio.ecommerce.domain.valueobject.BolsaDeEstiloId;
-import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-@Repository
+/** Doble en memoria para pruebas; no se registra como bean de la aplicación. */
 public class InMemoryBolsaDeEstiloRepository implements BolsaDeEstiloRepository {
 
     private final Map<BolsaDeEstiloId, BolsaDeEstilo> bolsas = new HashMap<>();

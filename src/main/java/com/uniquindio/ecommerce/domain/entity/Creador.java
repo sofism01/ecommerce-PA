@@ -1,5 +1,8 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -15,11 +18,20 @@ public class Creador {
     private final List<VitrinaDeCreador> vitrinas;
 
     private Creador(UUID id, String nombre, String email, String telefono, String taller, boolean cuentaValidada, List<VitrinaDeCreador> vitrinas) {
-        this.id = Objects.requireNonNull(id, "El ID del creador es obligatorio.");
+        if (id == null) {
+            throw new ReglaDominioException("El ID del creador es obligatorio.");
+        }
+        this.id = id;
         this.nombre = validarNombre(nombre);
         this.email = validarEmail(email);
-        this.telefono = Objects.requireNonNull(telefono, "El teléfono es obligatorio.");
-        this.taller = Objects.requireNonNull(taller, "El taller es obligatorio.");
+        if (telefono == null || telefono.isBlank()) {
+            throw new ReglaDominioException("El teléfono es obligatorio.");
+        }
+        this.telefono = telefono.trim();
+        if (taller == null || taller.isBlank()) {
+            throw new ReglaDominioException("El taller es obligatorio.");
+        }
+        this.taller = taller.trim();
         this.cuentaValidada = cuentaValidada;
         this.vitrinas = validarVitrinas(vitrinas);
     }
@@ -30,31 +42,43 @@ public class Creador {
 
     private String validarNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
-            throw new IllegalArgumentException("El nombre no puede estar vacío.");
+            throw new ReglaDominioException("El nombre no puede estar vacío.");
         }
         return nombre.trim();
     }
 
     private String validarEmail(String email) {
-        if (email == null || email.isBlank() || !email.contains("@")) {
-            throw new IllegalArgumentException("El email no es válido.");
+        if (email == null || !email.trim().matches("^[^\\s@]+@[^\\s@]+$")) {
+            throw new ReglaDominioException("El email no es válido.");
         }
         return email.trim();
     }
 
     private List<VitrinaDeCreador> validarVitrinas(List<VitrinaDeCreador> vitrinas) {
         if (vitrinas == null || vitrinas.isEmpty()) {
-            throw new IllegalArgumentException("El creador debe tener al menos una vitrina activa.");
+            throw new ReglaDominioException("El creador debe tener al menos una vitrina activa.");
         }
-        return List.copyOf(vitrinas);
+        if (vitrinas.stream().anyMatch(Objects::isNull)) {
+            throw new ReglaDominioException("Las vitrinas no pueden contener elementos nulos.");
+        }
+        return new ArrayList<>(vitrinas);
     }
 
     public void agregarVitrina(VitrinaDeCreador vitrina) {
-        Objects.requireNonNull(vitrina, "La vitrina no puede ser nula.");
+        if (vitrina == null) {
+            throw new ReglaDominioException("La vitrina no puede ser nula.");
+        }
         vitrinas.add(vitrina);
     }
 
     public void eliminarVitrina(UUID vitrinaId) {
+        if (vitrinaId == null) {
+            throw new ReglaDominioException("El ID de la vitrina es obligatorio.");
+        }
+        long restantes = vitrinas.stream().filter(vitrina -> !vitrina.getId().equals(vitrinaId)).count();
+        if (restantes == 0) {
+            throw new ReglaDominioException("El creador debe tener al menos una vitrina activa.");
+        }
         vitrinas.removeIf(vitrina -> vitrina.getId().equals(vitrinaId));
     }
 
@@ -85,7 +109,7 @@ public class Creador {
     }
 
     public List<VitrinaDeCreador> getVitrinas() {
-        return vitrinas;
+        return List.copyOf(vitrinas);
     }
 
     // --- equals y hashCode ---

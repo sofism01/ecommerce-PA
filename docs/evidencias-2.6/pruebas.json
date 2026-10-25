@@ -1,0 +1,163 @@
+{
+  "comando": ".\\gradlew.bat clean test",
+  "java": "21.0.12.1",
+  "resultado": "BUILD SUCCESSFUL",
+  "totales": {
+    "tests": 140,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": [
+    {
+      "name": "com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest",
+      "tests": "4",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:24.433Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.012"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+      "tests": "7",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:24.445Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.642"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.BolsaDeEstiloTest",
+      "tests": "2",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:25.089Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.009"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.EntidadTest",
+      "tests": "3",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:25.099Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.008"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+      "tests": "21",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:25.109Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.138"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.PrendaDeAutorTest",
+      "tests": "2",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:25.248Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.003"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest",
+      "tests": "4",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:25.252Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.025"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.valueobject.ValueObjectTest",
+      "tests": "4",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:25.277Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.005"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.EcommerceApplicationTests",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:16.466Z",
+      "hostname": "JUANRESTREPO",
+      "time": "7.963"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.CasosDeUsoJpaIntegrationTest",
+      "tests": "4",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:25.284Z",
+      "hostname": "JUANRESTREPO",
+      "time": "1.975"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+      "tests": "19",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:27.262Z",
+      "hostname": "JUANRESTREPO",
+      "time": "1.677"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+      "tests": "12",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:28.941Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.895"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+      "tests": "10",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:29.844Z",
+      "hostname": "JUANRESTREPO",
+      "time": "2.0"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+      "tests": "45",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:31.851Z",
+      "hostname": "JUANRESTREPO",
+      "time": "1.766"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest",
+      "tests": "2",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-25T01:45:33.621Z",
+      "hostname": "JUANRESTREPO",
+      "time": "0.531"
+    }
+  ]
+}

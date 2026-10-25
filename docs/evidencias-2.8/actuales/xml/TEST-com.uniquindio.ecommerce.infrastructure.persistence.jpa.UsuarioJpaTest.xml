@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-25T02:45:54.701Z" hostname="JUANRESTREPO" time="0.554">
+  <properties/>
+  <testcase name="indiceUnicoImpideDuplicadosAunqueSeOmitaConsultaPrevia()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest" time="0.037"/>
+  <testcase name="conservaCuentaInactivaParaDenegarAutenticacion()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest" time="0.013"/>
+  <testcase name="persisteYReconstruyeTodosLosCamposSinAcoplarDominioAJpa()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest" time="0.015"/>
+  <system-out><![CDATA[2026-10-24T21:45:54.703-05:00  INFO 26756 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest]: UsuarioJpaTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:45:54.718-05:00  INFO 26756 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest
+2026-10-24T21:45:54.719-05:00  INFO 26756 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest]: UsuarioJpaTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:45:54.734-05:00  INFO 26756 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-24T21:45:54.765-05:00  INFO 26756 --- [    Test worker] c.u.e.i.persistence.jpa.UsuarioJpaTest   : Starting UsuarioJpaTest using Java 21.0.12.1 with PID 26756 (started by Juan Restrepo in EQUIPO_LOCAL\OneDrive - uniminuto.edu\Documentos\ecommerce-PA)
+2026-10-24T21:45:54.765-05:00  INFO 26756 --- [    Test worker] c.u.e.i.persistence.jpa.UsuarioJpaTest   : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T21:45:54.873-05:00  INFO 26756 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T21:45:54.919-05:00  INFO 26756 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-10-24T21:45:54.926-05:00  INFO 26756 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-10-24T21:45:54.933-05:00  INFO 26756 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:a762ac20-a123-4de3-9a43-2bdbf8eb46b9;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-10-24T21:45:54.963-05:00  INFO 26756 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T21:45:55.014-05:00  INFO 26756 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T21:45:55.017-05:00  INFO 26756 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:a762ac20-a123-4de3-9a43-2bdbf8eb46b9]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: A762AC20-A123-4DE3-9A43-2BDBF8EB46B9/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T21:45:55.120-05:00  INFO 26756 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T21:45:55.131-05:00  INFO 26756 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T21:45:55.183-05:00  INFO 26756 --- [    Test worker] c.u.e.i.persistence.jpa.UsuarioJpaTest   : Started UsuarioJpaTest in 0.445 seconds (process running for 16.214)
+2026-10-24T21:45:55.211-05:00  WARN 26756 --- [    Test worker] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-10-24T21:45:55.211-05:00  WARN 26756 --- [    Test worker] org.hibernate.orm.jdbc.error             : Violación de indice de Unicidad ó Clave primaria: "PUBLIC.UK_USUARIO_CORREO INDEX PUBLIC.UK_USUARIO_CORREO_INDEX_3 ON PUBLIC.USUARIOS(CORREO NULLS FIRST) VALUES ( /* 1 */ 'unico@boheme.test' )"
+Unique index or primary key violation: "PUBLIC.UK_USUARIO_CORREO INDEX PUBLIC.UK_USUARIO_CORREO_INDEX_3 ON PUBLIC.USUARIOS(CORREO NULLS FIRST) VALUES ( /* 1 */ 'unico@boheme.test' )"; SQL statement:
+insert into usuarios (activo,correo,nombre,password_hash,rol,id) values (?,?,?,?,?,?) [23505-240]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

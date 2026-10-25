@@ -1,0 +1,906 @@
+{
+  "fechaUtc": "2026-10-25T02:32:45.056940+00:00",
+  "baseUrl": "http://localhost:57880",
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 201,
+      "body": {
+        "id": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+        "nombre": "Cuenta HTTP comprador",
+        "correo": "comprador-a105a8b25e@boheme.test",
+        "rol": "COMPRADOR",
+        "activo": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:32:49Z",
+        "rol": "COMPRADOR",
+        "usuario": {
+          "id": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+          "nombre": "Cuenta HTTP comprador",
+          "correo": "comprador-a105a8b25e@boheme.test",
+          "rol": "COMPRADOR",
+          "activo": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 201,
+      "body": {
+        "id": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+        "nombre": "Cuenta HTTP vendedor",
+        "correo": "vendedor-a105a8b25e@boheme.test",
+        "rol": "VENDEDOR",
+        "activo": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:32:54Z",
+        "rol": "VENDEDOR",
+        "usuario": {
+          "id": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+          "nombre": "Cuenta HTTP vendedor",
+          "correo": "vendedor-a105a8b25e@boheme.test",
+          "rol": "VENDEDOR",
+          "activo": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 201,
+      "body": {
+        "id": "6bc1ced8-4dd7-4105-af15-51528e63ceab",
+        "nombre": "Cuenta HTTP otro-comprador",
+        "correo": "otro-comprador-a105a8b25e@boheme.test",
+        "rol": "COMPRADOR",
+        "activo": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:32:59Z",
+        "rol": "COMPRADOR",
+        "usuario": {
+          "id": "6bc1ced8-4dd7-4105-af15-51528e63ceab",
+          "nombre": "Cuenta HTTP otro-comprador",
+          "correo": "otro-comprador-a105a8b25e@boheme.test",
+          "rol": "COMPRADOR",
+          "activo": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 201,
+      "body": {
+        "id": "8cd76b6a-6251-41f1-a32d-5ade83a818e3",
+        "nombre": "Cuenta HTTP otro-vendedor",
+        "correo": "otro-vendedor-a105a8b25e@boheme.test",
+        "rol": "VENDEDOR",
+        "activo": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:33:03Z",
+        "rol": "VENDEDOR",
+        "usuario": {
+          "id": "8cd76b6a-6251-41f1-a32d-5ade83a818e3",
+          "nombre": "Cuenta HTTP otro-vendedor",
+          "correo": "otro-vendedor-a105a8b25e@boheme.test",
+          "rol": "VENDEDOR",
+          "activo": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 409,
+      "body": {
+        "timestamp": "2026-10-25T02:33:05.709941600Z",
+        "status": 409,
+        "code": "CORREO_DUPLICADO",
+        "message": "El correo ya está registrado.",
+        "path": "/api/auth/register",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T02:33:07.803920300Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "La solicitud contiene datos inválidos.",
+        "path": "/api/auth/register",
+        "details": {
+          "correo": "debe ser una dirección de correo electrónico con formato correcto",
+          "password": "el tamaño debe estar entre 12 y 72"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 400,
+      "body": {
+        "timestamp": "2026-10-25T02:33:09.867471600Z",
+        "status": 400,
+        "code": "DATOS_INVALIDOS",
+        "message": "El JSON o los parámetros de la solicitud son inválidos. Revisa los UUID, tallas y tipos de datos.",
+        "path": "/api/auth/register",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 401,
+      "body": {
+        "timestamp": "2026-10-25T02:33:12.166341500Z",
+        "status": 401,
+        "code": "NO_AUTENTICADO",
+        "message": "Credenciales o token inválidos.",
+        "path": "/api/auth/login",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 401,
+      "body": {
+        "timestamp": "2026-10-25T02:33:14.469268600Z",
+        "status": 401,
+        "code": "NO_AUTENTICADO",
+        "message": "Credenciales o token inválidos.",
+        "path": "/api/auth/login",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/prendas",
+      "status": 401,
+      "body": {
+        "timestamp": "2026-10-25T02:33:16.512786500Z",
+        "status": 401,
+        "code": "NO_AUTENTICADO",
+        "message": "Credenciales o token inválidos.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/prendas",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:18.580471200Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/prendas",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:20.668048400Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/prendas",
+      "status": 201,
+      "body": {
+        "prendaId": "e3c94821-2b0e-4f43-9202-f95238a696f9",
+        "creadorId": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+        "nombre": "Camisa verificación JWT",
+        "descripcion": "Muestra local 2.7",
+        "precioBase": {
+          "monto": 40,
+          "moneda": "COP"
+        },
+        "variantes": [
+          {
+            "varianteId": "7f010e1a-3dbd-483b-a4c4-d284d9d33cdf",
+            "sku": "HTTP-JWT-M",
+            "tipoTalla": "M",
+            "stockDisponible": 3
+          }
+        ],
+        "stockTotal": 3,
+        "disponibleParaLaVenta": true
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/prendas/e3c94821-2b0e-4f43-9202-f95238a696f9/suspender",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:24.791528500Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/prendas/e3c94821-2b0e-4f43-9202-f95238a696f9/suspender",
+        "details": {}
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/prendas/e3c94821-2b0e-4f43-9202-f95238a696f9/variantes/7f010e1a-3dbd-483b-a4c4-d284d9d33cdf/stock",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:26.840785Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/prendas/e3c94821-2b0e-4f43-9202-f95238a696f9/variantes/7f010e1a-3dbd-483b-a4c4-d284d9d33cdf/stock",
+        "details": {}
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/prendas/e3c94821-2b0e-4f43-9202-f95238a696f9/variantes/7f010e1a-3dbd-483b-a4c4-d284d9d33cdf/stock",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/prendas/e3c94821-2b0e-4f43-9202-f95238a696f9/suspender",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/prendas/36823ff4-3389-4374-96f3-51107efc4fdc/suspender",
+      "status": 404,
+      "body": {
+        "timestamp": "2026-10-25T02:33:33.004234100Z",
+        "status": 404,
+        "code": "RECURSO_NO_ENCONTRADO",
+        "message": "La prenda no existe.",
+        "path": "/api/prendas/36823ff4-3389-4374-96f3-51107efc4fdc/suspender",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/bolsas",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:35.046682600Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/bolsas",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/bolsas",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:37.092480500Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/bolsas",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/bolsas",
+      "status": 201,
+      "body": {
+        "bolsaId": "31999eb7-7104-41d7-8892-d6807cc3d88f",
+        "clienteId": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+        "lineas": [],
+        "cerrada": false
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/bolsas/activas/3b46c912-5566-467e-b3dd-65bae9824cb4",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:41.198386500Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/bolsas/activas/3b46c912-5566-467e-b3dd-65bae9824cb4",
+        "details": {}
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/bolsas/31999eb7-7104-41d7-8892-d6807cc3d88f/items",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:43.260088500Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/bolsas/31999eb7-7104-41d7-8892-d6807cc3d88f/items",
+        "details": {}
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/bolsas/31999eb7-7104-41d7-8892-d6807cc3d88f/cerrar",
+      "status": 403,
+      "body": {
+        "timestamp": "2026-10-25T02:33:45.314995Z",
+        "status": 403,
+        "code": "ACCESO_DENEGADO",
+        "message": "No tienes permiso para acceder a este recurso.",
+        "path": "/api/bolsas/31999eb7-7104-41d7-8892-d6807cc3d88f/cerrar",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/bolsas/activas/3b46c912-5566-467e-b3dd-65bae9824cb4",
+      "status": 200,
+      "body": {
+        "bolsaId": "31999eb7-7104-41d7-8892-d6807cc3d88f",
+        "clienteId": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+        "lineas": [],
+        "cerrada": false
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/bolsas/31999eb7-7104-41d7-8892-d6807cc3d88f/items",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/bolsas/31999eb7-7104-41d7-8892-d6807cc3d88f/cerrar",
+      "status": 204,
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/api/bolsas/activas/3b46c912-5566-467e-b3dd-65bae9824cb4",
+      "status": 404,
+      "body": {
+        "timestamp": "2026-10-25T02:33:53.514466500Z",
+        "status": 404,
+        "code": "RECURSO_NO_ENCONTRADO",
+        "message": "El cliente no tiene una bolsa de estilo activa.",
+        "path": "/api/bolsas/activas/3b46c912-5566-467e-b3dd-65bae9824cb4",
+        "details": {}
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/prendas",
+      "status": 401,
+      "body": {
+        "timestamp": "2026-10-25T02:33:55.534758500Z",
+        "status": 401,
+        "code": "NO_AUTENTICADO",
+        "message": "Credenciales o token inválidos.",
+        "path": "/api/prendas",
+        "details": {}
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          },
+          {
+            "prendaId": "e3c94821-2b0e-4f43-9202-f95238a696f9",
+            "creadorId": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+            "nombre": "Camisa verificación JWT",
+            "descripcion": "Muestra local 2.7",
+            "precioBase": {
+              "monto": 40,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "7f010e1a-3dbd-483b-a4c4-d284d9d33cdf",
+                "sku": "HTTP-JWT-M",
+                "tipoTalla": "M",
+                "stockDisponible": 2
+              }
+            ],
+            "stockTotal": 3,
+            "disponibleParaLaVenta": false
+          },
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000003",
+            "creadorId": "81000000-0000-4000-8000-000000000002",
+            "nombre": "Chaqueta de autor",
+            "descripcion": "Chaqueta de edición limitada",
+            "precioBase": {
+              "monto": 95.9,
+              "moneda": "USD"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000005",
+                "sku": "BOH-CHAQ-L",
+                "tipoTalla": "L",
+                "stockDisponible": 2
+              }
+            ],
+            "stockTotal": 2,
+            "disponibleParaLaVenta": true
+          },
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000002",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Vestido de algodón",
+            "descripcion": "Vestido de colección independiente",
+            "precioBase": {
+              "monto": 220000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000003",
+                "sku": "BOH-VEST-S",
+                "tipoTalla": "S",
+                "stockDisponible": 4
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000004",
+                "sku": "BOH-VEST-M",
+                "tipoTalla": "M",
+                "stockDisponible": 0
+              }
+            ],
+            "stockTotal": 4,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 4,
+        "totalPages": 1,
+        "page": 0,
+        "size": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas?q=LINO&moneda=COP&page=0&size=1",
+      "status": 200,
+      "body": {
+        "content": [
+          {
+            "prendaId": "91000000-0000-4000-8000-000000000001",
+            "creadorId": "81000000-0000-4000-8000-000000000001",
+            "nombre": "Camisa de lino artesanal",
+            "descripcion": "Camisa de autor confeccionada en lino",
+            "precioBase": {
+              "monto": 150000.0,
+              "moneda": "COP"
+            },
+            "variantes": [
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000001",
+                "sku": "BOH-LINO-M",
+                "tipoTalla": "M",
+                "stockDisponible": 5
+              },
+              {
+                "varianteId": "a1000000-0000-4000-8000-000000000002",
+                "sku": "BOH-LINO-L",
+                "tipoTalla": "L",
+                "stockDisponible": 3
+              }
+            ],
+            "stockTotal": 8,
+            "disponibleParaLaVenta": true
+          }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "page": 0,
+        "size": 1
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/prendas/creador/75c5d8e0-52ca-41e9-bfea-113246546bb4",
+      "status": 200,
+      "body": [
+        {
+          "prendaId": "e3c94821-2b0e-4f43-9202-f95238a696f9",
+          "creadorId": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+          "nombre": "Camisa verificación JWT",
+          "descripcion": "Muestra local 2.7",
+          "precioBase": {
+            "monto": 40,
+            "moneda": "COP"
+          },
+          "variantes": [
+            {
+              "varianteId": "7f010e1a-3dbd-483b-a4c4-d284d9d33cdf",
+              "sku": "HTTP-JWT-M",
+              "tipoTalla": "M",
+              "stockDisponible": 2
+            }
+          ],
+          "stockTotal": 3,
+          "disponibleParaLaVenta": false
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/reportes/creadores/variedad",
+      "status": 200,
+      "body": [
+        {
+          "creadorId": "81000000-0000-4000-8000-000000000001",
+          "cantidadVariantes": 4,
+          "cantidadPrendas": 2
+        },
+        {
+          "creadorId": "81000000-0000-4000-8000-000000000002",
+          "cantidadVariantes": 1,
+          "cantidadPrendas": 1
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api-docs",
+      "status": 200,
+      "body": {
+        "operaciones": [
+          "DELETE /api/bolsas/{bolsaId}/items",
+          "GET /api/bolsas/activas/{clienteId}",
+          "GET /api/prendas",
+          "GET /api/prendas/creador/{creadorId}",
+          "GET /api/reportes/creadores/variedad",
+          "PATCH /api/bolsas/{bolsaId}/cerrar",
+          "PATCH /api/prendas/{prendaId}/suspender",
+          "PATCH /api/prendas/{prendaId}/variantes/{varianteId}/stock",
+          "POST /api/auth/login",
+          "POST /api/auth/register",
+          "POST /api/bolsas",
+          "POST /api/prendas"
+        ],
+        "bearerAuth": {
+          "type": "http",
+          "description": "Pega sólo el JWT devuelto por /api/auth/login, sin el prefijo Bearer.",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/swagger-ui/index.html",
+      "status": 200,
+      "body": null
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:34:10Z",
+        "rol": "VENDEDOR",
+        "usuario": {
+          "id": "81000000-0000-4000-8000-000000000001",
+          "nombre": "Cuenta demo VENDEDOR",
+          "correo": "vendedor1@boheme.test",
+          "rol": "VENDEDOR",
+          "activo": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:34:12Z",
+        "rol": "VENDEDOR",
+        "usuario": {
+          "id": "81000000-0000-4000-8000-000000000002",
+          "nombre": "Cuenta demo VENDEDOR",
+          "correo": "vendedor2@boheme.test",
+          "rol": "VENDEDOR",
+          "activo": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:34:15Z",
+        "rol": "COMPRADOR",
+        "usuario": {
+          "id": "c1000000-0000-4000-8000-000000000001",
+          "nombre": "Cuenta demo COMPRADOR",
+          "correo": "comprador1@boheme.test",
+          "rol": "COMPRADOR",
+          "activo": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "body": {
+        "token": "[JWT omitido; claims guardados por separado]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T03:34:17Z",
+        "rol": "COMPRADOR",
+        "usuario": {
+          "id": "c1000000-0000-4000-8000-000000000002",
+          "nombre": "Cuenta demo COMPRADOR",
+          "correo": "comprador2@boheme.test",
+          "rol": "COMPRADOR",
+          "activo": true
+        }
+      }
+    }
+  ],
+  "sql": [
+    {
+      "nombre": "usuarios-h2",
+      "consulta": "SELECT id, correo, rol, activo, LEFT(password_hash,7) AS bcrypt_prefijo, LENGTH(password_hash) AS hash_longitud FROM usuarios ORDER BY correo",
+      "filas": [
+        {
+          "ID": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+          "CORREO": "comprador-a105a8b25e@boheme.test",
+          "ROL": "COMPRADOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        },
+        {
+          "ID": "c1000000-0000-4000-8000-000000000001",
+          "CORREO": "comprador1@boheme.test",
+          "ROL": "COMPRADOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        },
+        {
+          "ID": "c1000000-0000-4000-8000-000000000002",
+          "CORREO": "comprador2@boheme.test",
+          "ROL": "COMPRADOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        },
+        {
+          "ID": "6bc1ced8-4dd7-4105-af15-51528e63ceab",
+          "CORREO": "otro-comprador-a105a8b25e@boheme.test",
+          "ROL": "COMPRADOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        },
+        {
+          "ID": "8cd76b6a-6251-41f1-a32d-5ade83a818e3",
+          "CORREO": "otro-vendedor-a105a8b25e@boheme.test",
+          "ROL": "VENDEDOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        },
+        {
+          "ID": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+          "CORREO": "vendedor-a105a8b25e@boheme.test",
+          "ROL": "VENDEDOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        },
+        {
+          "ID": "81000000-0000-4000-8000-000000000001",
+          "CORREO": "vendedor1@boheme.test",
+          "ROL": "VENDEDOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        },
+        {
+          "ID": "81000000-0000-4000-8000-000000000002",
+          "CORREO": "vendedor2@boheme.test",
+          "ROL": "VENDEDOR",
+          "ACTIVO": "TRUE",
+          "BCRYPT_PREFIJO": "$2a$12$",
+          "HASH_LONGITUD": "60"
+        }
+      ]
+    },
+    {
+      "nombre": "propiedad-prendas-h2",
+      "consulta": "SELECT p.id, p.creador_id, u.correo, u.rol FROM prendas_autor p JOIN usuarios u ON u.id=p.creador_id WHERE p.eliminado=FALSE ORDER BY p.id",
+      "filas": [
+        {
+          "ID": "91000000-0000-4000-8000-000000000001",
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000001",
+          "CORREO": "vendedor1@boheme.test",
+          "ROL": "VENDEDOR"
+        },
+        {
+          "ID": "91000000-0000-4000-8000-000000000002",
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000001",
+          "CORREO": "vendedor1@boheme.test",
+          "ROL": "VENDEDOR"
+        },
+        {
+          "ID": "91000000-0000-4000-8000-000000000003",
+          "CREADOR_ID": "81000000-0000-4000-8000-000000000002",
+          "CORREO": "vendedor2@boheme.test",
+          "ROL": "VENDEDOR"
+        },
+        {
+          "ID": "e3c94821-2b0e-4f43-9202-f95238a696f9",
+          "CREADOR_ID": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+          "CORREO": "vendedor-a105a8b25e@boheme.test",
+          "ROL": "VENDEDOR"
+        }
+      ]
+    },
+    {
+      "nombre": "propiedad-bolsas-h2",
+      "consulta": "SELECT b.id, b.cliente_id, u.correo, u.rol FROM bolsas_estilo b JOIN usuarios u ON u.id=b.cliente_id WHERE b.eliminado=FALSE ORDER BY b.id",
+      "filas": [
+        {
+          "ID": "31999eb7-7104-41d7-8892-d6807cc3d88f",
+          "CLIENTE_ID": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+          "CORREO": "comprador-a105a8b25e@boheme.test",
+          "ROL": "COMPRADOR"
+        },
+        {
+          "ID": "b1000000-0000-4000-8000-000000000001",
+          "CLIENTE_ID": "c1000000-0000-4000-8000-000000000001",
+          "CORREO": "comprador1@boheme.test",
+          "ROL": "COMPRADOR"
+        },
+        {
+          "ID": "b1000000-0000-4000-8000-000000000002",
+          "CLIENTE_ID": "c1000000-0000-4000-8000-000000000002",
+          "CORREO": "comprador2@boheme.test",
+          "ROL": "COMPRADOR"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "sub": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+      "correo": "comprador-a105a8b25e@boheme.test",
+      "iss": "boheme",
+      "exp": 1792899169,
+      "iat": 1792895569,
+      "jti": "0e4536ba-0689-4703-bc62-976efe68b3c7",
+      "rol": "COMPRADOR"
+    },
+    {
+      "sub": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+      "correo": "vendedor-a105a8b25e@boheme.test",
+      "iss": "boheme",
+      "exp": 1792899174,
+      "iat": 1792895574,
+      "jti": "8f998696-77b2-42ad-a809-614b511bd7f9",
+      "rol": "VENDEDOR"
+    },
+    {
+      "sub": "6bc1ced8-4dd7-4105-af15-51528e63ceab",
+      "correo": "otro-comprador-a105a8b25e@boheme.test",
+      "iss": "boheme",
+      "exp": 1792899179,
+      "iat": 1792895579,
+      "jti": "c0238907-01e2-4040-8d7e-9007b23a0ec1",
+      "rol": "COMPRADOR"
+    },
+    {
+      "sub": "8cd76b6a-6251-41f1-a32d-5ade83a818e3",
+      "correo": "otro-vendedor-a105a8b25e@boheme.test",
+      "iss": "boheme",
+      "exp": 1792899183,
+      "iat": 1792895583,
+      "jti": "78015f51-0ebf-4834-b5d4-f19b1d53299b",
+      "rol": "VENDEDOR"
+    }
+  ],
+  "resultado": "OK: registro, login, JWT, roles, propiedad, consultas públicas, OpenAPI y H2 comprobados por HTTP real.",
+  "muestras": {
+    "vendedor": "75c5d8e0-52ca-41e9-bfea-113246546bb4",
+    "comprador": "3b46c912-5566-467e-b3dd-65bae9824cb4",
+    "prenda": "e3c94821-2b0e-4f43-9202-f95238a696f9",
+    "bolsa": "31999eb7-7104-41d7-8892-d6807cc3d88f"
+  }
+}

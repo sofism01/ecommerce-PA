@@ -1,0 +1,12 @@
+﻿{
+    "archivosAntes":  129,
+    "archivosDespues":  129,
+    "archivosModificados":  1,
+    "cambios":  [
+                    {
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/EcommerceApplicationTests.java",
+                        "sha256Anterior":  "CFC24FEA07EF0BEE6A00B0A6C1B85A178598A406AE2F0A1CF3D54634E1311CF0",
+                        "sha256Final":  "CC4ED0E00FC55D4706475D6FB291EC509E835E3875F7C9CB75A3C9B1CC71D53E"
+                    }
+                ]
+}

@@ -1,0 +1,22 @@
+{
+  "archivosPrevios": 272,
+  "modificados": [
+    "README.md"
+  ],
+  "readmeAnteriorConservado": true,
+  "pruebasAnterioresIntactas": 21,
+  "produccionConfiguracionDependenciasSinCambios": true,
+  "agregados": [
+    "docs/seguimiento-pruebas-avanzadas/auditoria-inicial.json",
+    "docs/seguimiento-pruebas-avanzadas/captura-estado.json",
+    "docs/seguimiento-pruebas-avanzadas/gradle-clean-test.log",
+    "docs/seguimiento-pruebas-avanzadas/gradle-integracion-aislada.log",
+    "docs/seguimiento-pruebas-avanzadas/integracion-aislada.json",
+    "docs/seguimiento-pruebas-avanzadas/README.md",
+    "docs/seguimiento-pruebas-avanzadas/reporte-gradle-html.zip",
+    "docs/seguimiento-pruebas-avanzadas/resultado-final.json",
+    "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraControllerSeguimientoTest.java",
+    "src/test/java/com/uniquindio/ecommerce/infrastructure/security/BolsaSeguridadSeguimientoIntegrationTest.java",
+    "docs/seguimiento-pruebas-avanzadas/verificacion-integridad.json"
+  ]
+}

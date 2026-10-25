@@ -1,0 +1,10 @@
+﻿{
+    "archivosDominio":  34,
+    "referenciasProhibidas":  0,
+    "importsFueraDeJdkYDominio":  0,
+    "archivosProduccionModificados":  0,
+    "archivosPruebasModificados":  1,
+    "evidenciaH2":  [
+                        "2026-10-24T21:45:54.021-05:00  INFO 26756 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url=\u0027jdbc:h2:mem:85c765e4-0bcc-4736-8058-816eb5bf92ad;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false\u0027, username=\u0027sa\u0027"
+                    ]
+}

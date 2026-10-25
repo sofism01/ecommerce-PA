@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T02:45:48.731Z" hostname="JUANRESTREPO" time="0.01">
+  <properties/>
+  <testcase name="prendasYVariantesAusentes_SeDiferencianDeOtrasReglas()" classname="com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest" time="0.003"/>
+  <testcase name="bolsa_FlujoActivoVaciadoYCierreYErroresConservanReglas()" classname="com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest" time="0.002"/>
+  <testcase name="listado_RecuperaTodasLasPrendasYFiltraPorCreador()" classname="com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest" time="0.001"/>
+  <testcase name="suspensionYStock_SeConservanEnElRepositorio()" classname="com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

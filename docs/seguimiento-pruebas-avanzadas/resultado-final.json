@@ -1,0 +1,299 @@
+{
+  "actividad": "Seguimiento: Pruebas avanzadas del backend",
+  "fechaRevisionUtc": "2026-10-25T21:26:16.949924+00:00",
+  "comando": ".\\gradlew.bat clean test --console=plain",
+  "gradle": "BUILD SUCCESSFUL",
+  "clases": 23,
+  "totales": {
+    "tests": 224,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exitosas": 224
+  },
+  "baseEntregable2": 219,
+  "nuevas": 5,
+  "metodosSeleccionados": [
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+      "metodo": "guardarYRecuperarPrenda_ConservaTodosLosAtributosVariantesYEstado()",
+      "segundos": "0.017",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+      "metodo": "rankingCuentaVariantesYPrendasDistintasCoincideConSqlReal()",
+      "segundos": "0.024",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+      "metodo": "excluyePrendasEliminadasDelContenidoConteoYRanking()",
+      "segundos": "0.031",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+      "metodo": "excluyeVarianteHuerfanaEliminadaSinPerderPrenda()",
+      "segundos": "0.032",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+      "metodo": "suspensionExcluyeOfertaDelRankingPeroNoDelListado()",
+      "segundos": "0.082",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+      "metodo": "desempataRankingPorCreadorAscendente()",
+      "segundos": "0.036",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.security.BolsaSeguridadSeguimientoIntegrationTest",
+      "metodo": "consultarMismaBolsaSinTokenDevuelve401()",
+      "segundos": "0.006",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.security.BolsaSeguridadSeguimientoIntegrationTest",
+      "metodo": "consultarMismaBolsaConJwtVendedorValidoDevuelve403()",
+      "segundos": "0.005",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.security.BolsaSeguridadSeguimientoIntegrationTest",
+      "metodo": "consultarMismaBolsaConJwtCompradorPropietarioDevuelve200()",
+      "segundos": "0.011",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest",
+      "metodo": "flujoCompletoConErrorIntencionalStockPedidoYRelecturaDesdeH2()",
+      "segundos": "0.619",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.rest.controller.CompraControllerSeguimientoTest",
+      "metodo": "agregarABolsaInexistenteDevuelve404SinSolicitarGuardado()",
+      "segundos": "0.043",
+      "estado": "exitosa"
+    },
+    {
+      "clase": "com.uniquindio.ecommerce.infrastructure.rest.controller.CompraControllerSeguimientoTest",
+      "metodo": "agregarCantidadSuperiorAlStockDevuelve409SinSolicitarGuardado()",
+      "segundos": "0.019",
+      "estado": "exitosa"
+    }
+  ],
+  "suites": [
+    {
+      "name": "com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:34.348Z",
+      "time": "0.011"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:34.359Z",
+      "time": "0.679"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.BolsaDeEstiloTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.039Z",
+      "time": "0.011"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.EntidadTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.051Z",
+      "time": "0.007"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+      "tests": "21",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.059Z",
+      "time": "0.138"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.PedidoCompraTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.197Z",
+      "time": "0.012"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.PrendaDeAutorTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.210Z",
+      "time": "0.003"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.214Z",
+      "time": "0.021"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.domain.valueobject.ValueObjectTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.236Z",
+      "time": "0.006"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.EcommerceApplicationTests",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:24.428Z",
+      "time": "9.915"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.CasosDeUsoJpaIntegrationTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:35.244Z",
+      "time": "2.795"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+      "tests": "19",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:38.042Z",
+      "time": "1.912"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.FlujoCompraIntegrationTest",
+      "tests": "16",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:39.962Z",
+      "time": "2.995"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:42.962Z",
+      "time": "1.329"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:44.295Z",
+      "time": "0.826"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:45.131Z",
+      "time": "2.051"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.CompraControllerSeguimientoTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:47.187Z",
+      "time": "1.023"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:48.215Z",
+      "time": "8.585"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+      "tests": "45",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:56.802Z",
+      "time": "1.595"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:58.402Z",
+      "time": "0.45"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.security.BolsaSeguridadSeguimientoIntegrationTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:25:58.855Z",
+      "time": "1.942"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:26:00.807Z",
+      "time": "0.006"
+    },
+    {
+      "name": "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+      "tests": "37",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-25T21:26:00.813Z",
+      "time": "4.655"
+    }
+  ]
+}

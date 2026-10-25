@@ -35,3 +35,27 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Documentos personales de preparacion: no publicar
+**/GUION_SUSTENTACION_ENTREGABLE_2.docx
+**/GUIA_PASO_A_PASO_ENTREGA_SEGUIMIENTO_BOHEME.docx
+**/GUIA_PREPARACION_Y_VIDEO_ENTREGABLE_2.md
+
+# Secretos, archivos locales y temporales
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+Thumbs.db
+Desktop.ini
+.DS_Store
+__pycache__/
+*.pyc
+*.tmp
+*.swp
+*.bak
+*.jks
+/jdk*/
+/.jdks/

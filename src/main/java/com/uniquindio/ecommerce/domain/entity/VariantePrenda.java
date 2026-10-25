@@ -1,5 +1,7 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+
 import com.uniquindio.ecommerce.domain.valueobject.SKU;
 import com.uniquindio.ecommerce.domain.valueobject.TipoTalla;
 
@@ -14,12 +16,21 @@ public class VariantePrenda {
     private final int stockDisponible;
 
     private VariantePrenda(UUID id, SKU sku, TipoTalla tipoTalla, int stockDisponible) {
-        this.id = Objects.requireNonNull(id, "El ID de la variante es obligatorio.");
-        this.sku = Objects.requireNonNull(sku, "El SKU es obligatorio.");
-        this.tipoTalla = Objects.requireNonNull(tipoTalla, "El tipo de talla es obligatorio.");
+        if (id == null) {
+            throw new ReglaDominioException("El ID de la variante es obligatorio.");
+        }
+        this.id = id;
+        if (sku == null) {
+            throw new ReglaDominioException("El SKU es obligatorio.");
+        }
+        this.sku = sku;
+        if (tipoTalla == null) {
+            throw new ReglaDominioException("El tipo de talla es obligatorio.");
+        }
+        this.tipoTalla = tipoTalla;
 
         if (stockDisponible < 0) {
-            throw new IllegalArgumentException("El stock disponible no puede ser negativo.");
+            throw new ReglaDominioException("El stock disponible no puede ser negativo.");
         }
         this.stockDisponible = stockDisponible;
     }
@@ -30,7 +41,7 @@ public class VariantePrenda {
 
     public VariantePrenda reducirStock(int cantidad) {
         if (cantidad <= 0) {
-            throw new IllegalArgumentException("La cantidad a reducir debe ser mayor a cero.");
+            throw new ReglaDominioException("La cantidad a reducir debe ser mayor a cero.");
         }
         if (this.stockDisponible < cantidad) {
             throw new com.uniquindio.ecommerce.domain.exception.StockInsuficienteException("Stock insuficiente para la variante con SKU: " + sku.value());
@@ -40,7 +51,7 @@ public class VariantePrenda {
 
     public VariantePrenda actualizarStock(int nuevoStock) {
         if (nuevoStock < 0) {
-            throw new IllegalArgumentException("El stock no puede ser negativo.");
+            throw new ReglaDominioException("El stock no puede ser negativo.");
         }
         return new VariantePrenda(this.id, this.sku, this.tipoTalla, nuevoStock);
     }

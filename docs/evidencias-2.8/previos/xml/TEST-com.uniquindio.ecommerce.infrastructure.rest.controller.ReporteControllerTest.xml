@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-25T02:31:46.591Z" hostname="JUANRESTREPO" time="0.473">
+  <properties/>
+  <testcase name="variedad_Devuelve200ConConteosYDelega()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest" time="0.019"/>
+  <testcase name="variedad_SinDatosDevuelve200YArrayVacio()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest" time="0.011"/>
+  <system-out><![CDATA[2026-10-24T21:31:46.592-05:00  INFO 38288 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest]: ReporteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:31:46.602-05:00  INFO 38288 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest
+2026-10-24T21:31:46.603-05:00  INFO 38288 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest]: ReporteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:31:46.610-05:00  INFO 38288 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-24T21:31:46.642-05:00  INFO 38288 --- [    Test worker] c.u.e.i.r.c.ReporteControllerTest        : Starting ReporteControllerTest using Java 21.0.12.1 with PID 38288 (started by Juan Restrepo in EQUIPO_LOCAL\OneDrive - uniminuto.edu\Documentos\ecommerce-PA)
+2026-10-24T21:31:46.643-05:00  INFO 38288 --- [    Test worker] c.u.e.i.r.c.ReporteControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T21:31:47.012-05:00  INFO 38288 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T21:31:47.012-05:00  INFO 38288 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T21:31:47.014-05:00  INFO 38288 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-24T21:31:47.027-05:00  INFO 38288 --- [    Test worker] c.u.e.i.r.c.ReporteControllerTest        : Started ReporteControllerTest in 0.412 seconds (process running for 20.901)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

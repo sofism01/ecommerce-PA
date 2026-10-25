@@ -2,12 +2,16 @@ package com.uniquindio.ecommerce.domain.repository;
 
 import com.uniquindio.ecommerce.domain.entity.PrendaDeAutor;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
+import java.util.List;
 import java.util.UUID;
 
 public interface PrendaDeAutorRepository {
+    /** Lectura para una modificación atómica; el adaptador decide el control de concurrencia. */
+    default Optional<PrendaDeAutor> obtenerPrendaParaActualizar(PrendaDeAutorId id) {
+        return obtenerPrendaPorId(id);
+    }
 
     /**
      * Recupera una prenda de autor por su identificador único de dominio.
@@ -17,7 +21,7 @@ public interface PrendaDeAutorRepository {
     /**
      * Recupera todas las prendas de autor creadas por un diseñador específico.
      */
-    Optional<PrendaDeAutor> obtenerPrendaPorCreador(UUID creadorId);
+    List<PrendaDeAutor> obtenerPrendasPorCreador(UUID creadorId);
 
     /**
      * Almacena o actualiza una prenda de autor.

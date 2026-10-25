@@ -1,5 +1,7 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+
 import com.uniquindio.ecommerce.domain.valueobject.Dinero;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
 import com.uniquindio.ecommerce.domain.valueobject.SKU;
@@ -23,8 +25,8 @@ public class PrendaDeAutorTest {
         Dinero precioBase = new Dinero(new BigDecimal("100.00"), "USD");
 
         // Act & Assert
-        Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                PrendaDeAutor.crear(id, creadorId, "Camisa", "Camisa de algodón", precioBase, List.of())
+        Exception exception = assertThrows(ReglaDominioException.class, () ->
+                PrendaDeAutor.crear(id, creadorId, "Camisa", "Camisa de algodón", precioBase, List.of(), 0)
         );
         assertEquals("Una prenda de autor debe tener al menos una variante de talla.", exception.getMessage());
     }
@@ -35,7 +37,7 @@ public class PrendaDeAutorTest {
         // Arrange
         VariantePrenda variante = VariantePrenda.crear(UUID.randomUUID(), new SKU("SKU123"), TipoTalla.M, 10);
         PrendaDeAutor prenda = PrendaDeAutor.crear(PrendaDeAutorId.random(), UUID.randomUUID(),
-                "Camisa", "Camisa de algodón", new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante));
+                "Camisa", "Camisa de algodón", new Dinero(new BigDecimal("50.00"), "USD"), List.of(variante), 10);
         Dinero nuevoPrecio = new Dinero(new BigDecimal("75.00"), "USD");
 
         // Act

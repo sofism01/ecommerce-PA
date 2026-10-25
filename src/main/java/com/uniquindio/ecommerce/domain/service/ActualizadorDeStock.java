@@ -17,7 +17,7 @@ public class ActualizadorDeStock {
     public void actualizarStock(PrendaDeAutorId id, int nuevoStock) {
         Optional<PrendaDeAutor> prenda = prendaDeAutorRepository.obtenerPrendaPorId(id);
         prenda.ifPresent(p -> {
-            p.setStockTotal(nuevoStock);
+            p.actualizarStock(nuevoStock);
             prendaDeAutorRepository.guardarPrenda(p);
         });
     }

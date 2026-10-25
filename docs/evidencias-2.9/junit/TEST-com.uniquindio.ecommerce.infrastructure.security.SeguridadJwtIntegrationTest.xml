@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" tests="37" skipped="0" failures="0" errors="0" timestamp="2026-10-25T03:05:23.713Z" hostname="JUANRESTREPO" time="4.534">
+  <properties/>
+  <testcase name="tokenConFirmaInvalidaDevuelve401()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.009"/>
+  <testcase name="registroRechazaMasDe72BytesUtf8YNumerosComoRol()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.007"/>
+  <testcase name="swaggerDeclaraBearerYProteccionPorOperacion()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.372"/>
+  <testcase name="[1] path = &quot;/api/prendas&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.018"/>
+  <testcase name="[2] path = &quot;/api/prendas/creador/00000000-0000-0000-0000-000000000001&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.011"/>
+  <testcase name="[3] path = &quot;/api/reportes/creadores/variedad&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.008"/>
+  <testcase name="[1] metodo = &quot;POST&quot;, path = &quot;/api/prendas&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.009"/>
+  <testcase name="[2] metodo = &quot;PATCH&quot;, path = &quot;/api/prendas/00000000-0000-0000-0000-000000000001/suspender&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.007"/>
+  <testcase name="[3] metodo = &quot;PATCH&quot;, path = &quot;/api/prendas/00000000-0000-0000-0000-000000000001/variantes/00000000-0000-0000-0000-000000000002/stock&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.008"/>
+  <testcase name="[4] metodo = &quot;POST&quot;, path = &quot;/api/bolsas&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.007"/>
+  <testcase name="[5] metodo = &quot;GET&quot;, path = &quot;/api/bolsas/activas/00000000-0000-0000-0000-000000000001&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.007"/>
+  <testcase name="[6] metodo = &quot;DELETE&quot;, path = &quot;/api/bolsas/00000000-0000-0000-0000-000000000001/items&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.007"/>
+  <testcase name="[7] metodo = &quot;PATCH&quot;, path = &quot;/api/bolsas/00000000-0000-0000-0000-000000000001/cerrar&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.007"/>
+  <testcase name="registroDuplicadoNormalizaCorreoYDevuelve409()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.006"/>
+  <testcase name="cuentaInactivaRechazaLoginYTokenPrevio()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.219"/>
+  <testcase name="tokenExpiradoDevuelve401()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.003"/>
+  <testcase name="compradorNoPuedeConsultarVaciarNiCerrarBolsaAjena()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.02"/>
+  <testcase name="[1] correo = &quot;vendedor@boheme.test&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.211"/>
+  <testcase name="[2] correo = &quot;inexistente@boheme.test&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.21"/>
+  <testcase name="loginDevuelveBearerExpiracionYClaimsCorrectos()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.212"/>
+  <testcase name="registroPersisteHashBCryptYNoExponePassword()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.415"/>
+  <testcase name="vendedorOperaSuPrendaYNoPuedeSuplantarCreador()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.04"/>
+  <testcase name="recursosInexistentesDevuelven404ConRolCorrecto()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.01"/>
+  <testcase name="[1] campo = &quot;nombre&quot;, valor = &quot;&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.015"/>
+  <testcase name="[2] campo = &quot;correo&quot;, valor = &quot;no-es-correo&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.006"/>
+  <testcase name="[3] campo = &quot;password&quot;, valor = &quot;corta&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.004"/>
+  <testcase name="[4] campo = &quot;rol&quot;, valor = &quot;ADMIN&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.003"/>
+  <testcase name="[5] campo = &quot;rol&quot;, valor = &quot;ROLE_VENDEDOR&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.003"/>
+  <testcase name="[6] campo = &quot;nombre&quot;, valor = &quot; &quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.004"/>
+  <testcase name="[7] campo = &quot;password&quot;, valor = &quot; &quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.004"/>
+  <testcase name="vendedorNoPuedeModificarPrendaAjena()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.013"/>
+  <testcase name="[1] caso = &quot;sin-expiracion&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.003"/>
+  <testcase name="[2] caso = &quot;rol-invalido&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.004"/>
+  <testcase name="[3] caso = &quot;usuario-inexistente&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.004"/>
+  <testcase name="[4] caso = &quot;sub-invalido&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.003"/>
+  <testcase name="[5] caso = &quot;expedicion-futura&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.004"/>
+  <testcase name="compradorOperaSuBolsaYNoPuedeSuplantarCliente()" classname="com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest" time="0.021"/>
+  <system-out><![CDATA[2026-10-24T22:05:23.716-05:00  INFO 25360 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest]: SeguridadJwtIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T22:05:23.744-05:00  INFO 25360 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest
+2026-10-24T22:05:23.746-05:00  INFO 25360 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest]: SeguridadJwtIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T22:05:23.747-05:00  INFO 25360 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-24T22:05:23.768-05:00  INFO 25360 --- [    Test worker] c.u.e.i.s.SeguridadJwtIntegrationTest    : Starting SeguridadJwtIntegrationTest using Java 21.0.12.1 with PID 25360 (started by Juan Restrepo in EQUIPO_LOCAL\OneDrive - uniminuto.edu\Documentos\ecommerce-PA)
+2026-10-24T22:05:23.768-05:00  INFO 25360 --- [    Test worker] c.u.e.i.s.SeguridadJwtIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T22:05:23.968-05:00  INFO 25360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T22:05:24.003-05:00  INFO 25360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2026-10-24T22:05:24.071-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T22:05:24.098-05:00  INFO 25360 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T22:05:24.099-05:00  INFO 25360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-24T22:05:24.101-05:00  INFO 25360 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn86: url=jdbc:h2:mem:jwt_integration user=SA
+2026-10-24T22:05:24.102-05:00  INFO 25360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-24T22:05:24.102-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:jwt_integration]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: JWT_INTEGRATION/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T22:05:24.203-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T22:05:24.214-05:00  INFO 25360 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T22:05:24.588-05:00  INFO 25360 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T22:05:24.588-05:00  INFO 25360 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T22:05:24.589-05:00  INFO 25360 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T22:05:24.603-05:00  INFO 25360 --- [    Test worker] c.u.e.i.s.SeguridadJwtIntegrationTest    : Started SeguridadJwtIntegrationTest in 0.854 seconds (process running for 33.44)
+2026-10-24T22:05:24.604-05:00  WARN 25360 --- [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T22:05:24.604-05:00  WARN 25360 --- [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-24T22:05:26.687-05:00  INFO 25360 --- [    Test worker] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 352 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

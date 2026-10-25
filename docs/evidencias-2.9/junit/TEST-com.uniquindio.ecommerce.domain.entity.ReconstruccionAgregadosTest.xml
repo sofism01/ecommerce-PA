@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T03:05:02.760Z" hostname="JUANRESTREPO" time="0.02">
+  <properties/>
+  <testcase name="prenda_ReconstruccionNoOmiteInvariantes()" classname="com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest" time="0.006"/>
+  <testcase name="prenda_ReconstruyeIdentidadEstadoYObjetosDeValor()" classname="com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest" time="0.001"/>
+  <testcase name="bolsa_ReconstruccionRechazaNulosDuplicadosYMonedasMezcladas()" classname="com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest" time="0.007"/>
+  <testcase name="bolsa_ReconstruyeCerradaConLineasSinSimularStock()" classname="com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,396 @@
+{
+  "actividad": "Seguimiento: Pruebas avanzadas del backend",
+  "clases": 21,
+  "ejecucionesBase": 219,
+  "existeNeverAntes": false,
+  "inventario": [
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/application/usecase/ApiUseCasesTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "listado_RecuperaTodasLasPrendasYFiltraPorCreador",
+        "suspensionYStock_SeConservanEnElRepositorio",
+        "prendasYVariantesAusentes_SeDiferencianDeOtrasReglas",
+        "bolsa_FlujoActivoVaciadoYCierreYErroresConservanReglas"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "buscarDelegaCriteriosYConservaMetadatos",
+        "rankingDelegaSinInventarEstadisticas",
+        "criteriosRechazanPaginacionInvalidaSinSpring"
+      ],
+      "mock": true,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/domain/entity/BolsaDeEstiloTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "agregarLinea_StockInsuficiente_NoCambiaEstado",
+        "modificarBolsaCerrada_LanzaExcepcion_NoCambiaEstado"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/domain/entity/EntidadTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "igualdadPorIdentidad_PrendaDeAutor",
+        "reglaProtegida_ActualizarPrecioPrenda",
+        "reglaProtegida_ValidarVitrinasCreador"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "entidades_SoloExponenConstructoresPrivadosYFabricaCrear",
+        "fabricas_RechazanIdentificadoresObligatoriosAusentes",
+        "prenda_RechazaNombrePrecioStockYVariantesInvalidos",
+        "prenda_ActualizaStockValidoYRechazaNegativoSinMutar",
+        "servicioDeStock_UtilizaOperacionValidadaDelDominio",
+        "prenda_ActualizaVarianteCorrectaConservandoIdentidadYOriginalInmutable",
+        "prenda_RechazaActualizacionesDeVarianteInvalidasSinMutar",
+        "prenda_PrecioYSuspensionValidanYConservanIdentidad",
+        "variantePrenda_ValidaCamposYOperaSinStockNegativo",
+        "varianteDeTalla_ValidaCamposYConservaStockAnteRechazo",
+        "bolsa_AcumulaCantidadYRechazaExcesoSinMutar",
+        "bolsa_RechazaEntradasInvalidasYMezclaDeMonedasSinMutar",
+        "bolsa_CantidadAcumuladaNoDesbordaEntero",
+        "bolsa_CerradaImpideAgregarYVaciarPeroActivaPermiteVaciar",
+        "creador_ValidaDatosObligatoriosYListas",
+        "creador_EncapsulaVitrinasYConservaAlMenosUnaAlEliminar",
+        "vitrina_EncapsulaCatalogoYPermiteOperacionesValidas",
+        "vitrina_RechazaDatosYCatalogoInvalidos",
+        "pedido_RechazaVariantesInvalidasYProtegeLista",
+        "pedido_RespetaSecuenciaYRechazaSaltosSinCambiarEstado",
+        "pedido_CanceladoNoPuedeContinuarProceso"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/domain/entity/PedidoCompraTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "totalYSubtotalesSeCalculanEnDominioSinMarcarPagado",
+        "reconstruccionNoOmiteInvariantesDeLineasMonedaEIdentidad"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/domain/entity/PrendaDeAutorTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "crearPrenda_SinVariantes_LanzaExcepcion",
+        "actualizarPrecio_Valido_CambiaPrecio"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/domain/entity/ReconstruccionAgregadosTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "prenda_ReconstruyeIdentidadEstadoYObjetosDeValor",
+        "prenda_ReconstruccionNoOmiteInvariantes",
+        "bolsa_ReconstruyeCerradaConLineasSinSimularStock",
+        "bolsa_ReconstruccionRechazaNulosDuplicadosYMonedasMezcladas"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/domain/valueobject/ValueObjectTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "igualdadPorValor_Dinero",
+        "validacionMontoNegativo_Dinero",
+        "igualdadPorValor_SKU",
+        "validacionSKUVacio"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/EcommerceApplicationTests.java",
+      "anotaciones": [
+        "@SpringBootTest"
+      ],
+      "metodos": [
+        "contextLoads"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CasosDeUsoJpaIntegrationTest.java",
+      "anotaciones": [
+        "@SpringBootTest(properties = {\"spring.datasource.url=jdbc:h2:mem:boheme_jpa_integracion\", \"spring.jpa.show-sql=false\"})",
+        "@Transactional"
+      ],
+      "metodos": [
+        "recargar",
+        "aplicacion_UtilizaJpaYCargaDatosIdempotentesSinResucitarEliminados",
+        "cuatroCasosDeUsoDePrendas_EscribenYLeenEnH2",
+        "cuatroCasosDeUsoDeBolsas_PersistenContenidoVaciadoYCierre",
+        "modificarObjetoDeDominioSinGuardar_NoModificaLaBaseDeDatos"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+      "anotaciones": [
+        "@DataJpaTest(showSql = false, properties = {",
+        "@Import({JpaPrendaDeAutorRepository.class, PrendaJpaMapper.class, DineroJpaMapper.class,"
+      ],
+      "metodos": [
+        "recargar",
+        "preparar",
+        "buscaPorNombreODescripcionSinDistinguirMayusculas",
+        "filtraPorCreadorEnH2",
+        "filtraPorMonedaYNormalizaEntrada",
+        "combinaBusquedaCreadorYMonedaConAnd",
+        "paginaConConteoTotalSinDuplicadosYConTodasLasVariantes",
+        "desempataNombresPorIdEnBaseDeDatos",
+        "sinCoincidenciasYFueraDeRangoConservaConteos",
+        "omiteTextoYMonedaBlancosYEscapaComodines",
+        "excluyePrendasEliminadasDelContenidoConteoYRanking",
+        "rankingCuentaVariantesYPrendasDistintasCoincideConSqlReal",
+        "excluyeVarianteHuerfanaEliminadaSinPerderPrenda",
+        "desempataRankingPorCreadorAscendente",
+        "suspensionExcluyeOfertaDelRankingPeroNoDelListado",
+        "rankingVacioSiNoHayOferta",
+        "ejecutaLimiteEnSqlYNumeroConstanteDeConsultasSinNMasUno"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/FlujoCompraIntegrationTest.java",
+      "anotaciones": [
+        "@SpringBootTest(properties={\"spring.datasource.url=jdbc:h2:mem:flujo_compra;DB_CLOSE_DELAY=-1;LOCK_TIMEOUT=10000\","
+      ],
+      "metodos": [
+        "identidad",
+        "preparar",
+        "limpiarIdentidad",
+        "agregaVarianteDesdeCatalogoConPrecioYSubtotalCorrectosSinReservarStock",
+        "excesoDeStockYAcumulacionSeRechazanSinMutarInventarioOPedidos",
+        "bolsaCerradaNoAceptaItemsNiConfirmacion",
+        "prendaSuspendidaNoSeAgregaNiSeConfirma",
+        "respetaMonedaYRechazaVarianteInexistenteYCantidadInvalida",
+        "rechazaBolsaAjenaYConsultaDePedidoAjeno",
+        "pedidoPersistePendienteDescuentaVariantesCierraBolsaYSeRecupera",
+        "conservaPrecioHistoricoAunqueCambieCatalogoAntesYDespuesDeConfirmar",
+        "noConfirmaDosVecesNiPermiteBolsaVacia",
+        "revalidaStockYEliminacionAlConfirmar",
+        "falloDespuesDeFlushReviertePedidoInventarioYBolsa",
+        "reconstruccionDetectaTotalPersistidoCorrupto",
+        "dosCompradoresConcurrentesNoSobrevendenLaUltimaExistencia",
+        "confirmacionesConcurrentesDeMismaBolsaCreanUnSoloPedido",
+        "falloDeUnaLineaNoDescuentaParcialmenteLasOtras",
+        "comprasConcurrentesConLineasEnOrdenInversoUsanBloqueoEstable"
+      ],
+      "mock": false,
+      "spy": true,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+      "anotaciones": [
+        "@DataJpaTest(showSql = false)",
+        "@Import({JpaPrendaDeAutorRepository.class, JpaBolsaDeEstiloRepository.class,"
+      ],
+      "metodos": [
+        "recargar",
+        "guardarYRecuperarPrenda_ConservaTodosLosAtributosVariantesYEstado",
+        "actualizarPrenda_PersistePrecioStocksYSuspensionSinDuplicarVariantes",
+        "guardarYRecuperarBolsaCerrada_ConservaLineasPreciosOrdenYBloqueo",
+        "actualizarCantidad_ConservaIdentidadTecnicaDeLaLinea",
+        "eliminarPrenda_OcultaAgregadoYMarcaVariantesSinBorrarFilas",
+        "eliminarBolsa_OcultaAgregadoYMarcaLineasSinBorrarFilas",
+        "vaciarYAgregarDeNuevo_ConservaHistorialDeLineasSinDuplicadosActivos",
+        "retirarVarianteDelAgregado_UsaEliminacionLogicaDelHuerfano",
+        "guardarAgregadosEliminados_NoLosResucita",
+        "listado_FiltraPorCreadorYExcluyeEliminados",
+        "eliminarCatalogo_NoDestruyeSeleccionHistoricaDeUnaBolsa",
+        "dinero_ConservaPrecisionAltaYEscalaOriginalSinRedondear"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/UsuarioJpaTest.java",
+      "anotaciones": [
+        "@DataJpaTest(showSql=false)",
+        "@Import({JpaUsuarioRepository.class,UsuarioJpaMapper.class})"
+      ],
+      "metodos": [
+        "persisteYReconstruyeTodosLosCamposSinAcoplarDominioAJpa",
+        "indiceUnicoImpideDuplicadosAunqueSeOmitaConsultaPrevia",
+        "conservaCuentaInactivaParaDenegarAutenticacion"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+      "anotaciones": [
+        "@WebMvcTest(BolsaDeEstiloController.class)",
+        "@org.springframework.security.test.context.support.WithMockUser(roles=\"COMPRADOR\")",
+        "@Import({com.uniquindio.ecommerce.infrastructure.security.SecurityConfig.class, BolsaDeEstiloMapper.class, DineroMapper.class, ApiExceptionHandler.class, JsonConfig.class})"
+      ],
+      "metodos": [
+        "crear_Valida_Devuelve201ConDtoYDelega",
+        "crear_SinCliente_Devuelve400SinDelegar",
+        "obtenerActiva_DevuelveDtoConLineasYSubtotalDelDominio",
+        "obtenerActiva_Ausente_Devuelve404ConContratoDeError",
+        "vaciar_Devuelve204YDelegaIdentificadorTipado",
+        "cerrar_Devuelve204YDelegaIdentificadorTipado",
+        "vaciarYCerrar_BolsaInexistente_Devuelven404",
+        "vaciar_BolsaCerrada_Devuelve409",
+        "clienteUuidInvalido_Devuelve400"
+      ],
+      "mock": true,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraHttpIntegrationTest.java",
+      "anotaciones": [
+        "@SpringBootTest(properties={\"spring.datasource.url=jdbc:h2:mem:compra_http;DB_CLOSE_DELAY=-1\",\"boheme.datos-iniciales.enabled=false\"})",
+        "@AutoConfigureMockMvc @TestInstance(TestInstance.Lifecycle.PER_CLASS)"
+      ],
+      "metodos": [
+        "cuentasGenerales",
+        "compradorAislado",
+        "agregar",
+        "flujoCompletoConErrorIntencionalStockPedidoYRelecturaDesdeH2",
+        "rutasNuevasExigenJwtYRolComprador",
+        "compradorAjenoNoPuedeAgregarConfirmarNiConsultarElPedido",
+        "cantidadesYUuidInvalidosDevuelven400",
+        "swaggerDocumentaTresOperacionesConBearerYDtoSinPrecioEnSolicitud"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+      "anotaciones": [
+        "@WebMvcTest(PrendaController.class)",
+        "@org.springframework.security.test.context.support.WithMockUser(roles=\"VENDEDOR\")",
+        "@Import({com.uniquindio.ecommerce.infrastructure.security.SecurityConfig.class, PrendaMapper.class, DineroMapper.class, com.uniquindio.ecommerce.infrastructure.rest.mapper.ConsultaPrendasMapper.class, ApiExceptionHandler.class, JsonConfig.class})"
+      ],
+      "metodos": [
+        "buscar_DevuelvePaginaYDelegaFiltros",
+        "buscar_SinParametrosUsaValoresPorDefectoYDevuelve200Vacio",
+        "buscar_ParametrosInvalidosDevuelven400SinDelegar",
+        "registrar_Valido_Devuelve201YDelegaConDominioMapeado",
+        "registrar_Invalido_Devuelve400ConDetalleSinDelegar",
+        "registrar_ListaVariantesInvalida_Devuelve400",
+        "listar_DevuelveColeccionCompletaYDelega",
+        "listar_SinResultados_Devuelve200YColeccionVacia",
+        "suspender_Devuelve204YDelegaIdentificadorTipado",
+        "suspender_Inexistente_Devuelve404",
+        "suspender_ReglaIncumplida_Devuelve409",
+        "actualizarStock_Valido_Devuelve204YDelegaTodosLosArgumentos",
+        "actualizarStock_Invalido_Devuelve400SinDelegar",
+        "actualizarStock_VarianteInexistente_Devuelve404",
+        "actualizarStock_Fraccionario_Devuelve400SinTruncarNiDelegar",
+        "registrar_RechazaFraccionesYOrdinalesDeEnum",
+        "uuidInvalido_Devuelve400SinInvocarCasoDeUso",
+        "jsonMalFormadoYTallaDesconocida_Devuelven400",
+        "erroresDeProtocolo_ConservanEstadoYContratoJson",
+        "errorInesperado_Devuelve500SinFiltrarDetalles"
+      ],
+      "mock": true,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/ReporteControllerTest.java",
+      "anotaciones": [
+        "@WebMvcTest(ReporteController.class)",
+        "@Import({com.uniquindio.ecommerce.infrastructure.security.SecurityConfig.class, ConsultaPrendasMapper.class, PrendaMapper.class, DineroMapper.class})"
+      ],
+      "metodos": [
+        "variedad_Devuelve200ConConteosYDelega",
+        "variedad_SinDatosDevuelve200YArrayVacio"
+      ],
+      "mock": true,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+      "anotaciones": [],
+      "metodos": [
+        "rechazaSecretoAusenteCortoOMalCodificado",
+        "rechazaDuracionNoAdmitida",
+        "dominioNoAceptaPasswordPlanoComoHash"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    },
+    {
+      "archivo": "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+      "anotaciones": [
+        "@SpringBootTest(properties={\"spring.datasource.url=jdbc:h2:mem:jwt_integration;DB_CLOSE_DELAY=-1\",",
+        "@AutoConfigureMockMvc",
+        "@TestInstance(TestInstance.Lifecycle.PER_CLASS)",
+        "@Transactional"
+      ],
+      "metodos": [
+        "cuentasPersistidas",
+        "registroPersisteHashBCryptYNoExponePassword",
+        "registroDuplicadoNormalizaCorreoYDevuelve409",
+        "registroInvalidoDevuelve400",
+        "registroRechazaMasDe72BytesUtf8YNumerosComoRol",
+        "loginDevuelveBearerExpiracionYClaimsCorrectos",
+        "loginIncorrectoNoRevelaExistenciaDelCorreo",
+        "tokenExpiradoDevuelve401",
+        "tokenConFirmaInvalidaDevuelve401",
+        "rechazaClaimsInvalidosAunqueFirmaSeaValida",
+        "cuentaInactivaRechazaLoginYTokenPrevio",
+        "todasLasRutasProtegidasExigenTokenYRol",
+        "vendedorOperaSuPrendaYNoPuedeSuplantarCreador",
+        "vendedorNoPuedeModificarPrendaAjena",
+        "compradorOperaSuBolsaYNoPuedeSuplantarCliente",
+        "compradorNoPuedeConsultarVaciarNiCerrarBolsaAjena",
+        "recursosInexistentesDevuelven404ConRolCorrecto",
+        "consultasSiguenPublicasSinSesion",
+        "swaggerDeclaraBearerYProteccionPorOperacion"
+      ],
+      "mock": false,
+      "spy": false,
+      "never": false
+    }
+  ]
+}

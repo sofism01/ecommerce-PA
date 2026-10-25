@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-25T03:05:23.707Z" hostname="JUANRESTREPO" time="0.005">
+  <properties/>
+  <testcase name="dominioNoAceptaPasswordPlanoComoHash()" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.0"/>
+  <testcase name="[1] secreto = &quot;&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.001"/>
+  <testcase name="[2] secreto = &quot;corta&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.0"/>
+  <testcase name="[3] secreto = &quot;aW5zZWd1cmE=&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.001"/>
+  <testcase name="[4] secreto = &quot;no es base64&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.0"/>
+  <testcase name="[1] duracion = &quot;PT0S&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.0"/>
+  <testcase name="[2] duracion = &quot;PT-1S&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.001"/>
+  <testcase name="[3] duracion = &quot;PT25H&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.0"/>
+  <testcase name="[4] duracion = &quot;PT0.5S&quot;" classname="com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

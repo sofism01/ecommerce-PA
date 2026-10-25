@@ -1,0 +1,446 @@
+{
+  "fechaUtc": "2026-10-25T03:13:52.004899+00:00",
+  "baseUrl": "http://127.0.0.1:61809",
+  "fase": "final",
+  "estadisticasNewman": {
+    "iterations": {
+      "total": 1,
+      "pending": 0,
+      "failed": 0
+    },
+    "items": {
+      "total": 6,
+      "pending": 0,
+      "failed": 0
+    },
+    "scripts": {
+      "total": 6,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequests": {
+      "total": 6,
+      "pending": 0,
+      "failed": 0
+    },
+    "requests": {
+      "total": 6,
+      "pending": 0,
+      "failed": 0
+    },
+    "tests": {
+      "total": 6,
+      "pending": 0,
+      "failed": 0
+    },
+    "assertions": {
+      "total": 11,
+      "pending": 0,
+      "failed": 0
+    },
+    "testScripts": {
+      "total": 6,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequestScripts": {
+      "total": 0,
+      "pending": 0,
+      "failed": 0
+    }
+  },
+  "http": [
+    {
+      "paso": "11 Agregar dos unidades",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas",
+          "2e02af0f-bb3b-4d44-9042-656233d14829",
+          "items"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+        "cantidad": 2
+      },
+      "status": 200,
+      "response": {
+        "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+        "clienteId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+        "lineas": [
+          {
+            "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+            "cantidad": 2,
+            "precioUnitario": {
+              "monto": 19.95,
+              "moneda": "COP"
+            },
+            "subtotal": {
+              "monto": 39.9,
+              "moneda": "COP"
+            }
+          }
+        ],
+        "cerrada": false
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Cantidad y subtotal",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "12 Consultar bolsa y subtotal",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas",
+          "activas",
+          "24952836-09e1-45b2-a2c1-7b94a9387a3e"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 200,
+      "response": {
+        "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+        "clienteId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+        "lineas": [
+          {
+            "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+            "cantidad": 2,
+            "precioUnitario": {
+              "monto": 19.95,
+              "moneda": "COP"
+            },
+            "subtotal": {
+              "monto": 39.9,
+              "moneda": "COP"
+            }
+          }
+        ],
+        "cerrada": false
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Precio de catálogo",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "13 Confirmar pedido PENDIENTE",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas",
+          "2e02af0f-bb3b-4d44-9042-656233d14829",
+          "confirmar-pedido"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 201,
+      "response": {
+        "pedidoId": "b643920b-69f1-4673-b52d-e2316a8ed658",
+        "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+        "clienteId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+        "estado": "PENDIENTE",
+        "fechaCreacion": "2026-10-25T03:13:51.4507405",
+        "lineas": [
+          {
+            "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+            "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+            "nombrePrenda": "Camisa colección demo 2.9",
+            "sku": "DEMO29-M",
+            "tipoTalla": "M",
+            "cantidad": 2,
+            "precioUnitario": {
+              "monto": 19.95,
+              "moneda": "COP"
+            },
+            "subtotal": {
+              "monto": 39.9,
+              "moneda": "COP"
+            }
+          }
+        ],
+        "total": {
+          "monto": 39.9,
+          "moneda": "COP"
+        },
+        "moneda": "COP"
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "correcta": true
+        },
+        {
+          "nombre": "Pedido sin pago y total correcto",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "14 Consultar pedido persistido",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "pedidos",
+          "b643920b-69f1-4673-b52d-e2316a8ed658"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 200,
+      "response": {
+        "pedidoId": "b643920b-69f1-4673-b52d-e2316a8ed658",
+        "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+        "clienteId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+        "estado": "PENDIENTE",
+        "fechaCreacion": "2026-10-25T03:13:51.4507405",
+        "lineas": [
+          {
+            "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+            "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+            "nombrePrenda": "Camisa colección demo 2.9",
+            "sku": "DEMO29-M",
+            "tipoTalla": "M",
+            "cantidad": 2,
+            "precioUnitario": {
+              "monto": 19.95,
+              "moneda": "COP"
+            },
+            "subtotal": {
+              "monto": 39.9,
+              "moneda": "COP"
+            }
+          }
+        ],
+        "total": {
+          "monto": 39.9,
+          "moneda": "COP"
+        },
+        "moneda": "COP"
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Pedido y línea histórica",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "15 Consultar inventario actualizado",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "prendas",
+          "creador",
+          "9e44f086-ce58-4a1c-a378-993ece137143"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 200,
+      "response": [
+        {
+          "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+          "creadorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+          "nombre": "Camisa colección demo 2.9",
+          "descripcion": "Lino de autor para sustentación",
+          "precioBase": {
+            "monto": 19.95,
+            "moneda": "COP"
+          },
+          "variantes": [
+            {
+              "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+              "sku": "DEMO29-M",
+              "tipoTalla": "M",
+              "stockDisponible": 1
+            },
+            {
+              "varianteId": "4153cee3-8d9e-4458-8059-685bbc2cb1c9",
+              "sku": "DEMO29-L",
+              "tipoTalla": "L",
+              "stockDisponible": 2
+            }
+          ],
+          "stockTotal": 5,
+          "disponibleParaLaVenta": true
+        }
+      ],
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Sólo la variante comprada disminuye",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "16 Impedir confirmación duplicada",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas",
+          "2e02af0f-bb3b-4d44-9042-656233d14829",
+          "confirmar-pedido"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 409,
+      "response": {
+        "timestamp": "2026-10-25T03:13:51.757735600Z",
+        "status": 409,
+        "code": "BOLSA_CERRADA",
+        "message": "La bolsa está cerrada o ya fue confirmada.",
+        "path": "/api/bolsas/2e02af0f-bb3b-4d44-9042-656233d14829/confirmar-pedido",
+        "details": {}
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 409",
+          "correcta": true
+        }
+      ]
+    }
+  ],
+  "sql": [
+    {
+      "consulta": "SELECT COUNT(*) AS cantidad FROM pedidos_moda WHERE bolsa_id='2e02af0f-bb3b-4d44-9042-656233d14829'",
+      "filas": [
+        {
+          "CANTIDAD": "1"
+        }
+      ]
+    },
+    {
+      "consulta": "SELECT stock_disponible FROM variantes_prenda WHERE id='a7a1ca37-aa4c-4693-802b-bca5d802ec5b'",
+      "filas": [
+        {
+          "STOCK_DISPONIBLE": "1"
+        }
+      ]
+    },
+    {
+      "consulta": "SELECT cerrada FROM bolsas_estilo WHERE id='2e02af0f-bb3b-4d44-9042-656233d14829'",
+      "filas": [
+        {
+          "CERRADA": "TRUE"
+        }
+      ]
+    },
+    {
+      "consulta": "SELECT p.id,p.bolsa_id,p.cliente_id,p.estado,p.fecha_creacion,p.total,p.moneda,\n                l.prenda_id,l.variante_id,l.sku,l.tipo_talla,l.cantidad,l.precio_unitario,\n                l.cantidad*l.precio_unitario AS subtotal FROM pedidos_moda p\n                JOIN lineas_pedido l ON l.pedido_id=p.id WHERE p.id='b643920b-69f1-4673-b52d-e2316a8ed658' ORDER BY l.posicion",
+      "filas": [
+        {
+          "ID": "b643920b-69f1-4673-b52d-e2316a8ed658",
+          "BOLSA_ID": "2e02af0f-bb3b-4d44-9042-656233d14829",
+          "CLIENTE_ID": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+          "ESTADO": "PENDIENTE",
+          "FECHA_CREACION": "2026-10-25 03:13:51.4507405",
+          "TOTAL": "39.9",
+          "MONEDA": "COP",
+          "PRENDA_ID": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+          "VARIANTE_ID": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+          "SKU": "DEMO29-M",
+          "TIPO_TALLA": "M",
+          "CANTIDAD": "2",
+          "PRECIO_UNITARIO": "19.95",
+          "SUBTOTAL": "39.9"
+        }
+      ]
+    }
+  ],
+  "muestras": {
+    "vendedorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+    "compradorId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+    "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+    "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+    "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+    "pedidoId": "b643920b-69f1-4673-b52d-e2316a8ed658"
+  },
+  "resultado": "OK: aserciones Postman y comprobaciones SQL satisfactorias."
+}

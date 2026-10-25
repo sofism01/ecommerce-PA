@@ -1,5 +1,7 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+
 import com.uniquindio.ecommerce.domain.valueobject.SKU;
 import com.uniquindio.ecommerce.domain.valueobject.Dinero;
 
@@ -14,10 +16,16 @@ public class VarianteDeTalla {
     private final Dinero precio;
 
     private VarianteDeTalla(SKU sku, String talla, String color, int stock, Dinero precio) {
-        this.sku = Objects.requireNonNull(sku, "El SKU es obligatorio.");
+        if (sku == null) {
+            throw new ReglaDominioException("El SKU es obligatorio.");
+        }
+        this.sku = sku;
         this.talla = validarTalla(talla);
         this.color = validarColor(color);
-        this.precio = Objects.requireNonNull(precio, "El precio es obligatorio.");
+        if (precio == null) {
+            throw new ReglaDominioException("El precio es obligatorio.");
+        }
+        this.precio = precio;
         actualizarStock(stock);
     }
 
@@ -27,28 +35,28 @@ public class VarianteDeTalla {
 
     private String validarTalla(String talla) {
         if (talla == null || talla.isBlank()) {
-            throw new IllegalArgumentException("La talla no puede estar vacía.");
+            throw new ReglaDominioException("La talla no puede estar vacía.");
         }
         return talla.trim().toUpperCase();
     }
 
     private String validarColor(String color) {
         if (color == null || color.isBlank()) {
-            throw new IllegalArgumentException("El color no puede estar vacío.");
+            throw new ReglaDominioException("El color no puede estar vacío.");
         }
         return color.trim();
     }
 
     private void actualizarStock(int nuevoStock) {
         if (nuevoStock < 0) {
-            throw new IllegalArgumentException("El stock no puede ser negativo.");
+            throw new ReglaDominioException("El stock no puede ser negativo.");
         }
         this.stock = nuevoStock;
     }
 
     public boolean reducirStock(int cantidad) {
         if (cantidad <= 0) {
-            throw new IllegalArgumentException("La cantidad a reducir debe ser mayor a cero.");
+            throw new ReglaDominioException("La cantidad a reducir debe ser mayor a cero.");
         }
         if (cantidad > stock) {
             return false; // No hay suficiente stock

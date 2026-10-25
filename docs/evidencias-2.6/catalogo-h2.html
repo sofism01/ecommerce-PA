@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+Copyright 2004-2025 H2 Group. Multiple-Licensed under the MPL 2.0,
+and the EPL 1.0 (https://h2database.com/html/license.html).
+Initial Developer: H2 Group
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>H2 Console</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script type="text/javascript" src="table.js"></script>
+</head>
+<body class="result">
+
+<div id="output">
+SELECT p.id, p.creador_id, p.nombre, p.moneda,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.disponible_para_venta, p.eliminado, COUNT(v.id) AS variantes<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM prendas_autor p JOIN variantes_prenda v ON v.prenda_id=p.id<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHERE p.eliminado=FALSE AND v.eliminado=FALSE<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GROUP BY p.id, p.creador_id, p.nombre, p.moneda, p.disponible_para_venta, p.eliminado<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ORDER BY p.nombre, p.id;<br /><table class="resultSet" cellspacing="0" cellpadding="0"><tr><th>ID</th><th>CREADOR_ID</th><th>NOMBRE</th><th>MONEDA</th><th>DISPONIBLE_PARA_VENTA</th><th>ELIMINADO</th><th>VARIANTES</th></tr><tr><td>91000000-0000-4000-8000-000000000001</td><td>81000000-0000-4000-8000-000000000001</td><td>Camisa de lino artesanal</td><td>COP</td><td>TRUE</td><td>FALSE</td><td>2</td></tr><tr><td>91000000-0000-4000-8000-000000000003</td><td>81000000-0000-4000-8000-000000000002</td><td>Chaqueta de autor</td><td>USD</td><td>TRUE</td><td>FALSE</td><td>1</td></tr><tr><td>91000000-0000-4000-8000-000000000002</td><td>81000000-0000-4000-8000-000000000001</td><td>Vestido de algod&#243;n</td><td>COP</td><td>TRUE</td><td>FALSE</td><td>2</td></tr></table>(3 rows, 2 ms)<br />
+</div>
+
+<table id="h2auto" class="autoComp"><tbody></tbody></table>
+
+</body></html>

@@ -3,14 +3,14 @@ package com.uniquindio.ecommerce.infrastructure.persistence.jpa;
 import com.uniquindio.ecommerce.domain.entity.PrendaDeAutor;
 import com.uniquindio.ecommerce.domain.repository.PrendaDeAutorRepository;
 import com.uniquindio.ecommerce.domain.valueobject.PrendaDeAutorId;
-import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-@Repository
+/** Doble en memoria para pruebas; no se registra como bean de la aplicación. */
 public class InMemoryPrendaDeAutorRepository implements PrendaDeAutorRepository {
 
     private final Map<PrendaDeAutorId, PrendaDeAutor> prendas = new HashMap<>();
@@ -21,10 +21,10 @@ public class InMemoryPrendaDeAutorRepository implements PrendaDeAutorRepository 
     }
 
     @Override
-    public Optional<PrendaDeAutor> obtenerPrendaPorCreador(UUID creadorId) {
+    public List<PrendaDeAutor> obtenerPrendasPorCreador(UUID creadorId) {
         return prendas.values().stream()
                 .filter(prenda -> prenda.getCreadorId().equals(creadorId))
-                .findFirst();
+                .toList();
     }
 
     @Override

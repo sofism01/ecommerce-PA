@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-25T02:45:53.730Z" hostname="JUANRESTREPO" time="0.967">
+  <properties/>
+  <testcase name="retirarVarianteDelAgregado_UsaEliminacionLogicaDelHuerfano()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.028"/>
+  <testcase name="actualizarCantidad_ConservaIdentidadTecnicaDeLaLinea()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.028"/>
+  <testcase name="guardarAgregadosEliminados_NoLosResucita()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.045"/>
+  <testcase name="listado_FiltraPorCreadorYExcluyeEliminados()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.041"/>
+  <testcase name="guardarYRecuperarPrenda_ConservaTodosLosAtributosVariantesYEstado()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.019"/>
+  <testcase name="eliminarPrenda_OcultaAgregadoYMarcaVariantesSinBorrarFilas()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.022"/>
+  <testcase name="actualizarPrenda_PersistePrecioStocksYSuspensionSinDuplicarVariantes()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.023"/>
+  <testcase name="guardarYRecuperarBolsaCerrada_ConservaLineasPreciosOrdenYBloqueo()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.022"/>
+  <testcase name="eliminarBolsa_OcultaAgregadoYMarcaLineasSinBorrarFilas()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.022"/>
+  <testcase name="dinero_ConservaPrecisionAltaYEscalaOriginalSinRedondear()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.016"/>
+  <testcase name="vaciarYAgregarDeNuevo_ConservaHistorialDeLineasSinDuplicadosActivos()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.019"/>
+  <testcase name="eliminarCatalogo_NoDestruyeSeleccionHistoricaDeUnaBolsa()" classname="com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest" time="0.02"/>
+  <system-out><![CDATA[2026-10-24T21:45:53.733-05:00  INFO 26756 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest]: PersistenciaJpaTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:45:53.749-05:00  INFO 26756 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest
+2026-10-24T21:45:53.750-05:00  INFO 26756 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest]: PersistenciaJpaTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:45:53.767-05:00  INFO 26756 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-24T21:45:53.802-05:00  INFO 26756 --- [    Test worker] c.u.e.i.p.jpa.PersistenciaJpaTest        : Starting PersistenciaJpaTest using Java 21.0.12.1 with PID 26756 (started by Juan Restrepo in EQUIPO_LOCAL\OneDrive - uniminuto.edu\Documentos\ecommerce-PA)
+2026-10-24T21:45:53.802-05:00  INFO 26756 --- [    Test worker] c.u.e.i.p.jpa.PersistenciaJpaTest        : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T21:45:53.951-05:00  INFO 26756 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T21:45:54.005-05:00  INFO 26756 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2026-10-24T21:45:54.014-05:00  INFO 26756 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-10-24T21:45:54.021-05:00  INFO 26756 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:85c765e4-0bcc-4736-8058-816eb5bf92ad;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-10-24T21:45:54.055-05:00  INFO 26756 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T21:45:54.113-05:00  INFO 26756 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T21:45:54.115-05:00  INFO 26756 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:85c765e4-0bcc-4736-8058-816eb5bf92ad]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 85C765E4-0BCC-4736-8058-816EB5BF92AD/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T21:45:54.265-05:00  INFO 26756 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T21:45:54.278-05:00  INFO 26756 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T21:45:54.367-05:00  INFO 26756 --- [    Test worker] c.u.e.i.p.jpa.PersistenciaJpaTest        : Started PersistenciaJpaTest in 0.596 seconds (process running for 15.397)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+Copyright 2004-2025 H2 Group. Multiple-Licensed under the MPL 2.0,
+and the EPL 1.0 (https://h2database.com/html/license.html).
+Initial Developer: H2 Group
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>H2 Console</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script type="text/javascript" src="table.js"></script>
+</head>
+<body class="result">
+
+<div id="output">
+SELECT p.id, p.nombre FROM prendas_autor p<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHERE p.eliminado=FALSE AND p.moneda=&#39;COP&#39; AND<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(LOWER(p.nombre) LIKE &#39;%lino%&#39; OR LOWER(p.descripcion) LIKE &#39;%lino%&#39;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ORDER BY p.nombre, p.id OFFSET 0 ROWS FETCH FIRST 1 ROWS ONLY;<br /><table class="resultSet" cellspacing="0" cellpadding="0"><tr><th>ID</th><th>NOMBRE</th></tr><tr><td>91000000-0000-4000-8000-000000000001</td><td>Camisa de lino artesanal</td></tr></table>(1 row, 0 ms)<br />
+</div>
+
+<table id="h2auto" class="autoComp"><tbody></tbody></table>
+
+</body></html>

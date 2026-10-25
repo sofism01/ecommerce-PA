@@ -1,0 +1,40 @@
+﻿{
+    "creados":  [
+                    "src/main/java/com/uniquindio/ecommerce/application/dto/response/LineaPedidoResponse.java",
+                    "src/main/java/com/uniquindio/ecommerce/application/dto/response/PedidoResponse.java",
+                    "src/main/java/com/uniquindio/ecommerce/application/usecase/AgregarVarianteABolsaUseCase.java",
+                    "src/main/java/com/uniquindio/ecommerce/application/usecase/ConfirmarPedidoUseCase.java",
+                    "src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarPedidoUseCase.java",
+                    "src/main/java/com/uniquindio/ecommerce/domain/repository/CatalogoVariantesRepository.java",
+                    "src/main/java/com/uniquindio/ecommerce/domain/repository/PedidoDeModaRepository.java",
+                    "src/main/java/com/uniquindio/ecommerce/domain/valueobject/LineaDePedido.java",
+                    "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/JpaPedidoDeModaRepository.java",
+                    "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/LineaPedidoJpaEntity.java",
+                    "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/PedidoJpaEntity.java",
+                    "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/mapper/PedidoJpaMapper.java",
+                    "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/repository/PedidoJpaRepository.java",
+                    "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraController.java",
+                    "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/PedidoMapper.java",
+                    "src/test/java/com/uniquindio/ecommerce/domain/entity/PedidoCompraTest.java",
+                    "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/FlujoCompraIntegrationTest.java",
+                    "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraHttpIntegrationTest.java"
+                ],
+    "modificados":  [
+                        "src/main/java/com/uniquindio/ecommerce/application/dto/request/AgregarItemBolsaRequest.java",
+                        "src/main/java/com/uniquindio/ecommerce/application/usecase/ActualizarStockVariantePrendaUseCase.java",
+                        "src/main/java/com/uniquindio/ecommerce/application/usecase/CerrarBolsaDeEstiloUseCase.java",
+                        "src/main/java/com/uniquindio/ecommerce/application/usecase/SuspenderVentaPrendaDeAutorUseCase.java",
+                        "src/main/java/com/uniquindio/ecommerce/application/usecase/VaciarBolsaDeEstiloUseCase.java",
+                        "src/main/java/com/uniquindio/ecommerce/domain/entity/PedidoDeModa.java",
+                        "src/main/java/com/uniquindio/ecommerce/domain/repository/BolsaDeEstiloRepository.java",
+                        "src/main/java/com/uniquindio/ecommerce/domain/repository/PrendaDeAutorRepository.java",
+                        "src/main/java/com/uniquindio/ecommerce/infrastructure/config/OpenApiConfig.java",
+                        "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/JpaBolsaDeEstiloRepository.java",
+                        "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/JpaPrendaDeAutorRepository.java",
+                        "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/repository/BolsaJpaRepository.java",
+                        "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/repository/PrendaJpaRepository.java",
+                        "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/exception/ApiExceptionHandler.java",
+                        "src/main/java/com/uniquindio/ecommerce/infrastructure/security/SecurityConfig.java",
+                        "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java"
+                    ]
+}

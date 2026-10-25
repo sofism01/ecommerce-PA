@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-25T03:05:01.965Z" hostname="JUANRESTREPO" time="0.638">
+  <properties/>
+  <testcase name="rankingDelegaSinInventarEstadisticas()" classname="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" time="0.362"/>
+  <testcase name="[1] page = &quot;-1&quot;, size = &quot;20&quot;" classname="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" time="0.074"/>
+  <testcase name="[2] page = &quot;0&quot;, size = &quot;0&quot;" classname="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" time="0.001"/>
+  <testcase name="[3] page = &quot;0&quot;, size = &quot;-1&quot;" classname="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" time="0.001"/>
+  <testcase name="[4] page = &quot;0&quot;, size = &quot;101&quot;" classname="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" time="0.001"/>
+  <testcase name="[5] page = &quot;2147483647&quot;, size = &quot;2&quot;" classname="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" time="0.001"/>
+  <testcase name="buscarDelegaCriteriosYConservaMetadatos()" classname="com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

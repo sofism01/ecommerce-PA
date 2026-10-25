@@ -1,0 +1,588 @@
+{
+  "fechaUtc": "2026-10-25T03:13:48.210709+00:00",
+  "baseUrl": "http://127.0.0.1:61809",
+  "fase": "error",
+  "estadisticasNewman": {
+    "iterations": {
+      "total": 1,
+      "pending": 0,
+      "failed": 0
+    },
+    "items": {
+      "total": 10,
+      "pending": 0,
+      "failed": 0
+    },
+    "scripts": {
+      "total": 11,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequests": {
+      "total": 10,
+      "pending": 0,
+      "failed": 0
+    },
+    "requests": {
+      "total": 10,
+      "pending": 0,
+      "failed": 0
+    },
+    "tests": {
+      "total": 10,
+      "pending": 0,
+      "failed": 0
+    },
+    "assertions": {
+      "total": 14,
+      "pending": 0,
+      "failed": 0
+    },
+    "testScripts": {
+      "total": 10,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequestScripts": {
+      "total": 1,
+      "pending": 0,
+      "failed": 0
+    }
+  },
+  "http": [
+    {
+      "paso": "01 Registrar vendedor",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "auth",
+          "register"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "nombre": "Vendedor demo 2.9",
+        "correo": "vendedor.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "password": "[contraseña ficticia omitida]",
+        "rol": "VENDEDOR"
+      },
+      "status": 201,
+      "response": {
+        "id": "9e44f086-ce58-4a1c-a378-993ece137143",
+        "nombre": "Vendedor demo 2.9",
+        "correo": "vendedor.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "rol": "VENDEDOR",
+        "activo": true
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "02 Login vendedor",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "auth",
+          "login"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "correo": "vendedor.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "password": "[contraseña ficticia omitida]"
+      },
+      "status": 200,
+      "response": {
+        "token": "[JWT omitido]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T04:13:46Z",
+        "rol": "VENDEDOR",
+        "usuario": {
+          "id": "9e44f086-ce58-4a1c-a378-993ece137143",
+          "nombre": "Vendedor demo 2.9",
+          "correo": "vendedor.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+          "rol": "VENDEDOR",
+          "activo": true
+        }
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "03 Publicar prenda",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "prendas"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "creadorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+        "nombre": "Camisa colección demo 2.9",
+        "descripcion": "Lino de autor para sustentación",
+        "precioBase": 19.95,
+        "moneda": "COP",
+        "stockTotal": 5,
+        "variantes": [
+          {
+            "sku": "DEMO29-M",
+            "tipoTalla": "M",
+            "stockDisponible": 3
+          },
+          {
+            "sku": "DEMO29-L",
+            "tipoTalla": "L",
+            "stockDisponible": 2
+          }
+        ]
+      },
+      "status": 201,
+      "response": {
+        "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+        "creadorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+        "nombre": "Camisa colección demo 2.9",
+        "descripcion": "Lino de autor para sustentación",
+        "precioBase": {
+          "monto": 19.95,
+          "moneda": "COP"
+        },
+        "variantes": [
+          {
+            "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+            "sku": "DEMO29-M",
+            "tipoTalla": "M",
+            "stockDisponible": 3
+          },
+          {
+            "varianteId": "4153cee3-8d9e-4458-8059-685bbc2cb1c9",
+            "sku": "DEMO29-L",
+            "tipoTalla": "L",
+            "stockDisponible": 2
+          }
+        ],
+        "stockTotal": 5,
+        "disponibleParaLaVenta": true
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "04 Consultar publicación sin JWT",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "prendas",
+          "creador",
+          "9e44f086-ce58-4a1c-a378-993ece137143"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 200,
+      "response": [
+        {
+          "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+          "creadorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+          "nombre": "Camisa colección demo 2.9",
+          "descripcion": "Lino de autor para sustentación",
+          "precioBase": {
+            "monto": 19.95,
+            "moneda": "COP"
+          },
+          "variantes": [
+            {
+              "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+              "sku": "DEMO29-M",
+              "tipoTalla": "M",
+              "stockDisponible": 3
+            },
+            {
+              "varianteId": "4153cee3-8d9e-4458-8059-685bbc2cb1c9",
+              "sku": "DEMO29-L",
+              "tipoTalla": "L",
+              "stockDisponible": 2
+            }
+          ],
+          "stockTotal": 5,
+          "disponibleParaLaVenta": true
+        }
+      ],
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Prenda publicada",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "05 Registrar comprador",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "auth",
+          "register"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "nombre": "Comprador demo 2.9",
+        "correo": "comprador.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "password": "[contraseña ficticia omitida]",
+        "rol": "COMPRADOR"
+      },
+      "status": 201,
+      "response": {
+        "id": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+        "nombre": "Comprador demo 2.9",
+        "correo": "comprador.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "rol": "COMPRADOR",
+        "activo": true
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "06 Login comprador",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "auth",
+          "login"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "correo": "comprador.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+        "password": "[contraseña ficticia omitida]"
+      },
+      "status": 200,
+      "response": {
+        "token": "[JWT omitido]",
+        "tokenType": "Bearer",
+        "expiresIn": 3600,
+        "expiresAt": "2026-10-25T04:13:47Z",
+        "rol": "COMPRADOR",
+        "usuario": {
+          "id": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+          "nombre": "Comprador demo 2.9",
+          "correo": "comprador.a5854393-ad41-4c2e-94a7-dfbaa590f4b2@boheme.test",
+          "rol": "COMPRADOR",
+          "activo": true
+        }
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "07 Crear bolsa propia",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "clienteId": "24952836-09e1-45b2-a2c1-7b94a9387a3e"
+      },
+      "status": 201,
+      "response": {
+        "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+        "clienteId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+        "lineas": [],
+        "cerrada": false
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "08 Error intencional: cuatro unidades y sólo tres en stock",
+      "metodo": "POST",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas",
+          "2e02af0f-bb3b-4d44-9042-656233d14829",
+          "items"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": {
+        "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+        "cantidad": 4
+      },
+      "status": 409,
+      "response": {
+        "timestamp": "2026-10-25T03:13:47.766566800Z",
+        "status": 409,
+        "code": "STOCK_INSUFICIENTE",
+        "message": "No hay suficiente stock en el taller para esta variante de talla.",
+        "path": "/api/bolsas/2e02af0f-bb3b-4d44-9042-656233d14829/items",
+        "details": {}
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 409",
+          "correcta": true
+        },
+        {
+          "nombre": "STOCK_INSUFICIENTE",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "09 Bolsa sigue vacía tras rechazo",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "bolsas",
+          "activas",
+          "24952836-09e1-45b2-a2c1-7b94a9387a3e"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 200,
+      "response": {
+        "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829",
+        "clienteId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+        "lineas": [],
+        "cerrada": false
+      },
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Sin líneas después del error",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "paso": "10 Inventario no se alteró por el error",
+      "metodo": "GET",
+      "url": {
+        "protocol": "http",
+        "port": "61809",
+        "path": [
+          "api",
+          "prendas",
+          "creador",
+          "9e44f086-ce58-4a1c-a378-993ece137143"
+        ],
+        "host": [
+          "127",
+          "0",
+          "0",
+          "1"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "request": null,
+      "status": 200,
+      "response": [
+        {
+          "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+          "creadorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+          "nombre": "Camisa colección demo 2.9",
+          "descripcion": "Lino de autor para sustentación",
+          "precioBase": {
+            "monto": 19.95,
+            "moneda": "COP"
+          },
+          "variantes": [
+            {
+              "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+              "sku": "DEMO29-M",
+              "tipoTalla": "M",
+              "stockDisponible": 3
+            },
+            {
+              "varianteId": "4153cee3-8d9e-4458-8059-685bbc2cb1c9",
+              "sku": "DEMO29-L",
+              "tipoTalla": "L",
+              "stockDisponible": 2
+            }
+          ],
+          "stockTotal": 5,
+          "disponibleParaLaVenta": true
+        }
+      ],
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "correcta": true
+        },
+        {
+          "nombre": "Stock sigue en tres",
+          "correcta": true
+        }
+      ]
+    }
+  ],
+  "sql": [
+    {
+      "consulta": "SELECT COUNT(*) AS cantidad FROM pedidos_moda WHERE bolsa_id='2e02af0f-bb3b-4d44-9042-656233d14829'",
+      "filas": [
+        {
+          "CANTIDAD": "0"
+        }
+      ]
+    },
+    {
+      "consulta": "SELECT stock_disponible FROM variantes_prenda WHERE id='a7a1ca37-aa4c-4693-802b-bca5d802ec5b'",
+      "filas": [
+        {
+          "STOCK_DISPONIBLE": "3"
+        }
+      ]
+    },
+    {
+      "consulta": "SELECT cerrada FROM bolsas_estilo WHERE id='2e02af0f-bb3b-4d44-9042-656233d14829'",
+      "filas": [
+        {
+          "CERRADA": "FALSE"
+        }
+      ]
+    },
+    {
+      "consulta": "SELECT COUNT(*) AS cantidad FROM lineas_bolsa WHERE eliminado=FALSE AND bolsa_id='2e02af0f-bb3b-4d44-9042-656233d14829'",
+      "filas": [
+        {
+          "CANTIDAD": "0"
+        }
+      ]
+    }
+  ],
+  "muestras": {
+    "vendedorId": "9e44f086-ce58-4a1c-a378-993ece137143",
+    "compradorId": "24952836-09e1-45b2-a2c1-7b94a9387a3e",
+    "prendaId": "4813095b-e9b2-4a8a-9708-44bf973d44ab",
+    "varianteId": "a7a1ca37-aa4c-4693-802b-bca5d802ec5b",
+    "bolsaId": "2e02af0f-bb3b-4d44-9042-656233d14829"
+  },
+  "resultado": "OK: aserciones Postman y comprobaciones SQL satisfactorias."
+}

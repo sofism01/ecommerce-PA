@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-10-25T02:45:49.395Z" hostname="JUANRESTREPO" time="0.115">
+  <properties/>
+  <testcase name="servicioDeStock_UtilizaOperacionValidadaDelDominio()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.005"/>
+  <testcase name="entidades_SoloExponenConstructoresPrivadosYFabricaCrear()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.005"/>
+  <testcase name="varianteDeTalla_ValidaCamposYConservaStockAnteRechazo()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.008"/>
+  <testcase name="bolsa_RechazaEntradasInvalidasYMezclaDeMonedasSinMutar()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.006"/>
+  <testcase name="pedido_CanceladoNoPuedeContinuarProceso()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.003"/>
+  <testcase name="bolsa_CantidadAcumuladaNoDesbordaEntero()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.002"/>
+  <testcase name="vitrina_EncapsulaCatalogoYPermiteOperacionesValidas()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.004"/>
+  <testcase name="prenda_ActualizaStockValidoYRechazaNegativoSinMutar()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.001"/>
+  <testcase name="bolsa_AcumulaCantidadYRechazaExcesoSinMutar()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.003"/>
+  <testcase name="prenda_RechazaNombrePrecioStockYVariantesInvalidos()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.011"/>
+  <testcase name="prenda_RechazaActualizacionesDeVarianteInvalidasSinMutar()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.004"/>
+  <testcase name="creador_ValidaDatosObligatoriosYListas()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.009"/>
+  <testcase name="vitrina_RechazaDatosYCatalogoInvalidos()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.005"/>
+  <testcase name="prenda_PrecioYSuspensionValidanYConservanIdentidad()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.004"/>
+  <testcase name="pedido_RechazaVariantesInvalidasYProtegeLista()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.004"/>
+  <testcase name="bolsa_CerradaImpideAgregarYVaciarPeroActivaPermiteVaciar()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.001"/>
+  <testcase name="creador_EncapsulaVitrinasYConservaAlMenosUnaAlEliminar()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.003"/>
+  <testcase name="prenda_ActualizaVarianteCorrectaConservandoIdentidadYOriginalInmutable()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.001"/>
+  <testcase name="pedido_RespetaSecuenciaYRechazaSaltosSinCambiarEstado()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.004"/>
+  <testcase name="variantePrenda_ValidaCamposYOperaSinStockNegativo()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.007"/>
+  <testcase name="fabricas_RechazanIdentificadoresObligatoriosAusentes()" classname="com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

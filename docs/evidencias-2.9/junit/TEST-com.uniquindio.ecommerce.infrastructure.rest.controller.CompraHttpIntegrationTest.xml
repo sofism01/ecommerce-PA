@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-25T03:05:13.915Z" hostname="JUANRESTREPO" time="8.136">
+  <properties/>
+  <testcase name="flujoCompletoConErrorIntencionalStockPedidoYRelecturaDesdeH2()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.583"/>
+  <testcase name="[1] metodo = &quot;POST&quot;, path = &quot;/api/bolsas/00000000-0000-0000-0000-000000000001/items&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.435"/>
+  <testcase name="[2] metodo = &quot;POST&quot;, path = &quot;/api/bolsas/00000000-0000-0000-0000-000000000001/confirmar-pedido&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.425"/>
+  <testcase name="[3] metodo = &quot;GET&quot;, path = &quot;/api/pedidos/00000000-0000-0000-0000-000000000001&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.422"/>
+  <testcase name="compradorAjenoNoPuedeAgregarConfirmarNiConsultarElPedido()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.471"/>
+  <testcase name="swaggerDocumentaTresOperacionesConBearerYDtoSinPrecioEnSolicitud()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="1.142"/>
+  <testcase name="[1] contenido = &quot;{}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.484"/>
+  <testcase name="[2] contenido = &quot;{\&quot;varianteId\&quot;:null,\&quot;cantidad\&quot;:1}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.441"/>
+  <testcase name="[3] contenido = &quot;{\&quot;varianteId\&quot;:\&quot;00000000-0000-0000-0000-000000000001\&quot;,\&quot;cantidad\&quot;:0}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.423"/>
+  <testcase name="[4] contenido = &quot;{\&quot;varianteId\&quot;:\&quot;00000000-0000-0000-0000-000000000001\&quot;,\&quot;cantidad\&quot;:-1}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.425"/>
+  <testcase name="[5] contenido = &quot;{\&quot;varianteId\&quot;:\&quot;00000000-0000-0000-0000-000000000001\&quot;,\&quot;cantidad\&quot;:1.5}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.425"/>
+  <testcase name="[6] contenido = &quot;{\&quot;varianteId\&quot;:\&quot;invalido\&quot;,\&quot;cantidad\&quot;:1}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest" time="0.425"/>
+  <system-out><![CDATA[2026-10-24T22:05:13.917-05:00  INFO 25360 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest]: CompraHttpIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T22:05:13.920-05:00  INFO 25360 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest
+2026-10-24T22:05:13.921-05:00  INFO 25360 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest]: CompraHttpIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T22:05:13.923-05:00  INFO 25360 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.controller.CompraHttpIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-24T22:05:13.949-05:00  INFO 25360 --- [    Test worker] c.u.e.i.r.c.CompraHttpIntegrationTest    : Starting CompraHttpIntegrationTest using Java 21.0.12.1 with PID 25360 (started by Juan Restrepo in EQUIPO_LOCAL\OneDrive - uniminuto.edu\Documentos\ecommerce-PA)
+2026-10-24T22:05:13.949-05:00  INFO 25360 --- [    Test worker] c.u.e.i.r.c.CompraHttpIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T22:05:14.229-05:00  INFO 25360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T22:05:14.273-05:00  INFO 25360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2026-10-24T22:05:14.406-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T22:05:14.442-05:00  INFO 25360 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T22:05:14.443-05:00  INFO 25360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-24T22:05:14.446-05:00  INFO 25360 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn76: url=jdbc:h2:mem:compra_http user=SA
+2026-10-24T22:05:14.446-05:00  INFO 25360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-24T22:05:14.447-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:compra_http]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: COMPRA_HTTP/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T22:05:14.569-05:00  INFO 25360 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T22:05:14.583-05:00  INFO 25360 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T22:05:15.006-05:00  INFO 25360 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T22:05:15.006-05:00  INFO 25360 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T22:05:15.006-05:00  INFO 25360 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-24T22:05:15.022-05:00  INFO 25360 --- [    Test worker] c.u.e.i.r.c.CompraHttpIntegrationTest    : Started CompraHttpIntegrationTest in 1.096 seconds (process running for 23.859)
+2026-10-24T22:05:15.022-05:00  WARN 25360 --- [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T22:05:15.022-05:00  WARN 25360 --- [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-24T22:05:19.370-05:00  INFO 25360 --- [    Test worker] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 662 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

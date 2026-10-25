@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -18,11 +17,11 @@ public class ListarPrendasPorCreadorUseCase {
     private final PrendaDeAutorRepository prendaDeAutorRepository;
 
     @Transactional(readOnly = true)
-    public Optional<PrendaDeAutor> ejecutar(UUID creadorId) {
+    public List<PrendaDeAutor> ejecutar(UUID creadorId) {
         if (creadorId == null) {
             throw new IllegalArgumentException("El ID del creador no puede ser nulo.");
         }
 
-        return prendaDeAutorRepository.obtenerPrendaPorCreador(creadorId);
+        return prendaDeAutorRepository.obtenerPrendasPorCreador(creadorId);
     }
 }

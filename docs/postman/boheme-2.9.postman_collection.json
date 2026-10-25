@@ -1,0 +1,847 @@
+﻿{
+  "info": {
+    "name": "BOHEME 2.9 — flujo completo y error de negocio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Sólo desarrollo local. Ejecutar carpetas en orden. Credenciales ficticias generadas por cada corrida. No realiza pagos."
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:61809"
+    },
+    {
+      "key": "runId",
+      "value": ""
+    },
+    {
+      "key": "vendedorId",
+      "value": ""
+    },
+    {
+      "key": "compradorId",
+      "value": ""
+    },
+    {
+      "key": "ajenoId",
+      "value": ""
+    },
+    {
+      "key": "vendedorToken",
+      "value": ""
+    },
+    {
+      "key": "compradorToken",
+      "value": ""
+    },
+    {
+      "key": "ajenoToken",
+      "value": ""
+    },
+    {
+      "key": "prendaId",
+      "value": ""
+    },
+    {
+      "key": "varianteId",
+      "value": ""
+    },
+    {
+      "key": "bolsaId",
+      "value": ""
+    },
+    {
+      "key": "pedidoId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "01 Preparacion y error",
+      "item": [
+        {
+          "name": "01 Registrar vendedor",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.environment.set(\"runId\", pm.variables.replaceIn(\"{{$guid}}\"));"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.environment.set(\"vendedorId\", pm.response.json().id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/register",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Vendedor demo 2.9\",\n  \"correo\": \"vendedor.{{runId}}@boheme.test\",\n  \"password\": \"DemostracionBoheme2026!\",\n  \"rol\": \"VENDEDOR\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "02 Login vendedor",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.environment.set(\"vendedorToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"correo\": \"vendedor.{{runId}}@boheme.test\",\n  \"password\": \"DemostracionBoheme2026!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "03 Publicar prenda",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.environment.set(\"prendaId\", pm.response.json().prendaId);",
+                  "pm.environment.set(\"varianteId\", pm.response.json().variantes[0].varianteId);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{vendedorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/prendas",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"creadorId\": \"{{vendedorId}}\",\n  \"nombre\": \"Camisa colección demo 2.9\",\n  \"descripcion\": \"Lino de autor para sustentación\",\n  \"precioBase\": 19.95,\n  \"moneda\": \"COP\",\n  \"stockTotal\": 5,\n  \"variantes\": [\n    {\n      \"sku\": \"DEMO29-M\",\n      \"tipoTalla\": \"M\",\n      \"stockDisponible\": 3\n    },\n    {\n      \"sku\": \"DEMO29-L\",\n      \"tipoTalla\": \"L\",\n      \"stockDisponible\": 2\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "04 Consultar publicación sin JWT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Prenda publicada\", () => pm.expect(pm.response.json().some(p => p.prendaId === pm.environment.get(\"prendaId\"))).to.eql(true));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/prendas/creador/{{vendedorId}}"
+          }
+        },
+        {
+          "name": "05 Registrar comprador",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.environment.set(\"compradorId\", pm.response.json().id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/register",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Comprador demo 2.9\",\n  \"correo\": \"comprador.{{runId}}@boheme.test\",\n  \"password\": \"DemostracionBoheme2026!\",\n  \"rol\": \"COMPRADOR\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "06 Login comprador",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.environment.set(\"compradorToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"correo\": \"comprador.{{runId}}@boheme.test\",\n  \"password\": \"DemostracionBoheme2026!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "07 Crear bolsa propia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.environment.set(\"bolsaId\", pm.response.json().bolsaId);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clienteId\": \"{{compradorId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "08 Error intencional: cuatro unidades y sólo tres en stock",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 409\", function () { pm.response.to.have.status(409); });",
+                  "pm.test(\"STOCK_INSUFICIENTE\", () => pm.expect(pm.response.json().code).to.eql(\"STOCK_INSUFICIENTE\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas/{{bolsaId}}/items",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"varianteId\": \"{{varianteId}}\",\n  \"cantidad\": 4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "09 Bolsa sigue vacía tras rechazo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Sin líneas después del error\", () => pm.expect(pm.response.json().lineas).to.have.lengthOf(0));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas/activas/{{compradorId}}"
+          }
+        },
+        {
+          "name": "10 Inventario no se alteró por el error",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Stock sigue en tres\", () => pm.expect(pm.response.json()[0].variantes[0].stockDisponible).to.eql(3));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/prendas/creador/{{vendedorId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 Compra",
+      "item": [
+        {
+          "name": "11 Agregar dos unidades",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Cantidad y subtotal\", () => { const l=pm.response.json().lineas[0]; pm.expect(l.cantidad).to.eql(2); pm.expect(l.subtotal.monto).to.eql(39.9); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas/{{bolsaId}}/items",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"varianteId\": \"{{varianteId}}\",\n  \"cantidad\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "12 Consultar bolsa y subtotal",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Precio de catálogo\", () => pm.expect(pm.response.json().lineas[0].precioUnitario.monto).to.eql(19.95));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas/activas/{{compradorId}}"
+          }
+        },
+        {
+          "name": "13 Confirmar pedido PENDIENTE",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.environment.set(\"pedidoId\", pm.response.json().pedidoId);",
+                  "pm.test(\"Pedido sin pago y total correcto\", () => { const p=pm.response.json(); pm.expect(p.estado).to.eql(\"PENDIENTE\"); pm.expect(p.total.monto).to.eql(39.9); pm.expect(p.moneda).to.eql(\"COP\"); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas/{{bolsaId}}/confirmar-pedido"
+          }
+        },
+        {
+          "name": "14 Consultar pedido persistido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Pedido y línea histórica\", () => { const p=pm.response.json(); pm.expect(p.pedidoId).to.eql(pm.environment.get(\"pedidoId\")); pm.expect(p.lineas[0].cantidad).to.eql(2); pm.expect(p.lineas[0].subtotal.monto).to.eql(39.9); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/pedidos/{{pedidoId}}"
+          }
+        },
+        {
+          "name": "15 Consultar inventario actualizado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Sólo la variante comprada disminuye\", () => { const p=pm.response.json()[0]; pm.expect(p.variantes[0].stockDisponible).to.eql(1); pm.expect(p.variantes[1].stockDisponible).to.eql(2); pm.expect(p.stockTotal).to.eql(5); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/prendas/creador/{{vendedorId}}"
+          }
+        },
+        {
+          "name": "16 Impedir confirmación duplicada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 409\", function () { pm.response.to.have.status(409); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{compradorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas/{{bolsaId}}/confirmar-pedido"
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 Seguridad",
+      "item": [
+        {
+          "name": "17 Sin JWT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 401\", function () { pm.response.to.have.status(401); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/pedidos/{{pedidoId}}"
+          }
+        },
+        {
+          "name": "18 Vendedor no consulta pedido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 403\", function () { pm.response.to.have.status(403); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{vendedorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/pedidos/{{pedidoId}}"
+          }
+        },
+        {
+          "name": "19 Registrar otro comprador",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.environment.set(\"ajenoId\", pm.response.json().id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/register",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Otro comprador demo\",\n  \"correo\": \"ajeno.{{runId}}@boheme.test\",\n  \"password\": \"DemostracionBoheme2026!\",\n  \"rol\": \"COMPRADOR\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "20 Login otro comprador",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.environment.set(\"ajenoToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"correo\": \"ajeno.{{runId}}@boheme.test\",\n  \"password\": \"DemostracionBoheme2026!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "21 Rechazar pedido ajeno",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 403\", function () { pm.response.to.have.status(403); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{ajenoToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/pedidos/{{pedidoId}}"
+          }
+        },
+        {
+          "name": "22 Rechazar bolsa ajena",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 403\", function () { pm.response.to.have.status(403); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{ajenoToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/api/bolsas/{{bolsaId}}/items",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"varianteId\": \"{{varianteId}}\",\n  \"cantidad\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "23 Comprobar OpenAPI y Bearer",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Bearer y nuevos endpoints\", () => { const api=pm.response.json(); pm.expect(api.components.securitySchemes.bearerAuth.scheme).to.eql(\"bearer\"); pm.expect(api.paths[\"/api/pedidos/{pedidoId}\"].get.security[0]).to.have.property(\"bearerAuth\"); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api-docs"
+          }
+        }
+      ]
+    }
+  ]
+}
+

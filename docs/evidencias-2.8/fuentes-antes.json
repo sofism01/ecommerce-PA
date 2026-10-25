@@ -1,0 +1,518 @@
+﻿[
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/EcommerceApplication.java",
+        "sha256":  "1C1951F75C30064D89DB50058AAAB9F70DBD6701AFA387A79A50B1291BB44F13"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/request/ActualizarStockRequest.java",
+        "sha256":  "E244FF6516346F9B329E5CD887C24D7D9FEA2AE582FF6D551A3061EB33B4F1FB"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/request/AgregarItemBolsaRequest.java",
+        "sha256":  "F69F1470C0B46AB1BAB3085A56FD0CECD201E3F4C34FC288FE6E2B1C63EB7DCE"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/request/CrearBolsaRequest.java",
+        "sha256":  "62A4913A099CD4927C40C2066CA3FD341C07A440D1D87CA9308D195DEFB94257"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/request/LoginRequest.java",
+        "sha256":  "DFBE81CAC2E69CC60BE94331523141E02C051E0B54D072401EAD393A3D9E0583"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/request/RegistrarPrendaRequest.java",
+        "sha256":  "2D8E95BF4744658E8F13F39AF93E1A982AACBDF00711E2FAD0DED8A91EFE027D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/request/RegistroRequest.java",
+        "sha256":  "18429927623436D0AA5A885EE4FC1F518D8CEF9CA2927067BE2A30A09DBC5AB1"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/request/VariantePrendaRequest.java",
+        "sha256":  "FC9F2EB60A56B17D7998F1C7A001FBF46FF1061B5C5D343AE8B83C6DD83E6A2A"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/BolsaDeEstiloResponse.java",
+        "sha256":  "C00B8D1C93AF8FD8A15C7E1E6FBE2276B5FE9C89522E163D2BCBBC61100930FB"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/DineroResponse.java",
+        "sha256":  "D238F63F8A58EC382C03376541C17883DD3C6F8357226DDDB899281EFC6894C2"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/ErrorResponse.java",
+        "sha256":  "EC54AF76C6BC16BECDD792B024AE392029E8F0457AAA2C762D1D42F48607F0B5"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/LineaDeBolsaResponse.java",
+        "sha256":  "0356C9ECAB132D72A7FAFD6C24E688A9BD9A668E3CB861F258B0974C2D2D8EAD"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/LoginResponse.java",
+        "sha256":  "48F0A40E3179702C7F786E5EA50410803078E9CEE5B02484E4F36207343C5885"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/PaginaPrendasResponse.java",
+        "sha256":  "F3FB3AAAD22A0975549CC5D0BF99BC4C09369C9AC472D9F74CC1D89D31A57E7F"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/PrendaResponse.java",
+        "sha256":  "D954CED769E905ADCE8A027FBF8BEBE4EF17AE8470B962F51737F6E9F7554D3D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/UsuarioResponse.java",
+        "sha256":  "4FD6CA8388553DEBAE2DC4259EA90E77FA5151E0DE4E3B0889F0B0EBFFE5BB03"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/VariantePrendaResponse.java",
+        "sha256":  "8F614701BEB69997465A13DFE7263AB6706A9E4BB86083496E42BD76A5F1EACA"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/dto/response/VariedadCreadorResponse.java",
+        "sha256":  "A7AB0733624E3D4B733142ABA6AD26D28308C1313A41A0A85C4ADC4C30606CAB"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/security/AccesoDenegadoException.java",
+        "sha256":  "8495026F8106660001F7EA19F6CC1C8C464C4AAA3AE1A8CAB8A8FD793C76D455"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/security/CodificadorContrasenas.java",
+        "sha256":  "20B6442C9E783BFA1A5F292069A138F7D3FA8D1B077867BCA722A645A2EF9867"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/security/CredencialesInvalidasException.java",
+        "sha256":  "AA615635A47C4D18896810FC48D35210AC21E7FBBDABEB17CEE1690FBD9F77F5"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/security/EmisorTokens.java",
+        "sha256":  "4D24084ED3611CE92FEF76F26FE78C36FA788BCCE9B402CD6869DC59268A16A6"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/security/UsuarioActual.java",
+        "sha256":  "DF905AA182C67B9F616F7A385F648467AEC60E74572A06F5B459AB4A8FBF2674"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/ActualizarStockVariantePrendaUseCase.java",
+        "sha256":  "D6AB3A212EBE3998E6F82F8B8F31949DCA72A7719E5FD935021A3386B2B5AD0E"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/AutorizarRecursosUseCase.java",
+        "sha256":  "3178E69D379F7E44022FDE96BA81178FA8CAC328C5AB06612B058A06BE07B5FB"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/BuscarPrendasUseCase.java",
+        "sha256":  "7EAB1767621A58D1F0C77F2F790DD6ED718580EB4772BD353D4FCADBD46B5C88"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/CerrarBolsaDeEstiloUseCase.java",
+        "sha256":  "1A52492BFAC5D029FB6C5F263AC73135EB36BC3B1EDCD983D21A1AE4369EAD7C"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarVariedadCreadoresUseCase.java",
+        "sha256":  "B3190BC130E9A333A19DA32491C6175627E5A874ED728BF1242208C642FA6767"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/CrearBolsaDeEstiloUseCase.java",
+        "sha256":  "451485A10577C29BAC8F621A0B72FA1F8C0489B16F15D8CB1E2B334F330A93E3"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/IniciarSesionUseCase.java",
+        "sha256":  "F315FFA060620955867CCBA7F3F2A89F10AB14DE4A9D426F6E6C3057E1292D3C"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/ListarPrendasPorCreadorUseCase.java",
+        "sha256":  "D53DD62C62FE679A86E8D4AD31E851E31193E828C3CB6391E2B962F4685B9F8A"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/ObtenerBolsaDeEstiloActivaUseCase.java",
+        "sha256":  "5AA6A0304B333EED44FBCFB446B5B0C70D7A787BAE851AF5C4ED1E97BB6D3B9A"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/RegistrarPrendaDeAutorUseCase.java",
+        "sha256":  "FAA246467A8B5C69F29D0ACFC22FEEA91B4392E31BD3D9B0073F257ACCF40DAC"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/RegistrarUsuarioUseCase.java",
+        "sha256":  "66BBFF0F46A860B35B48381D1175F84350B5C557330DDCD33A99142C2AF7AFF6"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/SuspenderVentaPrendaDeAutorUseCase.java",
+        "sha256":  "33C0AB0212641D9C3291B4BA79389CECE3A815F2A80FDB710A1BF8A22DD31A9A"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/application/usecase/VaciarBolsaDeEstiloUseCase.java",
+        "sha256":  "F9BC408DF63AB3367C11D5D9C20A07EB0938E212C1F715A6F71704F542B92198"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/BolsaDeEstilo.java",
+        "sha256":  "9A6B009EAE2A288AA1A076FC06FD6A5B5798C51246ECAD6E4C695B0DD3EEBFFF"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/Creador.java",
+        "sha256":  "33D5A1E5C1BA88F72F99D01BDEDBBFFE22471CA3BD817EA2DD354CC0369D1E77"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/PedidoDeModa.java",
+        "sha256":  "F2BA676D947034DF1C8D31D7DD1B4A8407995FD14BAB00298F60A839A07F57B6"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/PrendaDeAutor.java",
+        "sha256":  "641DBAAF7CD0806A4D5F69C5D38705C04CA1786811F259E9C7795C1066155992"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/Usuario.java",
+        "sha256":  "14B4CAF60DBC29CE343D9423646868253EDAB3351A21C3CF17260AFB4CF031B4"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/VarianteDeTalla.java",
+        "sha256":  "9E88A8D921596ED0E566CE53F9AB69CE7746A6FB55AD4324F6A33F2C84FBE65F"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/VariantePrenda.java",
+        "sha256":  "8B25CB110BD050CF3019BDB1F3049E16A1BA4D95EAD6F8DAEACFA5C77AC2D913"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/entity/VitrinaDeCreador.java",
+        "sha256":  "9CF77040FAC463B025E06581DB52ED232A101FF84234ECE0F109407A5CBC42BF"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/exception/BolsaDeEstiloNoEncontradaException.java",
+        "sha256":  "ADF0CCAA5ACDE3B3723EFAB092B5F85BC47B5C950CB2984E90136352A426AA1D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/exception/CorreoDuplicadoException.java",
+        "sha256":  "8B923F1FD88183624D3026516DD2940E4EF16C11D260FAFC5DABEDCE7A2E6CE4"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/exception/ModificacionBolsaNoPermitidaException.java",
+        "sha256":  "411E95776860787944819166BCE8D4A6EB5339F819D86B4D11B010B9CC669BAC"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/exception/RecursoNoEncontradoException.java",
+        "sha256":  "AABF893CD61310D858751AF06FCC609D49C24ED36334805A0CB4CCAA1CF3CA61"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/exception/ReglaDominioException.java",
+        "sha256":  "0A5E49B2E2EFEA2B99ABF2A6C5D87E295D25BEA803CF863A6028A00AC09FBEA9"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/exception/StockInsuficienteException.java",
+        "sha256":  "2601981E6681DE58FBE41A19409D61C36082EA675369D3339B269CB4A9F8D020"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/query/ConsultaInvalidaException.java",
+        "sha256":  "15C5AB35FE3F8CE1FDCF8E5ECD6FADC9F55D44B4E4AFDCE7BE2433E7A6B2AFD8"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/query/ConsultaPrendas.java",
+        "sha256":  "2B89BD8FB1E5934CCA0076D95E36E87B468ADA0B938809BFC756DDAE5ECA5C8E"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/query/Pagina.java",
+        "sha256":  "B0380473AA3C07F39170015D4F987F70223ABF67BA8ACED13F406FAF661FF29A"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/query/VariedadCreador.java",
+        "sha256":  "18461F3B71C98C18E1E8BD5970D719EC0AC4F186A79B78C9CFB18AB1283B2F82"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/repository/BolsaDeEstiloRepository.java",
+        "sha256":  "5C96239FE60DA8F65431B315F959CF6CC3FFF864CAF2F1CF7590D9A9902DC3B9"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/repository/ConsultaPrendasRepository.java",
+        "sha256":  "0ECBE2B061848C4FF7A3E999F8D73B768D0F2762795EF3F30DB349B569CA7298"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/repository/PrendaDeAutorRepository.java",
+        "sha256":  "C076B06641CC21E56A8D838B2FA314DB0FF77D99D1A0A861DA5C48E1FAD339B4"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/repository/UsuarioRepository.java",
+        "sha256":  "FD2949AE4106E7BD707D5B5744A7057E5DA2E717178C184F9901F31D74EFD0DF"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/service/ActualizadorDeStock.java",
+        "sha256":  "77CF09413A5F737C3F75DDC8102885962E0ED15258F572C51B4B786F39395F29"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/service/GestorDeBolsaDeEstilo.java",
+        "sha256":  "D3D5DBF149C8A78668BB4C7571A84D65245C52DDA8C6D7C753279A662EDB3137"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/BolsaDeEstiloId.java",
+        "sha256":  "7971E94FCE6DFD62C370FA96DCC1A67BA0DF00831C3A0DCC40A92700D7B2AD85"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/Dinero.java",
+        "sha256":  "5144C8089916063F8B24F906F7B97145E9230569602DE142E808AEFE98C76E8D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoPedido.java",
+        "sha256":  "E60043E0EA971B1696422E4063CD1A0BA021A28BA712F16088680F756D6A4B91"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/LineaDeBolsa.java",
+        "sha256":  "0AA3FBB96F2931DEC0A1EFD248EB5A3E1FC64D5A540F3BD554C8F719DAE2C54D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/MedidasCorporales.java",
+        "sha256":  "56C97BE0E41A0C2A84926720C9490A2210F755D7B3801E1F9E2E823285601208"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/PrendaDeAutorId.java",
+        "sha256":  "A89DE7632C7B33A2F990F088786B54060265A49756C9814E6051C5406F456178"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/Rol.java",
+        "sha256":  "72D990B2BFA9F0C2D0BB13DCD3CD3D606591DEFDE8F7AA5E027D4CE063235D9D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/SKU.java",
+        "sha256":  "3BE331D95A80A4BE973A0755011243CF747EC22C582AD91B88F41BAF0FF0A2FC"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/TipoTalla.java",
+        "sha256":  "98FB11D9D67AC2E581332E338A0E57547B40F064C5F882DA2FF3A2580342EEA3"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/domain/valueobject/VariantePrendaId.java",
+        "sha256":  "A1A97C8272E127C40D493F2FDE62210154DBAE265F66B2555970E7B5C62FEF9C"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/config/DomainServiceConfig.java",
+        "sha256":  "D6545481D13703C278BE4FDB537BC9899F3B9FA9E9FC0F80FB6B84D3474B9C88"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/config/JsonConfig.java",
+        "sha256":  "3689DBD11E32AC33C2395116FAE1E72C23A124F986B2C0343773F07779F66B41"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/config/OpenApiConfig.java",
+        "sha256":  "A0BF5558C095F7758162ABA24DDFB69078EF1061086217CD8D61C87ECDA20663"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/InMemoryBolsaDeEstiloRepository.java",
+        "sha256":  "5C3E55CF88D7FA351291F194E864A40BB5CFD3157AF99C3D111DB61678AC9640"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/InMemoryPrendaDeAutorRepository.java",
+        "sha256":  "A4AF3A8B4899F206ADD23558BC93321A7C8B0E45B40DDB7D9E42D451A84BA167"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/JpaBolsaDeEstiloRepository.java",
+        "sha256":  "C45CB7C244622F1FF8AF4493076932CA07821F9F76BD8965A5DBAD682DA03596"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/JpaPrendaDeAutorRepository.java",
+        "sha256":  "976AC1D061DB8D7D411BBC0431AA21E3F422B25F276A6054D2B736CB603FC13C"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/JpaUsuarioRepository.java",
+        "sha256":  "A20A51822223404CB1E7F9BB83E01D7B71073C10C0E3781FD4973A68FDC5D708"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/BolsaJpaEntity.java",
+        "sha256":  "F48A8C23C744D3F766FC51129E23E45D77E505E8AFAF3CDB0A61E3158C07D734"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/DineroJpa.java",
+        "sha256":  "035F8DC4B142D377A7B142F7D3BAEF936E55E6457E1B9241B640F5BB8150DD35"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/LineaBolsaJpaEntity.java",
+        "sha256":  "193BB05CB9BED9AB402B6750A62ED414571505ACA7129BA0465B517EF70E7A5D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/PrendaJpaEntity.java",
+        "sha256":  "F28DF5EA20C3E42CCB4E760B6D0852C46A52F2F5728F7DFE4883C8387E7C8F2D"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/UsuarioJpaEntity.java",
+        "sha256":  "BBF3ECDA511D622DC58E52B156AE50AD22B043FDE9ACD0421F786BCAA273469C"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/VarianteJpaEntity.java",
+        "sha256":  "AF79170002941059A6622F1DD5A2D6B03FDD475A6EC1BCD1E4BE79848AC8AD52"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/mapper/BolsaJpaMapper.java",
+        "sha256":  "2216E20C7098ED1EE82D60F3103BE668589CA2F8D6021CABC02E982B87D83DE8"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/mapper/DineroJpaMapper.java",
+        "sha256":  "12A042D7E21D47E36656D9CE3FFF93886D000AB8DB4C56B4E987325B55118C96"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/mapper/PrendaJpaMapper.java",
+        "sha256":  "5121C32C15F2EF7AE6EC7E1C9EF40C2ECEE2C044AA4C3976637CF720A3864552"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/mapper/UsuarioJpaMapper.java",
+        "sha256":  "0C88A5800AD234754F5C8100BA1FED631D3FE77A5696F7EF43C60E6B41E0AE62"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/repository/BolsaJpaRepository.java",
+        "sha256":  "6F6522A42FF840974C30FFCAAE07C512E2B017310C6067C24A9ED05BA9BB1AE1"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/repository/PrendaJpaRepository.java",
+        "sha256":  "7A5E9BAB3BCC098042B393E83D610A57DAD2EC58213FB70379B4827223FD6E57"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/repository/UsuarioJpaRepository.java",
+        "sha256":  "76A0A91ACC9CAC7F89CCA5D13325188647CF2644E10E6051150D5E49BE75DB21"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/seed/DatosIniciales.java",
+        "sha256":  "280329CDE1E7684309DCAFD00C240319CCB04DA033137C46CB94D38DDEA33B7C"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/seed/UsuariosDemo.java",
+        "sha256":  "E34C178F191DA9F5F8BD964D958CC6C105214C2465A1EE3FC30AA6D44DA2D625"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/controller/AuthController.java",
+        "sha256":  "E039D988561230DC83C46E0E73423D0205F6CC064023444E0A939E1207AFA2AF"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloController.java",
+        "sha256":  "3267396D3E27024AFE9C3F467EAAABF2463FA911A1681B49FE05C39B33CEE0C3"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaController.java",
+        "sha256":  "A7949BAA7920BD5420BC848FC41912645AC06B25BC3BAC31B9B6A3C6A4536F01"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/controller/ReporteController.java",
+        "sha256":  "20C73606CE1F5C03106DE1B779430BC0CC8D284F4CEEA0880A4A73A47C986B1E"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/exception/ApiExceptionHandler.java",
+        "sha256":  "B04356B9BD7729A15A12CB638376E0BC933248A4CD0222DCB9C6AA3A167B11EC"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/BolsaDeEstiloMapper.java",
+        "sha256":  "B451AC172D6ABFCBA410CBA89C5AC91C422CA8F755AECD6094F88B911172A2E5"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/ConsultaPrendasMapper.java",
+        "sha256":  "2EFAB80F1793269A295D8C81B3BD8E575DABCFA15214BC53C5701CE87C2C459B"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/DineroMapper.java",
+        "sha256":  "D4D8C8DACF4DB436509883DEB7549D499112BCEF41804197BD80B4589D66B23E"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/PrendaMapper.java",
+        "sha256":  "4863E6E1481B6B85AF6D0539BA5966A2205247AC2900E134A28CED0A0D597427"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/UsuarioMapper.java",
+        "sha256":  "84BAF233FF4536916FFA456EE1D106F2818796BFBAE055083C920CA52DFBD957"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/security/BCryptContrasenas.java",
+        "sha256":  "B03259C1EFC028FACFE8C76A3BA8A1E1572F78FDFABAE2E421BDF903907EBBED"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfig.java",
+        "sha256":  "65A0DBBA918A8D9E7174569CC7084DB42F6810AB004AB0472690511BC8A244C2"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/security/NimbusEmisorTokens.java",
+        "sha256":  "FB81D55B2FD09CC6D18F420FF32DA0DF401E38B27BA05C407669EAFD9136CDDC"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/security/SecurityConfig.java",
+        "sha256":  "D7CFA5C1329C9BB3E6B4E37CF0E145E1A42EF85352224D4960DD07921D3F8FA4"
+    },
+    {
+        "archivo":  "src/main/java/com/uniquindio/ecommerce/infrastructure/security/SecurityContextUsuarioActual.java",
+        "sha256":  "990BB0433622079131810DB7E4415D7119E2629CAB87E0C13842423D7C02935E"
+    },
+    {
+        "archivo":  "src/main/resources/application-dev.properties",
+        "sha256":  "06DFFD9E6A42ABEEDCF05F7727F0830396BA4414D449F21B7CAEF5F8C3BAB472"
+    },
+    {
+        "archivo":  "src/main/resources/application.properties",
+        "sha256":  "12A95410561C7C04FB280DBFE50FBD23763622327D1AFBB145CF6624CB749ACB"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/EcommerceApplicationTests.java",
+        "sha256":  "CFC24FEA07EF0BEE6A00B0A6C1B85A178598A406AE2F0A1CF3D54634E1311CF0"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ApiUseCasesTest.java",
+        "sha256":  "2DD5FBC729F6F82CC48BF4C14EEF85BED69695BAE0EF081E50F32D0A63651F45"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+        "sha256":  "EC947C4AFEB0E2050809705F12E5BFB857EFEBCEAA1CA4AE0225CA9A7E33864F"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/BolsaDeEstiloTest.java",
+        "sha256":  "254146B18769752C0DCF40A03C084BA869B9A888741B6ED0C4579308462CE78A"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/EntidadTest.java",
+        "sha256":  "AFAC2C74A47C2BA7894E596AC9271E055D01C5F366D1D1460CD4A043C7793D40"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+        "sha256":  "2EC115DBAFBC967A04FDBAB8CE2A757941654CFE42855B03D9910EE5D54A7DFB"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/PrendaDeAutorTest.java",
+        "sha256":  "1F17767DBA887195A5A044B881165E7EEBFB76F3F0F4D87AD9C0BA4068D8140C"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/ReconstruccionAgregadosTest.java",
+        "sha256":  "987BA7AD25632F26EB654901FF34E0A81B032ACD0836FE138098344E2A42A1B0"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/valueobject/ValueObjectTest.java",
+        "sha256":  "B08011712D51292077ADF85B61FFF6C7DD812E2F687C9297888F8768A9F5F15D"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CasosDeUsoJpaIntegrationTest.java",
+        "sha256":  "4B4D1516D2D5CAF86F1B086920D6E9E7CA066D31C707AD73F4566630551A7976"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+        "sha256":  "64EFF770633554BA4E2E5CDCA51E43E785244B943BE40CE57F89DE396FFC9B5C"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+        "sha256":  "9146AF610503F2FC1ACA53E94EB74381BFB33FEBADBFDA382D39057951A7D220"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/UsuarioJpaTest.java",
+        "sha256":  "77BDF66C132EBFADE62D589B3EE718016DF444DCB4B40075128CBE3666B218ED"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+        "sha256":  "B45CA2AD69175D76B501A42453C27B11487E5E62982BE04BA75A9C20D623A9CA"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+        "sha256":  "526BD68BFEA0CF426D1E08B0737133839897CBF618831FE5374EBF6045201AC9"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/ReporteControllerTest.java",
+        "sha256":  "E5DF0E873AA40B0BA02B4A3A30313A5694B7F5AC849F39A26F3426D7223BF639"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+        "sha256":  "85A83363EEDB0B46D9C4E4334103FE0197425D270DBBFEB1CFF1D58DA5E48656"
+    },
+    {
+        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+        "sha256":  "DFCC1E529BD6730DEA801D81B955150AD5ACF70730D871B6D1E304BB119369CB"
+    },
+    {
+        "archivo":  "src/test/resources/application.properties",
+        "sha256":  "59AC553CFF68950632DCFAAA08BD27A5FBB29E5F08B13F95C47FDD8ACFAA6184"
+    }
+]

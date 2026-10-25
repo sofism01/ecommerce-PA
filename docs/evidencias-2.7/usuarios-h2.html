@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+Copyright 2004-2025 H2 Group. Multiple-Licensed under the MPL 2.0,
+and the EPL 1.0 (https://h2database.com/html/license.html).
+Initial Developer: H2 Group
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>H2 Console</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script type="text/javascript" src="table.js"></script>
+</head>
+<body class="result">
+
+<div id="output">
+SELECT id, correo, rol, activo, LEFT(password_hash,7) AS bcrypt_prefijo, LENGTH(password_hash) AS hash_longitud FROM usuarios ORDER BY correo;<br /><table class="resultSet" cellspacing="0" cellpadding="0"><tr><th>ID</th><th>CORREO</th><th>ROL</th><th>ACTIVO</th><th>BCRYPT_PREFIJO</th><th>HASH_LONGITUD</th></tr><tr><td>3b46c912-5566-467e-b3dd-65bae9824cb4</td><td>comprador-a105a8b25e@boheme.test</td><td>COMPRADOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr><tr><td>c1000000-0000-4000-8000-000000000001</td><td>comprador1@boheme.test</td><td>COMPRADOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr><tr><td>c1000000-0000-4000-8000-000000000002</td><td>comprador2@boheme.test</td><td>COMPRADOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr><tr><td>6bc1ced8-4dd7-4105-af15-51528e63ceab</td><td>otro-comprador-a105a8b25e@boheme.test</td><td>COMPRADOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr><tr><td>8cd76b6a-6251-41f1-a32d-5ade83a818e3</td><td>otro-vendedor-a105a8b25e@boheme.test</td><td>VENDEDOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr><tr><td>75c5d8e0-52ca-41e9-bfea-113246546bb4</td><td>vendedor-a105a8b25e@boheme.test</td><td>VENDEDOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr><tr><td>81000000-0000-4000-8000-000000000001</td><td>vendedor1@boheme.test</td><td>VENDEDOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr><tr><td>81000000-0000-4000-8000-000000000002</td><td>vendedor2@boheme.test</td><td>VENDEDOR</td><td>TRUE</td><td>&#36;2a&#36;12&#36;</td><td>60</td></tr></table>(8 rows, 1 ms)<br />
+</div>
+
+<table id="h2auto" class="autoComp"><tbody></tbody></table>
+
+</body></html>

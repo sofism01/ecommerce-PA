@@ -1,5 +1,8 @@
 package com.uniquindio.ecommerce.domain.entity;
 
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -13,11 +16,26 @@ public class VitrinaDeCreador {
     private final List<PrendaDeAutor> catalogo;
 
     private VitrinaDeCreador(UUID id, UUID creadorId, String nombreMarca, String descripcionMarca, List<PrendaDeAutor> catalogo) {
-        this.id = Objects.requireNonNull(id, "El ID de la vitrina es obligatorio.");
-        this.creadorId = Objects.requireNonNull(creadorId, "El ID del creador es obligatorio.");
+        if (id == null) {
+            throw new ReglaDominioException("El ID de la vitrina es obligatorio.");
+        }
+        this.id = id;
+        if (creadorId == null) {
+            throw new ReglaDominioException("El ID del creador es obligatorio.");
+        }
+        this.creadorId = creadorId;
         this.nombreMarca = validarNombre(nombreMarca);
-        this.descripcionMarca = Objects.requireNonNull(descripcionMarca, "La descripción de la marca es obligatoria.");
-        this.catalogo = Objects.requireNonNull(catalogo, "El catálogo no puede ser nulo.");
+        if (descripcionMarca == null) {
+            throw new ReglaDominioException("La descripción de la marca es obligatoria.");
+        }
+        this.descripcionMarca = descripcionMarca;
+        if (catalogo == null) {
+            throw new ReglaDominioException("El catálogo no puede ser nulo.");
+        }
+        if (catalogo.stream().anyMatch(Objects::isNull)) {
+            throw new ReglaDominioException("El catálogo no puede contener prendas nulas.");
+        }
+        this.catalogo = new ArrayList<>(catalogo);
     }
 
     public static VitrinaDeCreador crear(UUID id, UUID creadorId, String nombreMarca, String descripcionMarca, List<PrendaDeAutor> catalogo) {
@@ -26,18 +44,23 @@ public class VitrinaDeCreador {
 
     private String validarNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
-            throw new IllegalArgumentException("El nombre de la marca no puede estar vacío.");
+            throw new ReglaDominioException("El nombre de la marca no puede estar vacío.");
         }
         return nombre.trim();
     }
 
     public void agregarPrenda(PrendaDeAutor prenda) {
-        Objects.requireNonNull(prenda, "La prenda no puede ser nula.");
+        if (prenda == null) {
+            throw new ReglaDominioException("La prenda no puede ser nula.");
+        }
         catalogo.add(prenda);
     }
 
     public void eliminarPrenda(UUID prendaId) {
-        catalogo.removeIf(prenda -> prenda.getId().equals(prendaId));
+        if (prendaId == null) {
+            throw new ReglaDominioException("El ID de la prenda es obligatorio.");
+        }
+        catalogo.removeIf(prenda -> prenda.getId().value().equals(prendaId));
     }
 
     // --- equals() y hashCode() basados en el id ---

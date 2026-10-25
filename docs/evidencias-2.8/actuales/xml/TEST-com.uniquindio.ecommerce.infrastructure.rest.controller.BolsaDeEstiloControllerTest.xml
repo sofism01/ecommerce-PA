@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-25T02:45:55.263Z" hostname="JUANRESTREPO" time="2.385">
+  <properties/>
+  <testcase name="vaciar_Devuelve204YDelegaIdentificadorTipado()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.235"/>
+  <testcase name="obtenerActiva_Ausente_Devuelve404ConContratoDeError()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.314"/>
+  <testcase name="crear_Valida_Devuelve201ConDtoYDelega()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.196"/>
+  <testcase name="obtenerActiva_DevuelveDtoConLineasYSubtotalDelDominio()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.03"/>
+  <testcase name="cerrar_Devuelve204YDelegaIdentificadorTipado()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.022"/>
+  <testcase name="vaciarYCerrar_BolsaInexistente_Devuelven404()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.031"/>
+  <testcase name="[1] json = &quot;{}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.051"/>
+  <testcase name="[2] json = &quot;{\&quot;clienteId\&quot;:null}&quot;" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.019"/>
+  <testcase name="clienteUuidInvalido_Devuelve400()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.041"/>
+  <testcase name="vaciar_BolsaCerrada_Devuelve409()" classname="com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest" time="0.033"/>
+  <system-out><![CDATA[2026-10-24T21:45:55.265-05:00  INFO 26756 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest]: BolsaDeEstiloControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:45:55.309-05:00  INFO 26756 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest
+2026-10-24T21:45:55.310-05:00  INFO 26756 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest]: BolsaDeEstiloControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-24T21:45:55.318-05:00  INFO 26756 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-24T21:45:55.347-05:00  INFO 26756 --- [    Test worker] c.u.e.i.r.c.BolsaDeEstiloControllerTest  : Starting BolsaDeEstiloControllerTest using Java 21.0.12.1 with PID 26756 (started by Juan Restrepo in EQUIPO_LOCAL\OneDrive - uniminuto.edu\Documentos\ecommerce-PA)
+2026-10-24T21:45:55.348-05:00  INFO 26756 --- [    Test worker] c.u.e.i.r.c.BolsaDeEstiloControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T21:45:56.553-05:00  INFO 26756 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T21:45:56.554-05:00  INFO 26756 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T21:45:56.558-05:00  INFO 26756 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-10-24T21:45:56.600-05:00  INFO 26756 --- [    Test worker] c.u.e.i.r.c.BolsaDeEstiloControllerTest  : Started BolsaDeEstiloControllerTest in 1.279 seconds (process running for 17.63)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

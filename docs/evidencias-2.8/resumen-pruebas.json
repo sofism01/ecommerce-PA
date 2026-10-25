@@ -1,0 +1,1505 @@
+﻿{
+    "comando":  ".\\gradlew.bat clean test --console=plain",
+    "resultadoGradle":  "BUILD SUCCESSFUL",
+    "codigoSalida":  0,
+    "java":  "21.0.12.1",
+    "totalClases":  18,
+    "ejecutadas":  189,
+    "exitosas":  189,
+    "fallidas":  0,
+    "errores":  0,
+    "omitidas":  0,
+    "categorias":  [
+                       {
+                           "categoria":  "Casos de uso",
+                           "ejecutadas":  6
+                       },
+                       {
+                           "categoria":  "Controllers",
+                           "ejecutadas":  57
+                       },
+                       {
+                           "categoria":  "Dominio",
+                           "ejecutadas":  42
+                       },
+                       {
+                           "categoria":  "Otras",
+                           "ejecutadas":  50
+                       },
+                       {
+                           "categoria":  "Repositorios",
+                           "ejecutadas":  34
+                       }
+                   ],
+    "suites":  [
+                   {
+                       "clase":  "com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest",
+                       "ejecutadas":  4,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:48.731Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                       "ejecutadas":  7,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:48.742Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.domain.entity.BolsaDeEstiloTest",
+                       "ejecutadas":  2,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:49.377Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.domain.entity.EntidadTest",
+                       "ejecutadas":  3,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:49.388Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                       "ejecutadas":  21,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:49.395Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.domain.entity.PrendaDeAutorTest",
+                       "ejecutadas":  2,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:49.511Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest",
+                       "ejecutadas":  4,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:49.515Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.domain.valueobject.ValueObjectTest",
+                       "ejecutadas":  4,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:49.537Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.EcommerceApplicationTests",
+                       "ejecutadas":  1,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:40.165Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.CasosDeUsoJpaIntegrationTest",
+                       "ejecutadas":  4,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:49.543Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                       "ejecutadas":  19,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:51.983Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                       "ejecutadas":  12,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:53.730Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest",
+                       "ejecutadas":  3,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:54.701Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                       "ejecutadas":  10,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:55.263Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                       "ejecutadas":  45,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:57.655Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest",
+                       "ejecutadas":  2,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:45:59.732Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                       "ejecutadas":  9,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:46:00.328Z"
+                   },
+                   {
+                       "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                       "ejecutadas":  37,
+                       "fallidas":  0,
+                       "errores":  0,
+                       "omitidas":  0,
+                       "fechaUtc":  "2026-10-25T02:46:00.341Z"
+                   }
+               ],
+    "pruebas":  [
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ApiUseCasesTest.java",
+                        "nombre":  "prendasYVariantesAusentes_SeDiferencianDeOtrasReglas()",
+                        "categoria":  "Casos de uso",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ApiUseCasesTest.java",
+                        "nombre":  "bolsa_FlujoActivoVaciadoYCierreYErroresConservanReglas()",
+                        "categoria":  "Casos de uso",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ApiUseCasesTest.java",
+                        "nombre":  "listado_RecuperaTodasLasPrendasYFiltraPorCreador()",
+                        "categoria":  "Casos de uso",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ApiUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ApiUseCasesTest.java",
+                        "nombre":  "suspensionYStock_SeConservanEnElRepositorio()",
+                        "categoria":  "Casos de uso",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+                        "nombre":  "rankingDelegaSinInventarEstadisticas()",
+                        "categoria":  "Casos de uso",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+                        "nombre":  "[1] page = \"-1\", size = \"20\"",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+                        "nombre":  "[2] page = \"0\", size = \"0\"",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+                        "nombre":  "[3] page = \"0\", size = \"-1\"",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+                        "nombre":  "[4] page = \"0\", size = \"101\"",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+                        "nombre":  "[5] page = \"2147483647\", size = \"2\"",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.application.usecase.ConsultasAvanzadasUseCasesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/application/usecase/ConsultasAvanzadasUseCasesTest.java",
+                        "nombre":  "buscarDelegaCriteriosYConservaMetadatos()",
+                        "categoria":  "Casos de uso",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.BolsaDeEstiloTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/BolsaDeEstiloTest.java",
+                        "nombre":  "modificarBolsaCerrada_LanzaExcepcion_NoCambiaEstado()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.BolsaDeEstiloTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/BolsaDeEstiloTest.java",
+                        "nombre":  "agregarLinea_StockInsuficiente_NoCambiaEstado()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.EntidadTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/EntidadTest.java",
+                        "nombre":  "reglaProtegida_ValidarVitrinasCreador()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.EntidadTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/EntidadTest.java",
+                        "nombre":  "igualdadPorIdentidad_PrendaDeAutor()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.EntidadTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/EntidadTest.java",
+                        "nombre":  "reglaProtegida_ActualizarPrecioPrenda()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "servicioDeStock_UtilizaOperacionValidadaDelDominio()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "entidades_SoloExponenConstructoresPrivadosYFabricaCrear()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "varianteDeTalla_ValidaCamposYConservaStockAnteRechazo()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "bolsa_RechazaEntradasInvalidasYMezclaDeMonedasSinMutar()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "pedido_CanceladoNoPuedeContinuarProceso()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "bolsa_CantidadAcumuladaNoDesbordaEntero()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "vitrina_EncapsulaCatalogoYPermiteOperacionesValidas()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "prenda_ActualizaStockValidoYRechazaNegativoSinMutar()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "bolsa_AcumulaCantidadYRechazaExcesoSinMutar()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "prenda_RechazaNombrePrecioStockYVariantesInvalidos()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "prenda_RechazaActualizacionesDeVarianteInvalidasSinMutar()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "creador_ValidaDatosObligatoriosYListas()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "vitrina_RechazaDatosYCatalogoInvalidos()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "prenda_PrecioYSuspensionValidanYConservanIdentidad()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "pedido_RechazaVariantesInvalidasYProtegeLista()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "bolsa_CerradaImpideAgregarYVaciarPeroActivaPermiteVaciar()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "creador_EncapsulaVitrinasYConservaAlMenosUnaAlEliminar()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "prenda_ActualizaVarianteCorrectaConservandoIdentidadYOriginalInmutable()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "pedido_RespetaSecuenciaYRechazaSaltosSinCambiarEstado()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "variantePrenda_ValidaCamposYOperaSinStockNegativo()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.InvariantesEntidadesTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/InvariantesEntidadesTest.java",
+                        "nombre":  "fabricas_RechazanIdentificadoresObligatoriosAusentes()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.PrendaDeAutorTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/PrendaDeAutorTest.java",
+                        "nombre":  "crearPrenda_SinVariantes_LanzaExcepcion()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.PrendaDeAutorTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/PrendaDeAutorTest.java",
+                        "nombre":  "actualizarPrecio_Valido_CambiaPrecio()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/ReconstruccionAgregadosTest.java",
+                        "nombre":  "prenda_ReconstruccionNoOmiteInvariantes()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/ReconstruccionAgregadosTest.java",
+                        "nombre":  "prenda_ReconstruyeIdentidadEstadoYObjetosDeValor()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/ReconstruccionAgregadosTest.java",
+                        "nombre":  "bolsa_ReconstruccionRechazaNulosDuplicadosYMonedasMezcladas()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.entity.ReconstruccionAgregadosTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/entity/ReconstruccionAgregadosTest.java",
+                        "nombre":  "bolsa_ReconstruyeCerradaConLineasSinSimularStock()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.valueobject.ValueObjectTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/valueobject/ValueObjectTest.java",
+                        "nombre":  "validacionMontoNegativo_Dinero()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.valueobject.ValueObjectTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/valueobject/ValueObjectTest.java",
+                        "nombre":  "igualdadPorValor_SKU()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.valueobject.ValueObjectTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/valueobject/ValueObjectTest.java",
+                        "nombre":  "validacionSKUVacio()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.domain.valueobject.ValueObjectTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/domain/valueobject/ValueObjectTest.java",
+                        "nombre":  "igualdadPorValor_Dinero()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.EcommerceApplicationTests",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/EcommerceApplicationTests.java",
+                        "nombre":  "contextLoads()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.CasosDeUsoJpaIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CasosDeUsoJpaIntegrationTest.java",
+                        "nombre":  "cuatroCasosDeUsoDeBolsas_PersistenContenidoVaciadoYCierre()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.CasosDeUsoJpaIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CasosDeUsoJpaIntegrationTest.java",
+                        "nombre":  "cuatroCasosDeUsoDePrendas_EscribenYLeenEnH2()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.CasosDeUsoJpaIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CasosDeUsoJpaIntegrationTest.java",
+                        "nombre":  "modificarObjetoDeDominioSinGuardar_NoModificaLaBaseDeDatos()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.CasosDeUsoJpaIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CasosDeUsoJpaIntegrationTest.java",
+                        "nombre":  "aplicacion_UtilizaJpaYCargaDatosIdempotentesSinResucitarEliminados()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "omiteTextoYMonedaBlancosYEscapaComodines()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "paginaConConteoTotalSinDuplicadosYConTodasLasVariantes()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "[1] q = \"Camisa\", nombre = \"Camisa\"",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "[2] q = \"artesanal\", nombre = \"Camisa\"",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "[3] q = \"cAmIsA\", nombre = \"Camisa\"",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "[4] q = \"LINO\", nombre = \"Camisa\"",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "[5] q = \"edición\", nombre = \"Chaqueta\"",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "sinCoincidenciasYFueraDeRangoConservaConteos()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "desempataNombresPorIdEnBaseDeDatos()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "suspensionExcluyeOfertaDelRankingPeroNoDelListado()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "desempataRankingPorCreadorAscendente()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "ejecutaLimiteEnSqlYNumeroConstanteDeConsultasSinNMasUno()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "rankingVacioSiNoHayOferta()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "rankingCuentaVariantesYPrendasDistintasCoincideConSqlReal()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "excluyePrendasEliminadasDelContenidoConteoYRanking()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "filtraPorMonedaYNormalizaEntrada()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "combinaBusquedaCreadorYMonedaConAnd()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "filtraPorCreadorEnH2()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.ConsultasAvanzadasJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java",
+                        "nombre":  "excluyeVarianteHuerfanaEliminadaSinPerderPrenda()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "retirarVarianteDelAgregado_UsaEliminacionLogicaDelHuerfano()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "actualizarCantidad_ConservaIdentidadTecnicaDeLaLinea()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "guardarAgregadosEliminados_NoLosResucita()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "listado_FiltraPorCreadorYExcluyeEliminados()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "guardarYRecuperarPrenda_ConservaTodosLosAtributosVariantesYEstado()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "eliminarPrenda_OcultaAgregadoYMarcaVariantesSinBorrarFilas()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "actualizarPrenda_PersistePrecioStocksYSuspensionSinDuplicarVariantes()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "guardarYRecuperarBolsaCerrada_ConservaLineasPreciosOrdenYBloqueo()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "eliminarBolsa_OcultaAgregadoYMarcaLineasSinBorrarFilas()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "dinero_ConservaPrecisionAltaYEscalaOriginalSinRedondear()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "vaciarYAgregarDeNuevo_ConservaHistorialDeLineasSinDuplicadosActivos()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.PersistenciaJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java",
+                        "nombre":  "eliminarCatalogo_NoDestruyeSeleccionHistoricaDeUnaBolsa()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/UsuarioJpaTest.java",
+                        "nombre":  "indiceUnicoImpideDuplicadosAunqueSeOmitaConsultaPrevia()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/UsuarioJpaTest.java",
+                        "nombre":  "conservaCuentaInactivaParaDenegarAutenticacion()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.persistence.jpa.UsuarioJpaTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/UsuarioJpaTest.java",
+                        "nombre":  "persisteYReconstruyeTodosLosCamposSinAcoplarDominioAJpa()",
+                        "categoria":  "Repositorios",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "vaciar_Devuelve204YDelegaIdentificadorTipado()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "obtenerActiva_Ausente_Devuelve404ConContratoDeError()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "crear_Valida_Devuelve201ConDtoYDelega()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "obtenerActiva_DevuelveDtoConLineasYSubtotalDelDominio()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "cerrar_Devuelve204YDelegaIdentificadorTipado()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "vaciarYCerrar_BolsaInexistente_Devuelven404()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "[1] json = \"{}\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "[2] json = \"{\\\"clienteId\\\":null}\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "clienteUuidInvalido_Devuelve400()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.BolsaDeEstiloControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/BolsaDeEstiloControllerTest.java",
+                        "nombre":  "vaciar_BolsaCerrada_Devuelve409()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "uuidInvalido_Devuelve400SinInvocarCasoDeUso()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "actualizarStock_Fraccionario_Devuelve400SinTruncarNiDelegar()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "listar_SinResultados_Devuelve200YColeccionVacia()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "suspender_Inexistente_Devuelve404()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "actualizarStock_VarianteInexistente_Devuelve404()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "errorInesperado_Devuelve500SinFiltrarDetalles()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "buscar_SinParametrosUsaValoresPorDefectoYDevuelve200Vacio()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[1] json = \"{}\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[2] json = \"{\\\"nuevoStock\\\":null}\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[3] json = \"{\\\"nuevoStock\\\":-1}\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "actualizarStock_Valido_Devuelve204YDelegaTodosLosArgumentos()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[1] variantes = \"[]\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[2] variantes = \"[null]\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[3] variantes = \"null\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "jsonMalFormadoYTallaDesconocida_Devuelven400()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "registrar_Valido_Devuelve201YDelegaConDominioMapeado()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "suspender_ReglaIncumplida_Devuelve409()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "erroresDeProtocolo_ConservanEstadoYContratoJson()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[1] parametro = \"page\", valor = \"-1\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[2] parametro = \"size\", valor = \"0\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[3] parametro = \"size\", valor = \"-1\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[4] parametro = \"size\", valor = \"101\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[5] parametro = \"page\", valor = \"abc\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[6] parametro = \"size\", valor = \"1.5\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[7] parametro = \"page\", valor = \"2147483647\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[8] parametro = \"page\", valor = \"2147483648\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[9] parametro = \"creadorId\", valor = \"invalido\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[10] parametro = \"moneda\", valor = \"CO\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[11] parametro = \"moneda\", valor = \"123\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[1] campo = \"stockTotal\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[2] campo = \"stockDisponible\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[3] campo = \"tipoTalla\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "buscar_DevuelvePaginaYDelegaFiltros()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "listar_DevuelveColeccionCompletaYDelega()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[1] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\" \\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":5}],\\\"stockTotal\\\":5}\\n\", campo = \"nombre\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[2] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":0,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":5}],\\\"stockTotal\\\":5}\\n\", campo = \"precioBase\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[3] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":null,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":5}],\\\"stockTotal\\\":5}\\n\", campo = \"precioBase\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[4] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"cop\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":5}],\\\"stockTotal\\\":5}\\n\", campo = \"moneda\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[5] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\" \\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":5}],\\\"stockTotal\\\":5}\\n\", campo = \"variantes[0].sku\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[6] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":-1}],\\\"stockTotal\\\":5}\\n\", campo = \"variantes[0].stockDisponible\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[7] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":null}],\\\"stockTotal\\\":5}\\n\", campo = \"variantes[0].stockDisponible\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[8] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":null,\\\"stockDisponible\\\":5}],\\\"stockTotal\\\":5}\\n\", campo = \"variantes[0].tipoTalla\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[9] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":5}],\\\"stockTotal\\\":-1}\\n\", campo = \"stockTotal\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "[10] json = \"{\\\"creadorId\\\":\\\"11111111-1111-4111-8111-111111111111\\\",\\\"nombre\\\":\\\"Camisa\\\",\\\"descripcion\\\":\\\"Lino\\\",\\\"precioBase\\\":150000,\\\"moneda\\\":\\\"COP\\\",\\\"variantes\\\":[{\\\"sku\\\":\\\"cam-m\\\",\\\"tipoTalla\\\":\\\"M\\\",\\\"stockDisponible\\\":5}]}\\n\", campo = \"stockTotal\"",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.PrendaControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/PrendaControllerTest.java",
+                        "nombre":  "suspender_Devuelve204YDelegaIdentificadorTipado()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/ReporteControllerTest.java",
+                        "nombre":  "variedad_Devuelve200ConConteosYDelega()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.rest.controller.ReporteControllerTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/ReporteControllerTest.java",
+                        "nombre":  "variedad_SinDatosDevuelve200YArrayVacio()",
+                        "categoria":  "Controllers",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "dominioNoAceptaPasswordPlanoComoHash()",
+                        "categoria":  "Dominio",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[1] secreto = \"\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[2] secreto = \"corta\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[3] secreto = \"aW5zZWd1cmE=\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[4] secreto = \"no es base64\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[1] duracion = \"PT0S\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[2] duracion = \"PT-1S\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[3] duracion = \"PT25H\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.JwtConfigTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfigTest.java",
+                        "nombre":  "[4] duracion = \"PT0.5S\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "tokenConFirmaInvalidaDevuelve401()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "registroRechazaMasDe72BytesUtf8YNumerosComoRol()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "swaggerDeclaraBearerYProteccionPorOperacion()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[1] path = \"/api/prendas\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[2] path = \"/api/prendas/creador/00000000-0000-0000-0000-000000000001\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[3] path = \"/api/reportes/creadores/variedad\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[1] metodo = \"POST\", path = \"/api/prendas\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[2] metodo = \"PATCH\", path = \"/api/prendas/00000000-0000-0000-0000-000000000001/suspender\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[3] metodo = \"PATCH\", path = \"/api/prendas/00000000-0000-0000-0000-000000000001/variantes/00000000-0000-0000-0000-000000000002/stock\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[4] metodo = \"POST\", path = \"/api/bolsas\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[5] metodo = \"GET\", path = \"/api/bolsas/activas/00000000-0000-0000-0000-000000000001\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[6] metodo = \"DELETE\", path = \"/api/bolsas/00000000-0000-0000-0000-000000000001/items\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[7] metodo = \"PATCH\", path = \"/api/bolsas/00000000-0000-0000-0000-000000000001/cerrar\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "registroDuplicadoNormalizaCorreoYDevuelve409()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "cuentaInactivaRechazaLoginYTokenPrevio()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "tokenExpiradoDevuelve401()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "compradorNoPuedeConsultarVaciarNiCerrarBolsaAjena()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[1] correo = \"vendedor@boheme.test\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[2] correo = \"inexistente@boheme.test\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "loginDevuelveBearerExpiracionYClaimsCorrectos()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "registroPersisteHashBCryptYNoExponePassword()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "vendedorOperaSuPrendaYNoPuedeSuplantarCreador()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "recursosInexistentesDevuelven404ConRolCorrecto()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[1] campo = \"nombre\", valor = \"\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[2] campo = \"correo\", valor = \"no-es-correo\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[3] campo = \"password\", valor = \"corta\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[4] campo = \"rol\", valor = \"ADMIN\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[5] campo = \"rol\", valor = \"ROLE_VENDEDOR\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[6] campo = \"nombre\", valor = \" \"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[7] campo = \"password\", valor = \" \"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "vendedorNoPuedeModificarPrendaAjena()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[1] caso = \"sin-expiracion\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[2] caso = \"rol-invalido\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[3] caso = \"usuario-inexistente\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[4] caso = \"sub-invalido\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "[5] caso = \"expedicion-futura\"",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    },
+                    {
+                        "clase":  "com.uniquindio.ecommerce.infrastructure.security.SeguridadJwtIntegrationTest",
+                        "archivo":  "src/test/java/com/uniquindio/ecommerce/infrastructure/security/SeguridadJwtIntegrationTest.java",
+                        "nombre":  "compradorOperaSuBolsaYNoPuedeSuplantarCliente()",
+                        "categoria":  "Otras",
+                        "resultado":  "exitosa"
+                    }
+                ]
+}
