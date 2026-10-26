@@ -682,8 +682,6 @@ Para presentar los resultados del seguimiento seleccionamos ocho pruebas que per
 | 4 | Errores 404 y 409, comprobando que no se guarden cambios | 2 |
 | **Total** | **Cinco puntos evaluados** | **8 pruebas diferentes** |
 
-Para ejecutar estas pruebas desde IntelliJ IDEA creamos una configuración llamada `Seguimiento - Pruebas avanzadas`, en la que seleccionamos únicamente los métodos correspondientes a esta actividad.
-
 Las demás pruebas del proyecto se mantienen, ya que forman parte de las verificaciones realizadas durante el desarrollo de BOHEME.
 
 ### Ejecución de las pruebas
@@ -694,10 +692,6 @@ Para ejecutar todas las pruebas del proyecto desde la terminal de Windows utiliz
 .\gradlew.bat test
 ```
 
-Este comando corresponde a `./gradlew test`, solicitado en las instrucciones de entrega.
-
-En la verificación general realizada anteriormente obtuvimos **224 pruebas exitosas en 23 clases**, sin fallos. De estas, seleccionamos las ocho mencionadas para mostrar de manera específica el cumplimiento del seguimiento.
-
-Como evidencias de la actividad presentamos el enlace al repositorio de GitHub, donde están las pruebas dentro de `src/test/java`, y una captura de la ejecución de Gradle con el resultado exitoso.
+Este comando corresponde a `./gradlew test`.
 
 La información adicional y los resultados de las pruebas se encuentran en [la documentación del seguimiento](docs/seguimiento-pruebas-avanzadas/README.md).
