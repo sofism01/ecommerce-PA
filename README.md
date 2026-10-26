@@ -31,11 +31,9 @@ El **Entregable 2 implementa el backend**, desde la API REST y la persistencia h
 
 ## Integrantes
 
-| Integrante | Responsabilidad |
+| Integrante 1 | Integrante 2 |
 | --- | --- |
-| [PENDIENTE] | [PENDIENTE] |
-
-Completar con nombres y responsabilidades acordados por el equipo. No se encontró un listado confirmado de integrantes y aportes; los mensajes de commits no bastan para atribuir responsabilidades completas.
+| [Sofia Soto Mejia] | [Laura Ximena Osorio Rodriguez] |
 
 ## Tecnologías
 
