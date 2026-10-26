@@ -580,46 +580,126 @@ Los informes de cada etapa conservan su contexto histórico: por ejemplo, 2.8 re
 
 ## Pruebas avanzadas
 
-Actividad independiente **Seguimiento: Pruebas avanzadas del backend**, Programación Avanzada, Universidad del Quindío, docente **Valentina Oviedo Sánchez**.
-La información anterior conserva la fotografía del Entregable 2 (219 pruebas); este seguimiento reutiliza lo válido y añade sólo cinco escenarios faltantes.
+## Pruebas avanzadas
+
+Esta sección corresponde a la actividad **Seguimiento: Pruebas avanzadas del backend**, de la asignatura Programación Avanzada de la Universidad del Quindío, con la docente **Valentina Oviedo Sánchez**.
+
+Para realizar esta actividad revisamos las pruebas que ya teníamos en BOHEME y utilizamos las que cumplían con los requisitos. También agregamos cinco pruebas nuevas para completar los casos de seguridad y los errores del controller.
+
+El seguimiento tiene cinco puntos, del 0 al 4. Para comprobarlos seleccionamos **8 pruebas**, ya que algunas nos permiten cumplir más de un requisito. Por ejemplo, una de las pruebas de persistencia también sirve para demostrar el uso de `@DataJpaTest`. Por eso no vimos necesario crear otra prueba que hiciera exactamente lo mismo.
+
+### Punto 0 — Pruebas del repositorio
+
+En este punto comprobamos que la información se guarde y se consulte correctamente utilizando la base de datos H2.
+
+Primero guardamos una prenda con sus características, variantes y precio. Después consultamos nuevamente esa prenda para verificar que la información siguiera siendo la misma, incluyendo los Value Objects como `Dinero` y `SKU`.
+
+También realizamos una prueba para comprobar el ranking de creadores. Utilizamos datos que conocemos y revisamos que la cantidad de prendas y variantes que muestra la consulta sea correcta y no se cuenten registros repetidos.
+
+**Pruebas utilizadas:**
+
+- [PersistenciaJpaTest](src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java): `guardarYRecuperarPrenda_ConservaTodosLosAtributosVariantesYEstado`.
+- [ConsultasAvanzadasJpaTest](src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java): `rankingCuentaVariantesYPrendasDistintasCoincideConSqlReal`.
 
 ### Punto 1 — Seguridad
 
-Probamos la misma ruta GET /api/bolsas/activas/{clienteId}, con el mismo UUID y una única bolsa persistida en H2.  
-Sin token esperamos 401, porque la aplicación no puede autenticar la petición.  
-Un JWT válido de vendedor obtiene 403, porque esa ruta exige COMPRADOR aunque la firma sea correcta.  
-El JWT del comprador propietario obtiene 200 y devuelve exactamente la bolsa y el cliente preparados.  
-Los tokens salen del registro/login reales y el JwtDecoder real comprueba firma HS256, emisor, identidad, correo, rol y tiempos.  
-Los tres casos no cambian SecurityConfig ni el recurso y comprueban por SQL que la bolsa queda intacta: así distinguimos autenticación, rol y propiedad.
+Para este punto utilizamos la ruta `GET /api/bolsas/activas/{clienteId}` y realizamos las tres pruebas sobre una misma bolsa registrada en H2.  
+En la primera prueba enviamos la solicitud sin token y comprobamos que el sistema respondiera con el código **401**, porque no se había iniciado sesión.  
+En la segunda utilizamos un token válido de vendedor y verificamos que respondiera **403**, ya que ese usuario no tiene el rol necesario para acceder a la bolsa.  
+En la tercera utilizamos el token del comprador propietario y comprobamos que la respuesta fuera **200**, permitiendo consultar su bolsa correctamente.  
+Para estas pruebas utilizamos el inicio de sesión y los tokens reales de la aplicación, sin cambiar las reglas de seguridad que ya estaban configuradas.  
+Finalmente, comprobamos que la información de la bolsa no hubiera cambiado después de las solicitudes y que cada respuesta correspondiera al caso evaluado.
 
-Pruebas: [BolsaSeguridadSeguimientoIntegrationTest](src/test/java/com/uniquindio/ecommerce/infrastructure/security/BolsaSeguridadSeguimientoIntegrationTest.java), métodos `consultarMismaBolsaSinTokenDevuelve401`, `consultarMismaBolsaConJwtVendedorValidoDevuelve403` y `consultarMismaBolsaConJwtCompradorPropietarioDevuelve200`.
+**Pruebas utilizadas:**
+
+[BolsaSeguridadSeguimientoIntegrationTest](src/test/java/com/uniquindio/ecommerce/infrastructure/security/BolsaSeguridadSeguimientoIntegrationTest.java)
+
+- `consultarMismaBolsaSinTokenDevuelve401`
+- `consultarMismaBolsaConJwtVendedorValidoDevuelve403`
+- `consultarMismaBolsaConJwtCompradorPropietarioDevuelve200`
 
 ### Punto 2 — @DataJpaTest y @SpringBootTest
 
-Con @DataJpaTest cargamos la parte JPA: entidades, repositorios y una base H2 de pruebas, sin levantar todos los controllers y la seguridad.  
-En PersistenciaJpaTest importamos además nuestros adaptadores y mappers, porque no son repositorios Spring Data generados.  
-Guardamos una PrendaDeAutor, hacemos flush y clear y la recuperamos comprobando identidad, datos, Dinero, variantes, stock y estado.  
-Spring Boot 4 utiliza org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest y el starter spring-boot-starter-data-jpa-test, ambos ya presentes en BOHEME.  
-No agregamos dependencias: utilizamos las versiones compatibles gestionadas por Spring Boot 4.1.1 y rollback de cada prueba JPA.  
-Con @SpringBootTest cargamos el contexto completo y añadimos MockMvc cuando necesitamos integrar controllers, casos de uso, filtros JWT, adaptadores y H2.
+En este punto utilizamos `@DataJpaTest` para comprobar que los datos de una prenda se puedan guardar y recuperar correctamente desde la base de datos H2.  
+Esta anotación nos permite probar principalmente la parte de persistencia, sin tener que iniciar todos los componentes de la aplicación.  
+En nuestra prueba guardamos una prenda, limpiamos el contexto de persistencia y volvimos a consultarla para revisar sus datos, precio, variantes y estado.  
+Como estamos utilizando Spring Boot 4, tuvimos en cuenta que `@DataJpaTest` cambió de paquete y que necesita la dependencia `spring-boot-starter-data-jpa-test`, que ya tenemos configurada.  
+Por otra parte, `@SpringBootTest` permite cargar la aplicación completa, incluyendo los componentes que necesitamos para realizar pruebas de integración.  
+La diferencia que encontramos es que `@DataJpaTest` resulta útil cuando queremos revisar solamente el almacenamiento de información, mientras que `@SpringBootTest` nos sirve para comprobar el funcionamiento de varias partes del sistema.
 
-Referencia reutilizada: [PersistenciaJpaTest](src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java), método `guardarYRecuperarPrenda_ConservaTodosLosAtributosVariantesYEstado`.
+**Prueba utilizada:**
 
-### Punto 3 — Integración
+[PersistenciaJpaTest](src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/PersistenciaJpaTest.java)
 
-Reutilizamos flujoCompletoConErrorIntencionalStockPedidoYRelecturaDesdeH2, que entra por MockMvc y recorre los controllers reales.  
-La prueba registra usuarios, hace login con BCrypt/JWT reales y publica una prenda antes de crear y confirmar la bolsa del comprador.  
-Los casos de uso, reglas de dominio, repositorios, adaptadores JPA y H2 participan sin mocks ni spies en esa clase.  
-Comprobamos las respuestas HTTP y después consultamos H2 por el pedido y la variante concretos para verificar persistencia y descuento.  
-No es una prueba unitaria: detecta fallos de conexión entre capas, mapeo, seguridad y transacción que un colaborador simulado podría ocultar.  
-Resulta útil para validar recorridos críticos: su base separada sin seed y un comprador nuevo por método permiten repetirla sin depender del orden.
+- `guardarYRecuperarPrenda_ConservaTodosLosAtributosVariantesYEstado`
 
-Referencia: [CompraHttpIntegrationTest](src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraHttpIntegrationTest.java).
+Esta es la misma prueba utilizada en el punto 0, porque también cumple con el requisito de utilizar `@DataJpaTest`.
 
-**Punto 0:** reutilizamos el guardado/relectura anterior y el método `rankingCuentaVariantesYPrendasDistintasCoincideConSqlReal` de [ConsultasAvanzadasJpaTest](src/test/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ConsultasAvanzadasJpaTest.java). Sus pruebas de suspensión y eliminación comprueban los filtros del ranking con datos controlados y consultas H2 reales.
+### Punto 3 — Prueba de integración
 
-**Punto 4:** [CompraControllerSeguimientoTest](src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraControllerSeguimientoTest.java) incorpora `agregarABolsaInexistenteDevuelve404SinSolicitarGuardado` y `agregarCantidadSuperiorAlStockDevuelve409SinSolicitarGuardado`. Importa el caso de adición real y comprueba `verify(bolsas, never()).guardarBolsa(...)` sobre su repositorio participante; también comprueba que prendas no se guarda. WithMockUser sólo delimita este test MVC y no se presenta como prueba de JWT real.
+Para este punto utilizamos una prueba que realiza el proceso de compra utilizando los componentes reales que desarrollamos en BOHEME.  
+La prueba comienza registrando usuarios e iniciando sesión. Después se publica una prenda y el comprador crea su bolsa para agregar productos.  
+Durante el proceso también se comprueba qué sucede cuando se solicita una cantidad superior al stock disponible y luego se continúa con una compra válida.  
+En esta prueba participan el controller, los casos de uso, los repositorios y la base de datos H2, sin utilizar simulaciones de estos componentes.  
+Al finalizar revisamos las respuestas del sistema y consultamos la base de datos para verificar que el pedido se hubiera guardado y que el stock se actualizara correctamente.  
+Consideramos que esta prueba es diferente de una prueba unitaria porque no revisa un solo método de manera aislada, sino el funcionamiento de varias partes del sistema. Es útil cuando necesitamos comprobar procesos completos.
 
-Ejecución: `.\gradlew.bat clean test`. La matriz, los resultados finales y las instrucciones de entrega se conservan en [la evidencia propia del seguimiento](docs/seguimiento-pruebas-avanzadas/README.md). Los documentos y resultados históricos del Entregable 2 no se reescriben.
+**Prueba utilizada:**
 
-**Resultado del seguimiento verificado:** 224 pruebas exitosas en 23 clases, sin fallos, errores ni omitidas. La captura automática no pudo obtenerse; el reporte HTML real está preservado y las instrucciones de captura manual están en la carpeta del seguimiento.
+[CompraHttpIntegrationTest](src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraHttpIntegrationTest.java)
+
+- `flujoCompletoConErrorIntencionalStockPedidoYRelecturaDesdeH2`
+
+Aunque una de las pruebas de seguridad también utiliza componentes reales, seleccionamos esta prueba porque permite comprobar un proceso de compra más completo.
+
+### Punto 4 — Más casos en el controller
+
+En este punto realizamos dos pruebas para verificar que el sistema responda correctamente cuando ocurre un problema al agregar productos a una bolsa.
+
+La primera comprueba que, si intentamos agregar un producto a una bolsa que no existe, el sistema devuelva el código **404**.
+
+La segunda comprueba que, si solicitamos una cantidad mayor al stock disponible, el sistema devuelva el código **409**, correspondiente a la regla de negocio `STOCK_INSUFICIENTE`.
+
+En ambos casos utilizamos `verify(..., never())` para comprobar que no se llame al método encargado de guardar los cambios. También verificamos que no se intente guardar información de las prendas cuando la operación es rechazada.
+
+De esta manera comprobamos que el sistema maneje los errores y que no intente guardar una operación que no cumple las condiciones necesarias. Para estas pruebas utilizamos `WithMockUser` para configurar el usuario de prueba, sin evaluar nuevamente la validación de tokens JWT.
+
+**Pruebas utilizadas:**
+
+[CompraControllerSeguimientoTest](src/test/java/com/uniquindio/ecommerce/infrastructure/rest/controller/CompraControllerSeguimientoTest.java)
+
+- `agregarABolsaInexistenteDevuelve404SinSolicitarGuardado`
+- `agregarCantidadSuperiorAlStockDevuelve409SinSolicitarGuardado`
+
+### Resumen de las pruebas del seguimiento
+
+Para presentar los resultados del seguimiento seleccionamos ocho pruebas que permiten comprobar los cinco puntos solicitados.
+
+| Punto | Qué comprobamos | Cantidad de pruebas |
+|---|---|---:|
+| 0 | Guardar y recuperar información; comprobar el ranking | 2 |
+| 1 | Seguridad con respuestas 401, 403 y 200 | 3 |
+| 2 | Uso de `@DataJpaTest` y diferencia con `@SpringBootTest` | Se utiliza una prueba del punto 0 |
+| 3 | Proceso completo de compra con base de datos real | 1 |
+| 4 | Errores 404 y 409, comprobando que no se guarden cambios | 2 |
+| **Total** | **Cinco puntos evaluados** | **8 pruebas diferentes** |
+
+Para ejecutar estas pruebas desde IntelliJ IDEA creamos una configuración llamada `Seguimiento - Pruebas avanzadas`, en la que seleccionamos únicamente los métodos correspondientes a esta actividad.
+
+Las demás pruebas del proyecto se mantienen, ya que forman parte de las verificaciones realizadas durante el desarrollo de BOHEME.
+
+### Ejecución de las pruebas
+
+Para ejecutar todas las pruebas del proyecto desde la terminal de Windows utilizamos:
+
+```powershell
+.\gradlew.bat test
+```
+
+Este comando corresponde a `./gradlew test`, solicitado en las instrucciones de entrega.
+
+En la verificación general realizada anteriormente obtuvimos **224 pruebas exitosas en 23 clases**, sin fallos. De estas, seleccionamos las ocho mencionadas para mostrar de manera específica el cumplimiento del seguimiento.
+
+Como evidencias de la actividad presentamos el enlace al repositorio de GitHub, donde están las pruebas dentro de `src/test/java`, y una captura de la ejecución de Gradle con el resultado exitoso.
+
+La información adicional y los resultados de las pruebas se encuentran en [la documentación del seguimiento](docs/seguimiento-pruebas-avanzadas/README.md).
